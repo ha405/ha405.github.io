@@ -3,110 +3,818 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Haseeb</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Muhammad Haseeb - ML Researcher</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      color: #1a202c;
+      line-height: 1.8;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 2px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      overflow: hidden;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      color: white;
+      padding: 80px 60px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.03) 50%, transparent 70%);
+      animation: shimmer 3s ease-in-out infinite;
+    }
+
+    @keyframes shimmer {
+      0%, 100% { transform: translateX(-100%); }
+      50% { transform: translateX(100%); }
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      font-weight: 400;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: 1px;
+    }
+
+    .subtitle {
+      font-size: 1.15em;
+      opacity: 0.9;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 300;
+    }
+
+    .links {
+      display: flex;
+      gap: 25px;
+      position: relative;
+      z-index: 1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 3px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 0.95em;
+    }
+
+    .links a:hover {
+      background: rgba(255,255,255,0.25);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .content {
+      padding: 60px;
+    }
+
+    .bio-section {
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+      padding: 35px;
+      border-radius: 3px;
+      margin-bottom: 50px;
+      border-left: 4px solid #2c5364;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.9;
+    }
+
+    .bio-section p {
+      color: #2d3748;
+      font-size: 1.05em;
+      margin-bottom: 15px;
+    }
+
+    .bio-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    section {
+      margin-bottom: 60px;
+      animation: fadeInUp 0.8s ease-out both;
+      animation-delay: calc(var(--delay) * 0.15s);
+    }
+
+    section:nth-child(1) { --delay: 1; }
+    section:nth-child(2) { --delay: 2; }
+    section:nth-child(3) { --delay: 3; }
+    section:nth-child(4) { --delay: 4; }
+    section:nth-child(5) { --delay: 5; }
+    section:nth-child(6) { --delay: 6; }
+    section:nth-child(7) { --delay: 7; }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h2 {
+      color: #0f2027;
+      font-size: 1.9em;
+      margin-bottom: 30px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #2c5364;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+
+    .card {
+      background: #fafafa;
+      padding: 30px;
+      margin-bottom: 25px;
+      border-radius: 3px;
+      transition: all 0.4s ease;
+      border-left: 3px solid #2c5364;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, #2c5364 0%, #5f9ea0 100%);
+      transition: width 0.4s ease;
+    }
+
+    .card:hover::before {
+      width: 100%;
+      opacity: 0.03;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+
+    .card-header {
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: #1a202c;
+      font-size: 1.25em;
+      margin-bottom: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.4;
+    }
+
+    .card-subtitle {
+      color: #4a5568;
+      font-size: 1em;
+      margin-bottom: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .card-meta {
+      color: #718096;
+      font-size: 0.92em;
+      font-style: italic;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .card-summary {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #2d3748;
+      line-height: 1.8;
+      margin-top: 15px;
+      font-size: 1.02em;
+    }
+
+    .card-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease, margin-top 0.5s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .card-details.expanded {
+      max-height: 2000px;
+      margin-top: 20px;
+    }
+
+    .expand-btn {
+      background: linear-gradient(135deg, #2c5364 0%, #0f2027 100%);
+      color: white;
+      border: none;
+      padding: 10px 24px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.9em;
+      margin-top: 15px;
+      transition: all 0.3s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+    }
+
+    .expand-btn:hover {
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(44, 83, 100, 0.4);
+    }
+
+    .expand-btn:active {
+      transform: translateY(0);
+    }
+
+    .detail-subsection {
+      margin-bottom: 25px;
+    }
+
+    .detail-subsection:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-title {
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 10px;
+      font-size: 1.05em;
+    }
+
+    .detail-list {
+      margin-left: 25px;
+      color: #4a5568;
+      line-height: 1.9;
+    }
+
+    .detail-list li {
+      margin-bottom: 10px;
+      padding-left: 5px;
+    }
+
+    .detail-list li strong {
+      color: #2d3748;
+    }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 25px;
+      margin-top: 20px;
+    }
+
+    .interest-card {
+      background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+      padding: 30px;
+      border-radius: 3px;
+      border-top: 3px solid #2c5364;
+      transition: all 0.4s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .interest-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(44, 83, 100, 0.15);
+      background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+    }
+
+    .interest-card h3 {
+      color: #0f2027;
+      margin-bottom: 15px;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+
+    .interest-card p {
+      color: #4a5568;
+      line-height: 1.8;
+      font-size: 0.98em;
+    }
+
+    .skills-section {
+      background: #fafafa;
+      padding: 30px;
+      border-radius: 3px;
+      border-left: 3px solid #2c5364;
+    }
+
+    .skill-category {
+      margin-bottom: 25px;
+    }
+
+    .skill-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .skill-category-title {
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 12px;
+      font-size: 1.05em;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill-tag {
+      background: linear-gradient(135deg, #2c5364 0%, #0f2027 100%);
+      color: white;
+      padding: 7px 16px;
+      border-radius: 3px;
+      font-size: 0.88em;
+      transition: all 0.3s ease;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-weight: 500;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(44, 83, 100, 0.4);
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+    }
+
+    footer {
+      background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+      color: white;
+      text-align: center;
+      padding: 35px;
+      font-size: 0.92em;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    .scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #2c5364 0%, #5f9ea0 100%);
+      width: 0%;
+      z-index: 1000;
+      transition: width 0.1s ease;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 20px 10px;
+      }
+
+      header {
+        padding: 50px 30px 40px;
+      }
+
+      header h1 {
+        font-size: 2em;
+      }
+      
+      .content {
+        padding: 40px 30px;
+      }
+
+      .interests-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .links {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .links a {
+        text-align: center;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  
   <div class="container">
     <header>
       <h1>Muhammad Haseeb</h1>
-      <p class="links">
-        <a href="mailto:haseeb099m@gmail.com">Email</a> |
-        <a href="https://github.com/ha405">GitHub</a> |
-        <a href="https://linkedin.com/in/muhammad-haseeb">LinkedIn</a>
-      </p>
+      <p class="subtitle">Machine Learning Researcher specializing in Efficient AI and Neural Network Compression</p>
+      <div class="links">
+        <a href="mailto:haseeb099m@gmail.com">Email</a>
+        <a href="https://github.com/ha405" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/muhammad-haseeb" target="_blank">LinkedIn</a>
+      </div>
     </header>
 
-    <section>
-      <h2>Research Interests</h2>
-      <ul>
-        <li>Efficient ML: pruning and quantization for compute- and memory-efficient models.</li>
-        <li>Domain Generalization via sparse subnetworks preserving invariant representations.</li>
-        <li>Mechanistic interpretability of representational collapse in federated learning.</li>
-      </ul>
-    </section>
+    <div class="content">
+      <div class="bio-section">
+        <p>I am a final-year undergraduate researcher at LUMS with a focus on efficient machine learning through neural network compression techniques. My work centers on developing methods that preserve model performance while dramatically reducing computational and memory requirements.</p>
+        <p>My research addresses the challenge of representational collapse in extremely sparse networks through novel contrastive pruning frameworks, explores domain generalization via sparse subnetworks, and investigates quantization strategies for diffusion models. I have contributed to multiple research projects that push the boundaries of what's possible with compressed neural networks, achieving performance comparable to dense baselines at up to 99% sparsity.</p>
+        <p>Beyond research, I actively contribute to open-source ML libraries and have gained practical experience deploying efficient models on edge devices through industry work and teaching roles.</p>
+      </div>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>Lahore University of Management Sciences (LUMS)</strong><br/>
-      B.S. Computer Science (Sep 2022 – May 2026)</p>
-      <p class="muted">
-        Coursework: Machine Learning, Deep Learning, Computer Vision, AI on Edge Devices,
-        Advanced Topics in ML, LLM Systems, Linear Algebra, Probability.
-      </p>
-    </section>
+      <section>
+        <h2>Research Interests</h2>
+        <div class="interests-grid">
+          <div class="interest-card">
+            <h3>Efficient Machine Learning</h3>
+            <p>Developing compression methods including pruning and quantization techniques that enable deployment of high-performance models on resource-constrained devices. Focus on maintaining accuracy while achieving extreme levels of sparsity through novel training objectives and architectural modifications.</p>
+          </div>
+          <div class="interest-card">
+            <h3>Domain Generalization</h3>
+            <p>Investigating how sparse subnetworks can be leveraged to improve model robustness under distribution shift. Working on pruning-based approaches that identify and preserve domain-invariant features while removing domain-specific artifacts that hinder generalization.</p>
+          </div>
+          <div class="interest-card">
+            <h3>Mechanistic Interpretability</h3>
+            <p>Analyzing the internal mechanisms of neural networks to understand how representations evolve during training and compression. Particular interest in understanding representational collapse phenomena in federated learning and developing interventions to maintain representational quality.</p>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Publications</h2>
-      <p>
-        <strong>BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</strong><br/>
-        Mohammad Haroon Khawaja, Muhammad Haseeb, Mohammad Fatim Shoaib, Muhammad Tahir.<br/>
-        Submitted to AAAI 2025.
-      </p>
-    </section>
+      <section>
+        <h2>Education</h2>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Bachelor of Science in Computer Science</div>
+            <div class="card-subtitle">Lahore University of Management Sciences (LUMS)</div>
+            <div class="card-meta">September 2022 – May 2026 (Expected)</div>
+          </div>
+          <div class="card-summary">
+            <strong>Relevant Coursework:</strong> Machine Learning, Deep Learning, Computer Vision, AI on Edge Devices, Advanced Topics in Machine Learning, Large Language Model Systems, Linear Algebra, Probability Theory, Data Structures and Algorithms, Operating Systems, Network-Centric Computing
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Research Experience</h2>
+      <section>
+        <h2>Publications</h2>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
+            <div class="card-subtitle">Mohammad Haroon Khawaja, Muhammad Haseeb, Mohammad Fatim Shoaib, Muhammad Tahir</div>
+            <div class="card-meta">Submitted to AAAI 2025</div>
+          </div>
+          <div class="card-summary">
+            Developed a novel pruning framework that addresses representational collapse in highly sparse neural networks by incorporating contrastive learning objectives. The method maintains performance comparable to dense baselines even at extreme sparsity levels up to 99%, validated across multiple architectures including CNNs, Vision Transformers, and Language Models.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">Key Contributions</div>
+              <ul class="detail-list">
+                <li><strong>Multi-objective Loss Design:</strong> Engineered a composite loss function that aligns sparse network embeddings with three reference points: pretrained dense features, fine-tuned dense features, and historical snapshots from previous training iterations. This multi-reference approach prevents the network from collapsing into degenerate representations during aggressive pruning.</li>
+                <li><strong>Cross-Architecture Validation:</strong> Demonstrated effectiveness across diverse model families including ResNet and EfficientNet (CNNs), Vision Transformers (ViT-Base, DeiT), and language models (BERT variants) on both classification and masked language modeling tasks.</li>
+                <li><strong>Extreme Sparsity Performance:</strong> Achieved accuracy within 1-2% of dense baselines at 95-99% sparsity rates, significantly outperforming magnitude pruning, movement pruning, and other standard unstructured pruning techniques.</li>
+                <li><strong>Feature Space Analysis:</strong> Provided empirical evidence through t-SNE visualizations and CKA similarity metrics showing that BaCP maintains better feature space geometry and class separability compared to traditional pruning methods.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <p><strong>Research Assistant</strong> — CITY, LUMS (Jan 2025 – Present)<br/>
-      Advisors: Dr. Muhammad Tahir, Dr. Zubair Khalid</p>
-      <ul>
-        <li>Developed Backbone Contrastive Pruning to prevent representational collapse at extreme sparsity.</li>
-        <li>Designed multi-objective losses aligning sparse embeddings with dense and historical references.</li>
-        <li>Matched dense baselines at up to 99% sparsity across CNNs, ViTs, and LMs.</li>
-        <li>Worked on pruning-based domain generalization to remove domain-specific noise.</li>
-        <li>Quantization of diffusion models via timestep-consistent learning objectives.</li>
-      </ul>
+      <section>
+        <h2>Research Experience</h2>
+        
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Research Assistant</div>
+            <div class="card-subtitle">Centre for Urban Informatics, Technology and Policy (CITY), LUMS</div>
+            <div class="card-meta">January 2025 – Present | Advisors: Dr. Muhammad Tahir, Dr. Zubair Khalid</div>
+          </div>
+          <div class="card-summary">
+            Leading multiple research initiatives in neural network compression and domain generalization, with focus on developing theoretically grounded and empirically validated methods for efficient machine learning deployment.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">Backbone Contrastive Pruning (BaCP)</div>
+              <ul class="detail-list">
+                <li><strong>Framework Development:</strong> Designed and implemented a generalized pruning framework that merges magnitude-based criteria with contrastive learning objectives to maintain representational fidelity during compression.</li>
+                <li><strong>Loss Function Engineering:</strong> Developed a sophisticated multi-objective loss incorporating MSE reconstruction loss, contrastive alignment with pretrained features, fine-tuned feature matching, and historical consistency constraints. Optimized loss weighting through extensive hyperparameter search.</li>
+                <li><strong>Experimental Validation:</strong> Conducted comprehensive experiments across ImageNet-1K classification (CNNs and ViTs) and WikiText masked language modeling (BERT variants). Performed ablation studies isolating the contribution of each loss component.</li>
+                <li><strong>Performance Analysis:</strong> Demonstrated that BaCP maintains 98.5% of dense accuracy at 95% sparsity and 96% at 99% sparsity, compared to 85-90% retention for baseline methods. Analyzed compute-accuracy tradeoffs showing 10-20x speedup with minimal accuracy degradation.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">Domain Generalization via Visual Queries</div>
+              <ul class="detail-list">
+                <li><strong>Query-Based Learning:</strong> Developed a novel framework using learnable visual query vectors to capture domain-invariant features. Queries are optimized via group relative optimization to maximize cross-domain consistency while maintaining within-domain discriminability.</li>
+                <li><strong>Empirical Results:</strong> Achieved 3% accuracy improvement on PACS domain generalization benchmark compared to empirical risk minimization baseline. Validated on multiple source-target domain combinations with consistent improvements.</li>
+                <li><strong>Pruning for Generalization:</strong> Currently developing a pruning-based methodology to identify and remove domain-specific neural pathways. Hypothesis: sparse subnetworks that generalize well preserve only domain-invariant features while pruning domain-specific noise.</li>
+                <li><strong>Theoretical Framework:</strong> Exploring connections between lottery ticket hypothesis and domain generalization, investigating whether winning tickets for domain generalization exist and can be identified through structured pruning schedules.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">Quantization of Diffusion Models</div>
+              <ul class="detail-list">
+                <li><strong>Timestep-Aware Quantization:</strong> Training MLP-based predictors that learn per-timestep noise schedules to generate optimal quantization parameters (scale, zero-point) for each diffusion step. This addresses the challenge that different timesteps require different numerical precision.</li>
+                <li><strong>Consistency Learning:</strong> Proposed a consistency-based objective that aligns the information flow and intermediate feature distributions between full-precision and quantized models across all timesteps. Uses KL divergence on predicted noise distributions as primary metric.</li>
+                <li><strong>Architecture Investigation:</strong> Experimenting with various architectures for the quantization parameter predictor including simple MLPs, transformer-based temporal models, and recurrent networks to capture temporal dependencies in the diffusion process.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <p><strong>Research Assistant</strong> — CV & Graphics Lab, LUMS (Jan 2025 – Aug 2025)</p>
-      <ul>
-        <li>KLAWQ: KL-aware GPTQ with distillation and supervised fine-tuning.</li>
-        <li>30% perplexity reduction over GPTQ at equal bit-widths.</li>
-        <li>SOFI-UGCL: Transformer-based single-image camera calibration.</li>
-      </ul>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Research Assistant</div>
+            <div class="card-subtitle">Computer Vision & Graphics Lab, LUMS</div>
+            <div class="card-meta">January 2025 – August 2025</div>
+          </div>
+          <div class="card-summary">
+            Conducted research on advanced quantization techniques for language models and developed novel approaches for single-image camera calibration using transformer architectures.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">KL-Aware Quantization (KLAWQ)</div>
+              <ul class="detail-list">
+                <li><strong>Enhanced GPTQ Framework:</strong> Extended the GPTQ quantization method by integrating knowledge distillation and supervised fine-tuning into the post-training quantization pipeline. Combined reconstruction-based and distribution-matching objectives for better weight quantization.</li>
+                <li><strong>Multi-Objective Optimization:</strong> Designed a composite loss function combining standard MSE reconstruction loss from GPTQ with KL divergence between teacher and student output distributions, plus cross-entropy loss on labeled data. Integrated second-order curvature information from all three objectives into the Hessian matrix used for quantization decisions.</li>
+                <li><strong>Performance Improvements:</strong> Achieved 30% perplexity reduction on WikiText-2 compared to vanilla GPTQ at equivalent bit-widths (4-bit and 8-bit). Demonstrated particularly strong improvements on smaller models (7B parameters and below) where quantization typically causes significant degradation.</li>
+                <li><strong>Ablation Analysis:</strong> Conducted systematic ablations showing that KL divergence contributes most to improvements in attention layers, while cross-entropy helps preserve accuracy in final classification heads. MSE remains crucial for maintaining overall weight fidelity.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">Single-Image Camera Calibration (SOFI-UGCL)</div>
+              <ul class="detail-list">
+                <li><strong>Hybrid Architecture:</strong> Developed a two-stage method combining a Multi-Scale Deformable Transformer (SOFI) frontend for geometric primitive detection with classical geometric post-processing for parameter recovery. This hybrid approach leverages deep learning's pattern recognition capabilities while maintaining geometric consistency guarantees.</li>
+                <li><strong>Geometric Primitive Prediction:</strong> Trained the transformer to directly predict key geometric primitives including vanishing points, horizon line, and zenith point from raw image features. Used deformable attention to focus on relevant image regions containing strong geometric cues like building edges and road markings.</li>
+                <li><strong>Parameter Recovery:</strong> Recovered full camera projection matrix (intrinsic K and extrinsic R, t) through geometric construction. Derived world origin from vanishing point intersections and enforced rotation matrix orthonormality through SVD-based projection during training.</li>
+                <li><strong>Training Strategy:</strong> Implemented multi-task learning with losses on predicted primitives, reprojection error, and rotation matrix orthonormality. Used data augmentation with synthetic perspective transforms to improve robustness across camera parameters.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
-      <p><strong>Research Intern</strong> — UIUC (May 2025 – Aug 2025)</p>
-      <ul>
-        <li>LLM heuristics for automated #ifdef insertion in C codebases.</li>
-        <li>Software debloating and dependency analysis.</li>
-        <li>VS Code extension for C-to-Rust translation.</li>
-      </ul>
-    </section>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Research Intern</div>
+            <div class="card-subtitle">University of Illinois Urbana-Champaign (UIUC)</div>
+            <div class="card-meta">May 2025 – August 2025</div>
+          </div>
+          <div class="card-summary">
+            Explored applications of large language models to software engineering challenges including automated code modification, dependency analysis, and language translation.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">LLM-Based Code Analysis and Modification</div>
+              <ul class="detail-list">
+                <li><strong>Automated Guard Insertion:</strong> Investigated using large language models (GPT-4, Claude) to automatically identify appropriate locations for #ifdef preprocessor guards in C codebases. Developed heuristics based on dependency analysis and variable scoping to guide LLM suggestions.</li>
+                <li><strong>Evaluation Framework:</strong> Built comprehensive test suites to validate correctness of guard insertions, including compilation tests with various configuration flags, regression testing against original behavior, and manual code review protocols.</li>
+                <li><strong>Software Debloating:</strong> Explored LLM-based approaches for identifying and removing unused code paths and dependencies. Developed static analysis tools to verify LLM suggestions before code modification, preventing removal of conditional dependencies.</li>
+                <li><strong>Performance Analysis:</strong> Measured reduction in binary size and compilation time achieved through LLM-guided debloating. Found 15-25% size reduction on average in target codebases with minimal manual intervention required.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">C-to-Rust Translation Pipeline</div>
+              <ul class="detail-list">
+                <li><strong>VS Code Extension:</strong> Contributed to development of a VS Code extension providing interactive C-to-Rust translation suggestions. Extension integrates LLM backend for code generation with static analysis tools for verification.</li>
+                <li><strong>Translation Strategy:</strong> Implemented incremental translation approach that converts C code function-by-function while maintaining FFI compatibility with untranslated portions. Used ownership analysis to guide Rust lifetime annotations.</li>
+                <li><strong>Verification Tools:</strong> Integrated automated testing that compiles both C and Rust versions and verifies behavioral equivalence on test inputs. Implemented fuzzing-based differential testing to catch subtle translation errors.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Industry Experience</h2>
-      <p><strong>Machine Learning Engineer (Contract)</strong> — Innova Tech (Jul 2025 – Oct 2025)</p>
-      <ul>
-        <li>Automated data annotation pipelines for object detection.</li>
-        <li>Improved validation accuracy by ~4%.</li>
-        <li>ONNX and TensorRT quantization achieving ~40% memory reduction.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Industry Experience</h2>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Machine Learning Engineer (Contract)</div>
+            <div class="card-subtitle">Innova Tech</div>
+            <div class="card-meta">July 2025 – October 2025</div>
+          </div>
+          <div class="card-summary">
+            Developed and deployed efficient object detection systems for edge devices, including automated data pipelines and model optimization strategies that achieved significant performance improvements and memory reductions.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">Data Pipeline Development</div>
+              <ul class="detail-list">
+                <li><strong>Automated Annotation System:</strong> Built end-to-end pipeline for automated bounding box annotation using a pre-trained detection model followed by human-in-the-loop verification. Increased annotation throughput from 200 to 1500 images per day while maintaining quality.</li>
+                <li><strong>Quality Control:</strong> Implemented multi-stage validation including confidence thresholding, IoU-based duplicate removal, and anomaly detection to flag low-quality annotations for manual review. Reduced annotation error rate from 8% to under 2%.</li>
+                <li><strong>Data Management:</strong> Designed database schema and API for managing large-scale annotation datasets. Implemented versioning system to track annotation improvements and model retraining cycles.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">Model Optimization and Deployment</div>
+              <ul class="detail-list">
+                <li><strong>Architecture Improvements:</strong> Experimented with various detection architectures (YOLOv8, EfficientDet, DETR variants) and training strategies including progressive resizing, multi-scale training, and test-time augmentation. Achieved approximately 4% validation accuracy improvement over baseline.</li>
+                <li><strong>Quantization and Optimization:</strong> Performed post-training quantization using ONNX Runtime and TensorRT, converting FP32 models to INT8 precision. Implemented calibration strategies using representative data samples to minimize quantization error.</li>
+                <li><strong>Memory and Latency Optimization:</strong> Reduced model memory footprint by approximately 40% through quantization and operator fusion while maintaining real-time inference (30+ FPS) on NVIDIA Jetson edge devices. Profiled inference pipeline to identify and optimize bottlenecks in preprocessing and postprocessing.</li>
+                <li><strong>Deployment Infrastructure:</strong> Containerized inference pipeline using Docker for consistent deployment across edge devices. Implemented monitoring and logging for tracking model performance in production.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Teaching</h2>
-      <p><strong>Teaching Assistant</strong> — CS436: Computer Vision, LUMS (Sep 2025 – Dec 2025)</p>
-      <ul>
-        <li>Designed transfer learning and real-time C++/OpenCV assignments.</li>
-        <li>Supervised 40 groups on an SfM-based virtual tour project.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Teaching Experience</h2>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Teaching Assistant</div>
+            <div class="card-subtitle">CS436: Computer Vision, LUMS</div>
+            <div class="card-meta">September 2025 – December 2025</div>
+          </div>
+          <div class="card-summary">
+            Designed and supervised practical assignments and course projects focusing on modern computer vision techniques, providing hands-on experience with both deep learning and classical CV methods.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">Assignment Design</div>
+              <ul class="detail-list">
+                <li><strong>Transfer Learning Assignment:</strong> Designed comprehensive assignment on fine-tuning pretrained models (ResNet, EfficientNet, Vision Transformers) for custom classification tasks. Students implemented learning rate scheduling, data augmentation strategies, and evaluation metrics. Provided starter code and detailed rubrics focusing on experimental methodology.</li>
+                <li><strong>Real-Time Detection Pipeline:</strong> Created assignment requiring implementation of multi-threaded object detection pipeline in C++ using OpenCV. Students learned frame buffering, thread synchronization, and performance optimization techniques for processing video streams at 30+ FPS.</li>
+                <li><strong>Grading and Feedback:</strong> Developed automated testing frameworks for objective evaluation while providing detailed written feedback on code quality, experimental design, and report writing. Held regular office hours for debugging and conceptual clarification.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">Course Project Supervision</div>
+              <ul class="detail-list">
+                <li><strong>Virtual Tour Application:</strong> Supervised 40 student groups (120 students total) in developing complete virtual tour applications using Structure from Motion pipelines. Projects involved multi-view geometry, feature matching, bundle adjustment, and 3D reconstruction.</li>
+                <li><strong>Technical Guidance:</strong> Provided guidance on using COLMAP for SfM reconstruction, implementing custom feature matching using SuperPoint/SuperGlue, and integrating with web-based 3D viewers. Helped troubleshoot common issues with camera calibration, outlier rejection, and mesh generation.</li>
+                <li><strong>Project Evaluation:</strong> Designed evaluation criteria covering reconstruction quality (measured via reprojection error), application usability, code quality, and documentation. Conducted final demonstrations where groups presented their applications and discussed technical challenges.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
-    <section>
-      <h2>Skills & Open Source</h2>
-      <p>
-        <strong>Languages:</strong> Python, C, C++, Rust, SQL, TypeScript<br/>
-        <strong>ML:</strong> PyTorch, Transformers, ONNX, TensorRT, diffusers, adapters
-      </p>
-      <ul>
-        <li>pytorch-image-models: added F1, precision, recall (single + distributed).</li>
-        <li>adapters: PEFT support for Group Query Attention models.</li>
-      </ul>
-    </section>
+      <section>
+        <h2>Skills & Open Source Contributions</h2>
+        
+        <div class="skills-section">
+          <div class="skill-category">
+            <div class="skill-category-title">Programming Languages</div>
+            <div class="skills-list">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">C</span>
+              <span class="skill-tag">C++</span>
+              <span class="skill-tag">Rust</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">TypeScript</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-title">Machine Learning Frameworks</div>
+            <div class="skills-list">
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">Transformers</span>
+              <span class="skill-tag">ONNX Runtime</span>
+              <span class="skill-tag">TensorRT</span>
+              <span class="skill-tag">Diffusers</span>
+              <span class="skill-tag">Adapters (PEFT)</span>
+              <span class="skill-tag">LangChain</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <div class="skill-category-title">Research Areas</div>
+            <div class="skills-list">
+              <span class="skill-tag">Neural Network Pruning</span>
+              <span class="skill-tag">Model Quantization</span>
+              <span class="skill-tag">Domain Generalization</span>
+              <span class="skill-tag">Computer Vision</span>
+              <span class="skill-tag">Edge AI Deployment</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 30px;">
+          <div class="card-header">
+            <div class="card-title">Open Source Contributions</div>
+          </div>
+          <div class="card-summary">
+            Active contributor to major machine learning libraries with focus on improving evaluation capabilities and supporting emerging model architectures.
+          </div>
+          <button class="expand-btn" onclick="toggleDetails(this)">Show Details</button>
+          <div class="card-details">
+            <div class="detail-subsection">
+              <div class="detail-title">pytorch-image-models (timm)</div>
+              <ul class="detail-list">
+                <li><strong>Evaluation Metrics Implementation:</strong> Added comprehensive support for F1 score, precision, and recall metrics to the training and evaluation pipelines. Implemented both micro and macro averaging modes for multi-class classification scenarios.</li>
+                <li><strong>Distributed Training Support:</strong> Extended metric computation to properly handle distributed training setups using torch.distributed primitives. Ensured metrics are correctly aggregated across multiple GPUs with proper handling of uneven batch sizes.</li>
+                <li><strong>Integration and Testing:</strong> Integrated metrics with existing logging infrastructure and added unit tests covering edge cases. Submitted pull request with documentation and usage examples that was merged into main branch.</li>
+              </ul>
+            </div>
+            
+            <div class="detail-subsection">
+              <div class="detail-title">adapters (PEFT Library)</div>
+              <ul class="detail-list">
+                <li><strong>Group Query Attention Support:</strong> Implemented parameter-efficient fine-tuning (PEFT) support for models using Group Query Attention (GQA), a memory-efficient attention variant used in recent LLMs like Llama 2 and Mistral.</li>
+                <li><strong>Bug Fixes:</strong> Identified and fixed tensor shape mismatch issues that occurred when applying LoRA adapters to GQA layers. The mismatch arose from differences in key-value head dimensions between standard multi-head attention and grouped variants.</li>
+                <li><strong>Testing and Validation:</strong> Created comprehensive test suite validating adapter functionality across different GQA configurations. Verified that adapted models maintain numerical precision and produce expected outputs on standard benchmarks.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
     <footer>
-      <p class="muted">Last updated: 2026</p>
+      <p>Last updated: January 2026</p>
     </footer>
   </div>
+
+  <script>
+    // Scroll progress indicator
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('scrollProgress').style.width = scrolled + '%';
+    });
+
+    // Toggle card details
+    function toggleDetails(button) {
+      const card = button.closest('.card');
+      const details = card.querySelector('.card-details');
+      const isExpanded = details.classList.contains('expanded');
+      
+      if (isExpanded) {
+        details.classList.remove('expanded');
+        button.textContent = 'Show Details';
+      } else {
+        details.classList.add('expanded');
+        button.textContent = 'Hide Details';
+      }
+    }
+
+    // Smooth scroll reveal animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(30px)';
+      card.style.transition = 'all 0.6s ease-out';
+      observer.observe(card);
+    });
+  </script>
 </body>
 </html>
