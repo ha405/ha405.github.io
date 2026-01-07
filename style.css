@@ -1,45 +1,352 @@
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #ffffff;
-  color: #111;
-  line-height: 1.6;
+/* -----------------------------------------------------------
+   RESET & VARIABLES
+----------------------------------------------------------- */
+:root {
+    --bg-color: #fafafa;         /* Soft off-white */
+    --card-bg: #ffffff;          /* Pure white for cards */
+    --text-primary: #222222;     /* Almost black */
+    --text-secondary: #555555;   /* Dark Grey */
+    --text-muted: #888888;       /* Light Grey */
+    --accent: #2563eb;           /* Academic Blue */
+    --accent-hover: #1d4ed8;
+    --border-color: #eaeaea;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --spacing-section: 60px;
 }
 
-.container {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--accent);
+}
+
+/* -----------------------------------------------------------
+   LAYOUT
+----------------------------------------------------------- */
+.main-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* -----------------------------------------------------------
+   HEADER
+----------------------------------------------------------- */
+header {
+    margin-bottom: var(--spacing-section);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 40px;
 }
 
 header h1 {
-  margin-bottom: 5px;
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
 }
 
-.links a {
-  color: #0066cc;
-  text-decoration: none;
+.tagline {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: 20px;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.social-links {
+    display: flex;
+    gap: 20px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.social-links i {
+    margin-right: 6px;
+    color: var(--text-muted);
+}
+
+.social-links a:hover i {
+    color: var(--accent);
+}
+
+/* -----------------------------------------------------------
+   SECTIONS & TYPOGRAPHY
+----------------------------------------------------------- */
+section {
+    margin-bottom: var(--spacing-section);
+    animation: fadeIn 0.8s ease forwards; /* Subtle entry animation */
 }
 
 h2 {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 4px;
-  margin-top: 30px;
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+    color: var(--text-primary);
+    position: relative;
+    display: inline-block;
 }
 
-ul {
-  margin-left: 20px;
+/* -----------------------------------------------------------
+   TAGS / INTERESTS
+----------------------------------------------------------- */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.muted {
-  color: #555;
-  font-size: 0.95em;
+.tag {
+    background-color: #eef2ff; /* Very light blue */
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(37, 99, 235, 0.1);
 }
 
+/* -----------------------------------------------------------
+   CARDS (Experience / Education)
+----------------------------------------------------------- */
+.item-card {
+    margin-bottom: 35px;
+    padding-left: 20px;
+    border-left: 2px solid var(--border-color);
+    transition: border-left-color 0.3s ease;
+}
+
+.item-card:hover {
+    border-left-color: var(--accent);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 4px;
+}
+
+.item-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: var(--font-body);
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.details {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.bullet-list {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.bullet-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+}
+
+.bullet-list li::before {
+    content: "•";
+    color: var(--accent);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* -----------------------------------------------------------
+   PUBLICATIONS
+----------------------------------------------------------- */
+.publication-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.publication-card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.authors {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.venue {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* -----------------------------------------------------------
+   PROJECT GRID
+----------------------------------------------------------- */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-color: var(--accent);
+}
+
+.project-card h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    flex-grow: 1; /* Pushes tech stack to bottom */
+    margin-bottom: 15px;
+}
+
+.tech-stack {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-family: monospace;
+    background: #f4f4f4;
+    padding: 4px 8px;
+    border-radius: 4px;
+    align-self: flex-start;
+}
+
+/* -----------------------------------------------------------
+   FUN ZONE
+----------------------------------------------------------- */
+.fun-zone {
+    margin-top: 80px;
+    padding: 30px;
+    background-color: #f8f9fa; /* Slightly darker than bg */
+    border-radius: 12px;
+    text-align: center;
+    border: 1px dashed var(--border-color);
+}
+
+.fun-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--text-primary);
+}
+
+#fun-fact-text {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    min-height: 50px; /* Prevent jumping */
+    margin-bottom: 15px;
+    transition: opacity 0.2s ease;
+}
+
+button {
+    background-color: var(--text-primary);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: var(--accent);
+}
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
 footer {
-  margin-top: 40px;
-  font-size: 0.9em;
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px solid var(--border-color);
+    padding-top: 30px;
+}
+
+/* -----------------------------------------------------------
+   RESPONSIVE
+----------------------------------------------------------- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .item-header {
+        flex-direction: column;
+    }
+    
+    .date {
+        margin-top: 2px;
+    }
+}
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
