@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Muhammad Haseeb | Efficient ML Researcher</title>
+  <title>Muhammad Haseeb | ML Researcher</title>
   
   <!-- Fonts: Playfair (Academic/Elegant) & Inter (Clean/Tech) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,22 +18,13 @@
     :root {
       --bg-body: #f8f9fa;
       --bg-card: #ffffff;
-      --bg-accent: #f1f5f9; /* Light slate for technical blocks */
-      
-      --text-main: #1e293b; /* Slate 800 */
-      --text-muted: #64748b; /* Slate 500 */
-      --text-light: #94a3b8;
-      
-      --primary: #0f172a;   /* Slate 900 - The "Black" */
-      --accent: #2563eb;    /* Academic Blue */
-      --highlight: #ea580c; /* Subtle Orange for important tags */
-      
+      --bg-details: #f1f5f9;
+      --text-main: #111827;
+      --text-secondary: #4b5563;
+      --accent: #1d4ed8;
+      --border: #e5e7eb;
       --font-head: 'Playfair Display', serif;
       --font-body: 'Inter', sans-serif;
-      
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.05);
-      
       --radius: 8px;
     }
 
@@ -47,43 +38,39 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* --- LAYOUT --- */
     .container {
-      max-width: 850px; /* Optimal reading width */
+      max-width: 850px;
       margin: 60px auto;
       padding: 0 24px;
     }
 
-    /* --- HEADER --- */
     header {
       margin-bottom: 60px;
-      border-bottom: 1px solid #e2e8f0;
+      border-bottom: 1px solid var(--border);
       padding-bottom: 40px;
     }
 
     h1 {
       font-family: var(--font-head);
       font-size: 3rem;
-      color: var(--primary);
+      color: var(--text-main);
       margin-bottom: 12px;
-      letter-spacing: -0.02em;
     }
 
     .tagline {
       font-size: 1.25rem;
-      color: var(--text-muted);
-      font-weight: 300;
-      max-width: 600px;
+      color: var(--accent);
+      font-weight: 500;
       margin-bottom: 24px;
     }
 
     .social-links {
       display: flex;
-      gap: 20px;
+      gap: 24px;
     }
 
     .social-links a {
-      color: var(--text-main);
+      color: var(--text-secondary);
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 500;
@@ -95,15 +82,14 @@
 
     .social-links a:hover { color: var(--accent); }
 
-    /* --- SECTIONS --- */
-    section { margin-bottom: 80px; }
+    section { margin-bottom: 60px; }
 
     h2 {
       font-family: var(--font-body);
       font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      color: var(--text-muted);
+      color: var(--text-secondary);
       font-weight: 600;
       margin-bottom: 30px;
       display: flex;
@@ -115,228 +101,149 @@
       content: "";
       flex: 1;
       height: 1px;
-      background: #e2e8f0;
+      background: var(--border);
     }
-
-    /* --- ABOUT / BIO --- */
+    
     .bio {
       font-size: 1.1rem;
       color: var(--text-main);
       line-height: 1.8;
     }
-
-    /* --- EXPERIENCE CARDS --- */
-    .exp-item {
-      display: grid;
-      grid-template-columns: 140px 1fr; /* Date on left, content on right */
-      gap: 30px;
-      margin-bottom: 50px;
-      position: relative;
-    }
-
-    .exp-date {
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-align: right;
-      padding-top: 4px;
-      font-feature-settings: "tnum";
-    }
-
-    .exp-content h3 {
-      font-family: var(--font-head);
-      font-size: 1.4rem;
-      color: var(--primary);
-      margin-bottom: 4px;
-    }
-
-    .exp-role {
-      font-size: 1rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      font-weight: 400;
-      font-style: italic;
-    }
-
-    /* The "Summary" paragraph */
-    .exp-summary {
-      margin-bottom: 16px;
-      font-weight: 500;
-      color: var(--text-main);
-    }
-
-    /* The "Technical Deep Dive" block */
-    .tech-deep-dive {
-      background: var(--bg-accent);
-      padding: 20px;
-      border-radius: var(--radius);
-      border-left: 3px solid var(--accent);
-      font-size: 0.92rem;
-    }
-
-    .tech-deep-dive ul {
-      list-style: none;
-    }
-
-    .tech-deep-dive li {
-      margin-bottom: 10px;
-      position: relative;
-      padding-left: 18px;
-      color: #334155;
-    }
-
-    .tech-deep-dive li::before {
-      content: "•";
-      color: var(--accent);
-      position: absolute;
-      left: 0;
-      font-weight: bold;
-    }
-
-    .tech-deep-dive strong {
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* --- PUBLICATIONS --- */
-    .pub-item {
-      background: var(--bg-card);
-      border: 1px solid #e2e8f0;
-      padding: 24px;
-      border-radius: var(--radius);
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .pub-item:hover {
-      border-color: var(--accent);
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .pub-title {
-      font-family: var(--font-head);
-      font-size: 1.25rem;
-      color: var(--primary);
-      margin-bottom: 8px;
-      font-weight: 600;
-    }
-
-    .pub-meta {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 4px 8px;
-      background: #eff6ff;
-      color: var(--accent);
-      font-size: 0.75rem;
-      font-weight: 600;
-      border-radius: 4px;
-      margin-top: 8px;
-    }
-
-    /* --- PROJECTS GRID --- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
+    
     .card {
+      margin-bottom: 25px;
       background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 24px;
-      border-radius: var(--radius);
-      border: 1px solid #e2e8f0;
-      display: flex;
-      flex-direction: column;
+      overflow: hidden; /* Important for child margins */
     }
 
-    .card h4 {
-      font-size: 1.1rem;
-      margin-bottom: 8px;
-      color: var(--primary);
+    .card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
     }
 
-    .card p {
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-bottom: 16px;
-      flex-grow: 1;
-    }
-
-    .tech-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .tech-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      color: var(--text-muted);
-      background: #f1f5f9;
-      padding: 2px 6px;
-      border-radius: 4px;
-    }
-
-    /* --- FUN FACT SECTION --- */
-    .fun-fact-container {
-      margin-top: 100px;
-      text-align: center;
-      padding: 40px;
-      background: #fff;
-      border: 1px dashed #cbd5e1;
-      border-radius: var(--radius);
-    }
-
-    .fun-fact-btn {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 50px;
-      font-family: var(--font-body);
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s;
-      margin-top: 16px;
-    }
-
-    .fun-fact-btn:hover { background: var(--accent); }
-
-    /* --- RESPONSIVE --- */
-    @media (max-width: 768px) {
-      .container { margin: 30px auto; }
-      h1 { font-size: 2.2rem; }
-      
-      .exp-item {
-        grid-template-columns: 1fr;
-        gap: 8px;
-      }
-      
-      .exp-date {
-        text-align: left;
-        font-size: 0.8rem;
-        margin-bottom: 4px;
-        color: var(--accent);
+    .card-title {
+        font-family: var(--font-head);
+        font-size: 1.4rem;
         font-weight: 600;
-      }
+        margin-bottom: 4px;
+    }
+
+    .card-meta {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+
+    .card-date {
+        font-size: 0.85rem;
+        color: var(--text-secondary);
+        font-weight: 500;
+        white-space: nowrap;
+        padding-top: 6px;
+    }
+
+    .card-summary {
+        margin-top: 16px;
+    }
+    
+    .details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out, margin-top 0.5s ease-out, padding 0.5s ease-out;
+      background: var(--bg-details);
+      border-radius: 6px;
+      padding: 0 20px;
+      margin: 0 -20px -20px -20px; /* Pull into parent padding */
+    }
+
+    .details.expanded {
+      max-height: 2000px;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .details h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--text-main);
+    }
+    
+    .details ul {
+        list-style: none;
+    }
+
+    .details li {
+        margin-bottom: 10px;
+        padding-left: 20px;
+        position: relative;
+        color: #374151;
+        font-size: 0.95rem;
+    }
+
+    .details li::before {
+        content: '›';
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-weight: 700;
+        font-size: 1.1rem;
+    }
+
+    .details li strong {
+        color: var(--text-main);
+        font-weight: 600;
+    }
+
+    .expand-btn {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .expand-btn:hover {
+      background: var(--bg-details);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .expand-btn .chevron {
+      transition: transform 0.3s ease;
+    }
+    
+    .expand-btn.active .chevron {
+      transform: rotate(90deg);
+    }
+
+    @media (max-width: 600px) {
+      .card-header { flex-direction: column; gap: 4px; }
+      .card-date { padding-top: 0; }
+      h1 { font-size: 2.2rem; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    
-    <!-- HEADER -->
     <header>
       <h1>Muhammad Haseeb</h1>
-      <p class="tagline">
-        Machine Learning Researcher focused on <strong>Efficient AI</strong>, <strong>Compression</strong>, and <strong>Interpretability</strong>.
-      </p>
-      
+      <p class="tagline">ML Researcher: Model Compression, Domain Generalization & Mechanistic Interpretability</p>
       <div class="social-links">
         <a href="mailto:haseeb099m@gmail.com"><i class="fas fa-envelope"></i> haseeb099m@gmail.com</a>
         <a href="https://github.com/ha405"><i class="fab fa-github"></i> github.com/ha405</a>
@@ -344,214 +251,191 @@
       </div>
     </header>
 
-    <!-- ABOUT -->
     <section>
       <h2>About</h2>
       <p class="bio">
-        I am a final-year CS undergrad at <strong>LUMS</strong> (exp. 2026), working at the intersection of model efficiency and robustness. My research aims to bridge the gap between massive foundation models and edge deployment. I build frameworks for <strong>pruning, quantization, and domain generalization</strong> that preserve representational fidelity even at extreme sparsity levels (up to 99%).
+        I am a final-year Computer Science student at LUMS (exp. 2026). My research is centered on making large neural networks efficient and reliable for deployment. I design and implement algorithms for <strong>model compression (pruning, quantization)</strong> and <strong>domain generalization</strong>, focusing on understanding how these techniques alter a model's internal circuitry to improve performance and reduce computational cost.
       </p>
     </section>
 
-    <!-- PUBLICATIONS -->
     <section>
       <h2>Publications</h2>
-      <div class="pub-item">
-        <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
-        <div class="pub-meta">
-          Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, Mohammad Fatim Shoaib, Muhammad Tahir.<br>
-          <em>Submitted to AAAI 2025</em>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
+            <div class="card-meta">Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, et al. <em>(Submitted to AAAI 2025)</em></div>
+          </div>
         </div>
-        <p style="font-size: 0.95rem; color: var(--text-main);">
-          Designed a multi-objective pruning framework preventing representational collapse. Matched dense baseline accuracy at <strong>99% sparsity</strong> across CNNs, Vision Transformers, and Language Models.
-        </p>
-        <span class="badge">Contrastive Learning</span>
-        <span class="badge">Network Pruning</span>
+        <p class="card-summary">I co-developed a pruning framework that stops representational collapse in networks compressed up to 99% sparsity by merging standard pruning with a contrastive learning objective.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Technical Contributions</button>
+        <div class="details">
+          <ul>
+            <li><strong>I engineered a multi-objective loss function</strong> that aligns sparse network embeddings with three distinct references: the original pretrained weights, the fine-tuned dense model, and historical snapshots of the network itself.</li>
+            <li><strong>I validated the framework's effectiveness</strong> across CNNs (ResNet), Vision Transformers (ViT), and Language Models (BERT), demonstrating its architectural versatility on classification and masked language modeling tasks.</li>
+            <li><strong>My method outperformed standard unstructured pruning,</strong> maintaining accuracy comparable to the original dense model at extreme sparsity levels where other techniques suffer significant performance degradation.</li>
+          </ul>
+        </div>
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
     <section>
       <h2>Research Experience</h2>
-
-      <!-- Item 1 -->
-      <div class="exp-item">
-        <div class="exp-date">Jan 2025 – Present</div>
-        <div class="exp-content">
-          <h3>Centre for Urban Informatics (CITY)</h3>
-          <div class="exp-role">Research Assistant | Advisors: Dr. Muhammad Tahir, Dr. Zubair Khalid</div>
-          
-          <p class="exp-summary">
-            Leading research on contrastive pruning and domain generalization to create robust, sparse subnetworks.
-          </p>
-
-          <div class="tech-deep-dive">
-            <ul>
-              <li><strong>BaCP Framework:</strong> Designed a multi-objective loss aligning sparse embeddings with three references: pretrained, fine-tuned, and historical snapshots.</li>
-              <li><strong>Domain Generalization:</strong> Developed a "Visual Query" framework using group relative optimization, achieving a <strong>3% accuracy gain</strong> on the PACS benchmark over ERM.</li>
-              <li><strong>Diffusion Quantization:</strong> Proposed a consistency-based objective to align information flow between quantized and full-precision diffusion models across timesteps.</li>
-            </ul>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Research Assistant</div>
+            <div class="card-meta">Centre for Urban Informatics (CITY), LUMS | Advisors: Dr. Tahir, Dr. Khalid</div>
           </div>
+          <div class="card-date">Jan 2025 – Present</div>
+        </div>
+        <p class="card-summary">I lead multiple research projects in network compression and domain generalization. My work here produced the BaCP framework (above) and explores new methods for creating robust, efficient models.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Project Details</button>
+        <div class="details">
+          <h4>Domain Generalization</h4>
+          <ul>
+            <li><strong>I developed a novel framework using visual queries</strong> to improve out-of-distribution performance. By training these queries with a group relative optimization objective, my model achieved a <strong>3% accuracy gain on the PACS dataset</strong> compared to the empirical risk minimization baseline.</li>
+            <li><strong>I am currently designing a pruning-based methodology</strong> to isolate and remove domain-specific noise from a network, thereby creating a more stable and generalized sparse subnetwork.</li>
+          </ul>
+          <h4>Quantization of Diffusion Models</h4>
+          <ul>
+            <li><strong>I am training an MLP-based scheduler</strong> to predict optimal quantization parameters (scale and zero-point) on a per-timestep basis, adapting the numerical precision to the noise level of the diffusion process.</li>
+            <li><strong>I proposed a consistency-based learning objective</strong> to align the information flow between the quantized and full-precision models, minimizing divergence in their predictive distributions at each step.</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Item 2 -->
-      <div class="exp-item">
-        <div class="exp-date">Jan 2025 – Aug 2025</div>
-        <div class="exp-content">
-          <h3>Computer Vision & Graphics Lab</h3>
-          <div class="exp-role">Research Assistant @ LUMS</div>
-          
-          <p class="exp-summary">
-            Focused on post-training quantization (PTQ) and geometric computer vision.
-          </p>
-
-          <div class="tech-deep-dive">
-            <ul>
-              <li><strong>KLAWQ (Quantization):</strong> Augmented GPTQ by integrating Knowledge Distillation. Combined standard Hessian optimization with second-order curvature from KL-divergence.</li>
-              <li><strong>Results:</strong> Achieved <strong>30% reduction in perplexity</strong> compared to standard GPTQ at equivalent bit-widths.</li>
-              <li><strong>SOFI-UGCL:</strong> Created a Transformer-based camera calibration method enforcing rotation matrix orthonormality to recover intrinsics/extrinsics from single images.</li>
-            </ul>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Research Assistant</div>
+            <div class="card-meta">Computer Vision & Graphics Lab, LUMS</div>
           </div>
+          <div class="card-date">Jan 2025 – Aug 2025</div>
+        </div>
+        <p class="card-summary">I developed advanced quantization techniques for large language models and built a novel, Transformer-based system for single-image camera calibration.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Project Details</button>
+        <div class="details">
+          <h4>KL-Aware Quantization (KLAWQ)</h4>
+          <ul>
+            <li><strong>I built an augmented GPTQ framework</strong> that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization process.</li>
+            <li><strong>My method combines the standard GPTQ Hessian</strong> with second-order curvature information from KL-divergence and cross-entropy objectives, better preserving the teacher model's output distribution.</li>
+            <li><strong>This approach achieved a 30% reduction in perplexity</strong> over the baseline GPTQ at equivalent bit-widths.</li>
+          </ul>
+          <h4>Single-Image Camera Calibration (SOFI-UGCL)</h4>
+          <ul>
+            <li><strong>I designed a hybrid method</strong> combining a Transformer front-end for geometric primitive prediction with classical geometric post-processing to recover the full camera projection matrix.</li>
+            <li><strong>I trained a Multi-Scale Deformable Transformer (SOFI)</strong> to predict primitives like the zenith point and horizon line. From these, I derived the camera's intrinsic (K) and extrinsic (R, t) parameters while algorithmically enforcing rotation matrix orthonormality during training.</li>
+          </ul>
         </div>
       </div>
-
-      <!-- Item 3 -->
-      <div class="exp-item">
-        <div class="exp-date">May 2025 – Aug 2025</div>
-        <div class="exp-content">
-          <h3>University of Illinois Urbana-Champaign (UIUC)</h3>
-          <div class="exp-role">Research Intern (SE / AI)</div>
-          
-          <div class="tech-deep-dive">
-            <ul>
-              <li><strong>LLM for Code:</strong> Investigated heuristics for automated <code>#ifdef</code> guard insertion in C codebases using LLMs.</li>
-              <li><strong>Debloating:</strong> Built evaluation suites to empirically validate software debloating and dependency analysis.</li>
-              <li><strong>Tooling:</strong> Developed a VS Code extension to support a C-to-Rust translation pipeline.</li>
-            </ul>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Research Intern</div>
+            <div class="card-meta">University of Illinois Urbana-Champaign (UIUC)</div>
           </div>
+          <div class="card-date">May 2025 – Aug 2025</div>
         </div>
-      </div>
-    </section>
-
-    <!-- INDUSTRY -->
-    <section>
-      <h2>Industry Experience</h2>
-      <div class="exp-item">
-        <div class="exp-date">Jul 2025 – Oct 2025</div>
-        <div class="exp-content">
-          <h3>Innova Tech</h3>
-          <div class="exp-role">Machine Learning Engineer (Contract)</div>
-          <div class="tech-deep-dive">
-            <ul>
-              <li><strong>Optimization:</strong> Conducted ONNX and TensorRT quantization, reducing memory footprint by ~40% for real-time edge inference.</li>
-              <li><strong>Pipeline:</strong> Automated data annotation, improving validation accuracy by 4% through better dataset quality.</li>
-            </ul>
-          </div>
+        <p class="card-summary">I applied Large Language Models to automated software engineering, focusing on code modification, dependency analysis, and building developer tools.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Project Details</button>
+        <div class="details">
+          <ul>
+            <li><strong>I investigated LLM-based heuristics</strong> for the automated insertion of <code>#ifdef</code> guards in large C codebases and built empirical validation suites to measure correctness.</li>
+            <li><strong>I explored LLM-driven software debloating</strong> and code dependency analysis to reduce binary sizes and complexity.</li>
+            <li><strong>I contributed to the development of a VS Code extension</strong> that supports a C-to-Rust translation pipeline, leveraging LLMs for code modernization.</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS & OPEN SOURCE -->
     <section>
-      <h2>Projects & Open Source</h2>
-      <div class="grid">
-        
-        <!-- Open Source 1 -->
-        <div class="card">
-          <h4><i class="fab fa-github"></i> pytorch-image-models</h4>
-          <p>Contributor to <code>timm</code>. Added F1, precision, and recall metrics to evaluation pipelines, supporting both single-GPU and distributed training setups.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">PyTorch</span>
-            <span class="tech-tag">Distributed</span>
+      <h2>Industry & Teaching</h2>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Machine Learning Engineer (Contract)</div>
+            <div class="card-meta">Innova Tech</div>
           </div>
+          <div class="card-date">Jul 2025 – Oct 2025</div>
         </div>
-
-        <!-- Open Source 2 -->
-        <div class="card">
-          <h4><i class="fas fa-code-branch"></i> adapters (PEFT)</h4>
-          <p>Implemented Parameter-Efficient Fine-Tuning support for Group Query Attention (GQA) models, fixing critical tensor mismatch issues.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">LLMs</span>
-            <span class="tech-tag">GQA</span>
+        <p class="card-summary">I owned the optimization and deployment pipeline for an on-device object detection system, delivering significant gains in both performance and efficiency.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Technical Details</button>
+        <div class="details">
+          <ul>
+            <li><strong>I led ONNX and TensorRT-based quantization experiments,</strong> reducing model memory footprints by approximately 40% while maintaining real-time inference on edge hardware.</li>
+            <li><strong>I automated a large-scale data annotation pipeline,</strong> which improved model training and resulted in a 4% accuracy improvement in validation performance.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <div>
+            <div class="card-title">Teaching Assistant, CS436: Computer Vision</div>
+            <div class="card-meta">LUMS</div>
           </div>
+          <div class="card-date">Sep 2025 – Dec 2025</div>
         </div>
-
-        <!-- Project 1 -->
-        <div class="card">
-          <h4>Multi-Agent LLM System</h4>
-          <p>Orchestrated an agent pipeline for data ingestion and model selection. Integrated RAG for domain retrieval and deployed via Dockerized FastAPI.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">LangChain</span>
-            <span class="tech-tag">FastAPI</span>
-          </div>
+        <p class="card-summary">I designed and supervised assignments and projects, leading 40 student groups through complex computer vision implementations.</p>
+        <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Responsibilities</button>
+        <div class="details">
+          <ul>
+            <li><strong>I created assignments on transfer learning with PyTorch</strong> and building multithreaded object-detection pipelines in C++/OpenCV for real-time video streams.</li>
+            <li><strong>I designed and led a course project for 40 student groups</strong> on building a virtual tour application using Structure from Motion (SfM) pipelines and state-of-the-art computer vision tools.</li>
+          </ul>
         </div>
-
-        <!-- Project 2 -->
-        <div class="card">
-          <h4>Fullstack Dev Agent</h4>
-          <p>Prototype assistant using Google ADK & Model Context Protocol (MCP) to automate code generation and API scaffolding.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Agentic AI</span>
-            <span class="tech-tag">MCP</span>
-          </div>
-        </div>
-
       </div>
     </section>
     
-    <!-- TEACHING -->
     <section>
-      <h2>Teaching</h2>
-      <div class="exp-item">
-        <div class="exp-date">Sep 2025 – Dec 2025</div>
-        <div class="exp-content">
-          <h3>CS436: Computer Vision</h3>
-          <div class="exp-role">Teaching Assistant @ LUMS</div>
-          <div class="tech-deep-dive">
-            <ul>
-              <li>Designed assignments on Transfer Learning (PyTorch) and real-time object detection (C++/OpenCV).</li>
-              <li>Supervised 40 student groups building Virtual Tour apps using Structure from Motion (SfM) pipelines.</li>
-            </ul>
-          </div>
+        <h2>Open Source & Projects</h2>
+        <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Contributor, pytorch-image-models (timm)</div>
+              </div>
+            </div>
+            <p class="card-summary">I implemented key evaluation metrics to enhance the library's training and validation capabilities, with a focus on distributed environments.</p>
+            <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Contributions</button>
+            <div class="details">
+              <ul>
+                <li><strong>I added F1, precision, and recall metrics</strong> to the core evaluation loop, supporting both single-GPU and distributed training setups.</li>
+                <li><strong>My implementation correctly handles aggregation across multiple GPUs</strong> using `torch.distributed` primitives, ensuring accurate metrics even with uneven batch sizes.</li>
+              </ul>
+            </div>
         </div>
-      </div>
+        <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Contributor, adapters (PEFT Library)</div>
+              </div>
+            </div>
+            <p class="card-summary">I extended the library to support modern, memory-efficient attention mechanisms used in new Large Language Models.</p>
+            <button class="expand-btn" onclick="toggleDetails(this)"><span class="chevron">›</span> Show Contributions</button>
+            <div class="details">
+              <ul>
+                <li><strong>I implemented PEFT support for Group Query Attention (GQA) models,</strong> enabling low-rank adaptation for models like Llama-2 and Mistral.</li>
+                <li><strong>I identified and fixed a critical tensor shape mismatch bug</strong> that occurred when applying LoRA to GQA layers, unblocking users of these newer architectures.</li>
+              </ul>
+            </div>
+        </div>
     </section>
-
-    <!-- FUN FACT -->
-    <div class="fun-fact-container">
-      <i class="fas fa-coffee" style="font-size: 24px; color: var(--text-light); margin-bottom: 15px;"></i>
-      <div id="fact-display" style="font-style: italic; color: var(--text-main); min-height: 50px;">
-        "I enjoy pruning neural networks until they fit on a toaster."
-      </div>
-      <button class="fun-fact-btn" onclick="newFact()">Generate Fun Fact</button>
-    </div>
-
-    <footer style="text-align: center; margin-top: 60px; color: var(--text-light); font-size: 0.85rem;">
-      <p>&copy; 2026 Muhammad Haseeb. Last updated: January 2026.</p>
-    </footer>
 
   </div>
 
   <script>
-    const facts = [
-      "I enjoy pruning neural networks until they are small enough to run on a toaster.",
-      "I'm learning Rust because C++ gave me trust issues.",
-      "I once optimized a model so much it forgot what a 'cat' was (representational collapse is real!).",
-      "I spend 90% of my time debugging tensor dimension mismatches.",
-      "My favorite hobby is reading StackOverflow threads from 2013.",
-      "I believe every problem can be solved with enough GPU memory (or quantization)."
-    ];
+    function toggleDetails(button) {
+      const details = button.nextElementSibling;
+      const buttonText = button.textContent.trim().split(' ').slice(1).join(' ');
 
-    function newFact() {
-      const display = document.getElementById('fact-display');
-      const randomFact = facts[Math.floor(Math.random() * facts.length)];
-      
-      // Simple fade animation
-      display.style.opacity = 0;
-      setTimeout(() => {
-        display.innerText = `"${randomFact}"`;
-        display.style.opacity = 1;
-      }, 200);
+      button.classList.toggle('active');
+
+      if (details.classList.contains('expanded')) {
+        details.classList.remove('expanded');
+        button.innerHTML = `<span class="chevron">›</span> Show ${buttonText}`;
+      } else {
+        details.classList.add('expanded');
+        button.innerHTML = `<span class="chevron">›</span> Hide ${buttonText}`;
+      }
     }
   </script>
 
