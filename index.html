@@ -31,7 +31,7 @@
       <section id="about">
         <h2>About Me</h2>
         <p>
-          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I develop novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits, which deepens my understanding of the problem posed.
+          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I research on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits which helps my understanding of the problem posed.
         </p>
       </section>
 
@@ -52,7 +52,7 @@
           </li>
           <li>
             <span class="timeline-date">Jan 2025 - Aug 2025</span>
-            <span class="timeline-event">Developed a GPTQ-inspired quantization and ViT-based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
+            <span class="timeline-event">Developed a GPTQ inspired quantization and ViT based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
           </li>
         </ul>
       </section>
@@ -144,40 +144,126 @@
         </div>
       </section>
 
-      <!-- Fun Fact Section -->
-      <section id="fun-facts">
-        <h2>Just for Fun</h2>
-        <div class="fun-fact-container">
-          <div id="fact-display" class="fun-fact-text">
-            Click the button for a random fact about my life as a researcher!
-          </div>
-          <button class="fun-fact-btn" onclick="newFact()">Tell me something else</button>
+      <footer class="page-footer">
+        <p class="copyright">&copy; 2024 Muhammad Haseeb</p>
+        <div id="quiz-container">
+            <h3 id="question-text">Prime Messi or Prime Ronaldo?</h3>
+            <div id="options-container">
+                <button id="option-a-btn" class="quiz-btn"></button>
+                <button id="option-b-btn" class="quiz-btn"></button>
+            </div>
+            <p id="quiz-feedback"></p>
+            <p id="quiz-score"></p>
+            <button id="play-again-btn" class="quiz-btn" style="display: none;">Play Again</button>
         </div>
-      </section>
-
+      </footer>
     </main>
   </div>
 
   <script>
-    const facts = [
-      "I believe every problem can be solved with enough GPU memory... or smarter quantization.",
-      "My favorite debugging tool is still a good night's sleep.",
-      "I spend 90% of my time debugging tensor dimension mismatches.",
-      "I'm learning Rust because C++ gave me trust issues.",
-      "I once optimized a model so much it forgot what a 'cat' was. Representational collapse is real!"
+    const allQuestions = [
+        { question: "Prime Messi or Prime Ronaldo?", options: ["Prime Messi", "Prime Ronaldo"], answer: "Prime Messi" },
+        { question: "PyTorch or TensorFlow?", options: ["PyTorch", "TensorFlow"], answer: "PyTorch" },
+        { question: "Levi or Mikasa?", options: ["Levi", "Mikasa"], answer: "Levi" },
+        { question: "Test cricket or T20?", options: ["Test cricket", "T20"], answer: "Test cricket" },
+        { question: "Anime openings or endings?", options: ["Anime openings", "Anime endings"], answer: "Anime openings" },
+        { question: "Manual rev-matching or paddle shifters?", options: ["Manual rev-matching", "Paddle shifters"], answer: "Manual rev-matching" },
+        { question: "Tiki-taka or counter-attack?", options: ["Tiki-taka", "Counter-attack"], answer: "Counter-attack" },
+        { question: "Derby days or cup finals?", options: ["Derby days", "Cup finals"], answer: "Derby days" },
+        { question: "Naturally aspirated or turbocharged?", options: ["Naturally aspirated", "Turbocharged"], answer: "Naturally aspirated" },
+        { question: "Long anime arcs or short seasons?", options: ["Long anime arcs", "Short seasons"], answer: "Long anime arcs" },
+        { question: "Through balls or long shots?", options: ["Through balls", "Long shots"], answer: "Through balls" },
+        { question: "Leg spin or left-arm fast?", options: ["Leg spin", "Left-arm fast"], answer: "Left-arm fast" }
     ];
 
-    function newFact() {
-      const display = document.getElementById('fact-display');
-      const randomFact = facts[Math.floor(Math.random() * facts.length)];
-      
-      // Simple fade animation
-      display.style.opacity = 0;
-      setTimeout(() => {
-        display.innerText = `"${randomFact}"`;
-        display.style.opacity = 1;
-      }, 200);
+    let currentQuestions = [];
+    let currentQuestionIndex = 0;
+    let friendshipPoints = 0;
+
+    const questionText = document.getElementById('question-text');
+    const optionABtn = document.getElementById('option-a-btn');
+    const optionBBtn = document.getElementById('option-b-btn');
+    const optionsContainer = document.getElementById('options-container');
+    const quizFeedback = document.getElementById('quiz-feedback');
+    const quizScore = document.getElementById('quiz-score');
+    const playAgainBtn = document.getElementById('play-again-btn');
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
     }
+
+    function startQuiz() {
+        currentQuestions = shuffleArray([...allQuestions]).slice(0, 5);
+        currentQuestionIndex = 0;
+        friendshipPoints = 0;
+        
+        questionText.style.display = 'block';
+        optionsContainer.style.display = 'flex';
+        playAgainBtn.style.display = 'none';
+        quizFeedback.textContent = '';
+        updateScore();
+        displayQuestion();
+    }
+
+    function displayQuestion() {
+        if (currentQuestionIndex >= 5) {
+            endQuiz();
+            return;
+        }
+
+        const question = currentQuestions[currentQuestionIndex];
+        questionText.textContent = question.question;
+        optionABtn.textContent = question.options[0];
+        optionBBtn.textContent = question.options[1];
+        
+        optionABtn.disabled = false;
+        optionBBtn.disabled = false;
+        quizFeedback.textContent = '';
+        quizFeedback.className = '';
+    }
+
+    function handleAnswer(userChoice) {
+        optionABtn.disabled = true;
+        optionBBtn.disabled = true;
+
+        const correctChoice = currentQuestions[currentQuestionIndex].answer;
+        if (userChoice === correctChoice) {
+            friendshipPoints++;
+            quizFeedback.textContent = "Great minds think alike! +1 Friendship Point.";
+            quizFeedback.className = 'feedback-correct';
+        } else {
+            quizFeedback.textContent = `Good choice, but I prefer ${correctChoice}.`;
+            quizFeedback.className = 'feedback-incorrect';
+        }
+        updateScore();
+        
+        setTimeout(() => {
+            currentQuestionIndex++;
+            displayQuestion();
+        }, 2000);
+    }
+
+    function endQuiz() {
+        questionText.style.display = 'none';
+        optionsContainer.style.display = 'none';
+        quizFeedback.textContent = `Thanks for playing with me`;
+        quizFeedback.className = '';
+        playAgainBtn.style.display = 'block';
+    }
+
+    function updateScore() {
+        quizScore.textContent = `Friendship Points: ${friendshipPoints} / 5`;
+    }
+
+    optionABtn.addEventListener('click', () => handleAnswer(optionABtn.textContent));
+    optionBBtn.addEventListener('click', () => handleAnswer(optionBBtn.textContent));
+    playAgainBtn.addEventListener('click', startQuiz);
+
+    document.addEventListener('DOMContentLoaded', startQuiz);
   </script>
 
 </body>
