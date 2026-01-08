@@ -9,244 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <style>
-    :root {
-      --bg: #f9fafb;
-      --bg-sidebar: #ffffff;
-      --bg-details: #f3f4f6;
-      --text-primary: #111827;
-      --text-secondary: #4b5563;
-      --accent: #2563eb;
-      --border: #e5e7eb;
-      --font-heading: 'Source Serif Pro', serif;
-      --font-body: 'Inter', sans-serif;
-    }
-
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: var(--font-body);
-      background-color: var(--bg);
-      color: var(--text-primary);
-      line-height: 1.7;
-    }
-
-    .wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      gap: 40px;
-    }
-
-    /* --- Sidebar --- */
-    .sidebar {
-      width: 300px;
-      flex-shrink: 0;
-      background-color: var(--bg-sidebar);
-      border-right: 1px solid var(--border);
-      padding: 40px;
-      height: 100vh;
-      position: sticky;
-      top: 0;
-    }
-
-    .profile-photo {
-      width: 150px;
-      height: 150px;
-      background-color: #d1d5db;
-      border-radius: 50%;
-      margin: 0 auto 20px;
-      border: 4px solid var(--bg);
-    }
-
-    .sidebar-name {
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 4px;
-    }
-
-    .sidebar-title {
-      font-size: 1rem;
-      text-align: center;
-      color: var(--text-secondary);
-      margin-bottom: 8px;
-    }
-
-    .sidebar-affiliation {
-      font-size: 0.9rem;
-      text-align: center;
-      color: var(--text-secondary);
-      margin-bottom: 24px;
-    }
-
-    .sidebar-links {
-      list-style: none;
-    }
-
-    .sidebar-links li {
-      margin-bottom: 12px;
-    }
-
-    .sidebar-links a {
-      color: var(--text-secondary);
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      transition: color 0.2s ease;
-    }
-
-    .sidebar-links a:hover {
-      color: var(--accent);
-    }
-    
-    .sidebar-links .icon {
-        width: 20px;
-        text-align: center;
-    }
-
-    /* --- Main Content --- */
-    .content {
-      flex-grow: 1;
-      padding: 60px 40px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      font-family: var(--font-heading);
-      font-size: 1.8rem;
-      padding-bottom: 12px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 24px;
-    }
-
-    p {
-      margin-bottom: 1em;
-    }
-
-    /* Timeline Section */
-    .timeline {
-        list-style: none;
-        padding-left: 20px;
-        border-left: 2px solid var(--border);
-    }
-    .timeline li {
-        position: relative;
-        padding-bottom: 20px;
-    }
-    .timeline li::before {
-        content: '';
-        position: absolute;
-        left: -27px;
-        top: 5px;
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background-color: var(--accent);
-        border: 2px solid var(--bg);
-    }
-    .timeline-date {
-        font-weight: 600;
-        color: var(--text-primary);
-        display: block;
-        margin-bottom: 4px;
-    }
-    .timeline-event {
-        color: var(--text-secondary);
-    }
-
-    /* Research Interests */
-    .interests-list {
-        list-style: none;
-    }
-    .interests-list li {
-        margin-bottom: 8px;
-        padding-left: 24px;
-        position: relative;
-    }
-    .interests-list li::before {
-        content: '✓';
-        position: absolute;
-        left: 0;
-        color: var(--accent);
-        font-weight: 600;
-    }
-
-    /* Publication & Project Items */
-    .item {
-        margin-bottom: 24px;
-    }
-    .item details {
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        background-color: var(--bg-sidebar);
-    }
-    .item summary {
-        padding: 20px;
-        cursor: pointer;
-        outline: none;
-        font-weight: 600;
-    }
-    .item summary::-webkit-details-marker {
-        display: none; /* Hide default marker */
-    }
-    .item-title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        display: block;
-    }
-    .item-meta {
-        font-size: 0.9rem;
-        color: var(--text-secondary);
-        margin-top: 4px;
-    }
-    .item-details-content {
-        padding: 0 20px 20px 20px;
-        border-top: 1px solid var(--border);
-        background-color: var(--bg-details);
-    }
-    .item-details-content p {
-        font-size: 0.95rem;
-        padding-top: 15px;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-        .wrapper {
-            flex-direction: column;
-        }
-        .sidebar {
-            width: 100%;
-            height: auto;
-            position: static;
-            border-right: none;
-            border-bottom: 1px solid var(--border);
-        }
-        .content {
-            padding: 40px 20px;
-        }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="wrapper">
     <aside class="sidebar">
-      <div class="profile-photo"></div>
+      <!-- You can replace this with a real image -->
+      <img src="gdp.png" alt="Muhammad Haseeb" class="profile-photo">
       <h1 class="sidebar-name">Muhammad Haseeb</h1>
-      <div class="sidebar-title">Machine Learning Researcher</div>
+      <div class="sidebar-title">Machine Learning Engineer | CS Undergrad</div>
       <div class="sidebar-affiliation">Lahore University of Management Sciences</div>
 
       <ul class="sidebar-links">
         <li><a href="mailto:haseeb099m@gmail.com"><i class="icon fas fa-envelope"></i> Email</a></li>
         <li><a href="https://github.com/ha405" target="_blank"><i class="icon fab fa-github"></i> GitHub</a></li>
         <li><a href="https://linkedin.com/in/muhammad-haseeb" target="_blank"><i class="icon fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="#"><i class="icon fas fa-file-pdf"></i> Download CV</a></li>
+        <li><a href="cv.pdf"><i class="icon fas fa-file-pdf"></i> Download CV</a></li>
       </ul>
     </aside>
 
@@ -254,7 +32,7 @@
       <section id="about">
         <h2>About Me</h2>
         <p>
-          I am a final-year Computer Science undergraduate at LUMS, graduating in 2026. My research focuses on making large-scale neural networks practical for real-world, resource-constrained environments. I build and analyze algorithms for model compression (pruning, quantization) and domain generalization, with a core interest in understanding *how* these methods alter a model's internal representations to achieve efficiency and robustness.
+          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I research on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits which helps my understanding of the problem posed.
         </p>
       </section>
 
@@ -263,11 +41,11 @@
         <ul class="timeline">
           <li>
             <span class="timeline-date">Jan 2025 - Present</span>
-            <span class="timeline-event">Started as a Research Assistant at CITY, LUMS, focusing on contrastive pruning and domain generalization.</span>
+            <span class="timeline-event">Leading projects in Interpretability, Domain Generalization, and Compression at CITY, LUMS.</span>
           </li>
           <li>
             <span class="timeline-date">Sep 2025 - Dec 2025</span>
-            <span class="timeline-event">Served as a Teaching Assistant for CS436: Computer Vision.</span>
+            <span class="timeline-event">Served as Teaching Assistant for CS436: Computer Vision, mentoring 80 students in Programming Assignment and Course Project.</span>
           </li>
           <li>
             <span class="timeline-date">May 2025 - Aug 2025</span>
@@ -275,7 +53,7 @@
           </li>
           <li>
             <span class="timeline-date">Jan 2025 - Aug 2025</span>
-            <span class="timeline-event">Conducted research on quantization and computer vision at the CV & Graphics Lab, LUMS.</span>
+            <span class="timeline-event">Developed a GPTQ inspired quantization and ViT based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
           </li>
         </ul>
       </section>
@@ -283,9 +61,9 @@
       <section id="interests">
         <h2>Research Interests</h2>
         <ul class="interests-list">
-            <li><strong>Model Compression:</strong> Pruning and quantization methods to reduce the computational and memory footprint of neural networks without loss in performance.</li>
-            <li><strong>Domain Generalization:</strong> Adapting models to distribution shifts by identifying and preserving sparse, domain-invariant subnetworks.</li>
-            <li><strong>Mechanistic Interpretability:</strong> Analyzing internal circuit evolution to understand phenomena like representational collapse in compressed or federated models.</li>
+            <li><strong>Model Compression:</strong> Researching pruning and quantization methods to reduce the computational and memory footprint of neural networks while preserving performance.</li>
+            <li><strong>Domain Generalization:</strong> Developing methods that adapt models to distribution shifts by identifying and preserving sparse, domain-invariant subnetworks.</li>
+            <li><strong>Mechanistic Interpretability:</strong> Analyzing internal circuit evolution to understand phenomena like representational collapse in federated learning.</li>
         </ul>
       </section>
 
@@ -298,7 +76,7 @@
               <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir. <em>(Submitted to AAAI 2025)</em></div>
             </summary>
             <div class="item-details-content">
-              <p>In this work, I co-developed a framework that prevents representational collapse in networks pruned up to 99% sparsity. My primary contribution was engineering a multi-objective loss function that aligns the sparse network's embeddings with three distinct references: the original pretrained weights, the fine-tuned dense model, and historical snapshots of the network itself during training. I personally validated this framework's effectiveness across CNNs, Vision Transformers, and Language Models, showing that our method maintains accuracy comparable to the original dense model where other techniques fail.</p>
+              <p>As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented the multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity. </p>
             </div>
           </details>
         </div>
@@ -313,7 +91,7 @@
                 <div class="item-meta">Role: Project Lead | CITY, LUMS</div>
             </summary>
             <div class="item-details-content">
-                <p>I developed a novel framework that uses learnable visual queries to improve a model's out-of-distribution performance. By training these queries with a group relative optimization objective, I forced the model to learn domain-invariant features. My implementation achieved a 3% accuracy gain on the PACS dataset compared to the standard empirical risk minimization baseline. I am now extending this by designing a pruning methodology to physically remove domain-specific circuits from the network.</p>
+                <p>Developed a framework using learnable visual queries to improve out-of-distribution performance. By training these queries with a group relative optimization objective, I guided the model to learn domain-invariant features. My implementation <strong>achieved a 3% accuracy gain</strong> on the PACS dataset over the ERM baseline. I am now extending this work by designing a pruning methodology to physically remove domain-specific circuits from the network.</p>
             </div>
           </details>
         </div>
@@ -324,7 +102,7 @@
                 <div class="item-meta">Role: Project Lead | CV & Graphics Lab, LUMS</div>
             </summary>
             <div class="item-details-content">
-                <p>I built an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical contribution was to combine the standard GPTQ Hessian (for reconstruction loss) with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's output distribution, and my implementation achieved a 30% reduction in perplexity over the baseline GPTQ at equivalent bit-widths.</p>
+                <p>Developed an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical innovation was combining the standard GPTQ Hessian with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's outputs, and my implementation <strong>achieved a 30% reduction in perplexity</strong> over the baseline GPTQ at equivalent bit-widths.</p>
             </div>
           </details>
         </div>
@@ -335,7 +113,7 @@
                 <div class="item-meta">Role: Contributor | CV & Graphics Lab, LUMS</div>
             </summary>
             <div class="item-details-content">
-                <p>I designed a hybrid method for camera calibration that combines a Transformer front-end with geometric post-processing. I trained a Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I developed the algorithm to derive the camera's intrinsic (K) and extrinsic (R, t) parameters while enforcing rotation matrix orthonormality, recovering the full projection matrix from a single image.</p>
+                <p>Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I took a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong>developed the algorithm to derive the camera's intrinsic (K) and extrinsic (R, t) parameters</strong> while enforcing rotation matrix orthonormality, enabling recovery of the full projection matrix from a single image.</p>
             </div>
           </details>
         </div>
@@ -347,10 +125,10 @@
           <details>
             <summary>
                 <span class="item-title">Contributor, pytorch-image-models (timm)</span>
-                <div class="item-meta">Role: Added core evaluation metrics</div>
+                <div class="item-meta">Role: Core Evaluation Metrics</div>
             </summary>
             <div class="item-details-content">
-                <p>I implemented F1, precision, and recall metrics into the core evaluation loop of the popular `timm` library. My contribution specifically handles distributed training environments, correctly aggregating metrics across multiple GPUs using `torch.distributed` primitives to ensure accuracy even with uneven batch sizes.</p>
+                <p>Implemented F1, precision, and recall metrics into the core evaluation loop of the popular `timm` library. My contribution specifically handles distributed training environments by correctly aggregating metrics across multiple GPUs using `torch.distributed` primitives, ensuring accuracy even with uneven batch sizes.</p>
             </div>
           </details>
         </div>
@@ -358,10 +136,10 @@
           <details>
             <summary>
                 <span class="item-title">Contributor, adapters (PEFT Library)</span>
-                <div class="item-meta">Role: Enabled PEFT support for Group Query Attention</div>
+                <div class="item-meta">Role: GQA Support for Modern LLMs</div>
             </summary>
             <div class="item-details-content">
-                <p>I extended the `adapters` library to support Parameter-Efficient Fine-Tuning (PEFT) for models that use Group Query Attention (GQA), such as Llama-2 and Mistral. In doing so, I identified and fixed a critical tensor shape mismatch bug that was preventing users from applying LoRA to these newer, memory-efficient architectures.</p>
+                <p>Extended the `adapters` library to support Parameter-Efficient Fine-Tuning (PEFT) for models using Group Query Attention (GQA), such as Llama-2 and Mistral. As part of this, I identified and fixed a critical tensor shape mismatch bug, unblocking PEFT for these newer, memory-efficient architectures.</p>
             </div>
           </details>
         </div>
