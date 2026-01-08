@@ -14,7 +14,6 @@
 <body>
   <div class="wrapper">
     <aside class="sidebar">
-      <!-- You can replace this with a real image -->
       <img src="gdp.png" alt="Muhammad Haseeb" class="profile-photo">
       <h1 class="sidebar-name">Muhammad Haseeb</h1>
       <div class="sidebar-title">Machine Learning Engineer | CS Undergrad</div>
@@ -24,7 +23,7 @@
         <li><a href="mailto:haseeb099m@gmail.com"><i class="icon fas fa-envelope"></i> Email</a></li>
         <li><a href="https://github.com/ha405" target="_blank"><i class="icon fab fa-github"></i> GitHub</a></li>
         <li><a href="https://linkedin.com/in/muhammad-haseeb" target="_blank"><i class="icon fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="cv.pdf"><i class="icon fas fa-file-pdf"></i> Download CV</a></li>
+        <li><a href="cv.pdf" class="cv-button"><i class="icon fas fa-file-pdf"></i> Download CV</a></li>
       </ul>
     </aside>
 
@@ -32,7 +31,7 @@
       <section id="about">
         <h2>About Me</h2>
         <p>
-          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I research on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits which helps my understanding of the problem posed.
+          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I develop novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits, which deepens my understanding of the problem posed.
         </p>
       </section>
 
@@ -53,7 +52,7 @@
           </li>
           <li>
             <span class="timeline-date">Jan 2025 - Aug 2025</span>
-            <span class="timeline-event">Developed a GPTQ inspired quantization and ViT based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
+            <span class="timeline-event">Developed a GPTQ-inspired quantization and ViT-based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
           </li>
         </ul>
       </section>
@@ -76,7 +75,7 @@
               <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir. <em>(Submitted to AAAI 2025)</em></div>
             </summary>
             <div class="item-details-content">
-              <p>As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented the multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity. </p>
+              <p>As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented the multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity.</p>
             </div>
           </details>
         </div>
@@ -145,7 +144,41 @@
         </div>
       </section>
 
+      <!-- Fun Fact Section -->
+      <section id="fun-facts">
+        <h2>Just for Fun</h2>
+        <div class="fun-fact-container">
+          <div id="fact-display" class="fun-fact-text">
+            Click the button for a random fact about my life as a researcher!
+          </div>
+          <button class="fun-fact-btn" onclick="newFact()">Tell me something else</button>
+        </div>
+      </section>
+
     </main>
   </div>
+
+  <script>
+    const facts = [
+      "I believe every problem can be solved with enough GPU memory... or smarter quantization.",
+      "My favorite debugging tool is still a good night's sleep.",
+      "I spend 90% of my time debugging tensor dimension mismatches.",
+      "I'm learning Rust because C++ gave me trust issues.",
+      "I once optimized a model so much it forgot what a 'cat' was. Representational collapse is real!"
+    ];
+
+    function newFact() {
+      const display = document.getElementById('fact-display');
+      const randomFact = facts[Math.floor(Math.random() * facts.length)];
+      
+      // Simple fade animation
+      display.style.opacity = 0;
+      setTimeout(() => {
+        display.innerText = `"${randomFact}"`;
+        display.style.opacity = 1;
+      }, 200);
+    }
+  </script>
+
 </body>
 </html>

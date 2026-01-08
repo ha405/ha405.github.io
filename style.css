@@ -85,15 +85,31 @@ body {
   align-items: center;
   gap: 12px;
   transition: color 0.2s ease;
+  padding: 8px;
+  border-radius: 6px;
 }
 
 .sidebar-links a:hover {
   color: var(--accent);
+  background-color: var(--bg-details);
 }
 
 .sidebar-links .icon {
     width: 20px;
     text-align: center;
+}
+
+.cv-button {
+    background-color: var(--accent);
+    color: white;
+    font-weight: 600;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.cv-button:hover {
+    background-color: #1d4ed8;
+    color: white;
 }
 
 /* --- Main Content --- */
@@ -127,6 +143,10 @@ p {
 .timeline li {
     position: relative;
     padding-bottom: 20px;
+    transition: transform 0.2s ease;
+}
+.timeline li:hover {
+    transform: translateX(5px);
 }
 .timeline li:last-child {
     padding-bottom: 0;
@@ -160,6 +180,10 @@ p {
     margin-bottom: 8px;
     padding-left: 24px;
     position: relative;
+    transition: transform 0.2s ease;
+}
+.interests-list li:hover {
+    transform: translateX(5px);
 }
 .interests-list li::before {
     content: '✓';
@@ -230,6 +254,39 @@ p {
 .item-details-content p {
     font-size: 0.95rem;
     padding-top: 15px;
+}
+
+/* --- Fun Fact Section --- */
+.fun-fact-container {
+    text-align: center;
+    padding: 30px;
+    background: var(--bg-details);
+    border: 1px dashed var(--border);
+    border-radius: 8px;
+}
+.fun-fact-text {
+    font-style: italic;
+    color: var(--text-secondary);
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+.fun-fact-btn {
+    background-color: var(--text-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    margin-top: 16px;
+}
+.fun-fact-btn:hover {
+    background-color: var(--accent);
 }
 
 /* Responsive Design */
