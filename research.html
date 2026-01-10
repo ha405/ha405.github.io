@@ -41,36 +41,36 @@
         <h2>Research Projects</h2>
         <div class="item" id="project-dg">
             <span class="item-title">Domain Generalization</span>
-            <div class="item-meta">Role: Project Lead | CITY, LUMS</div>
+            <div class="item-meta">Advisors:Dr. Muhammad Tahir, CITY at LUMS</div>
             <p class="item-description">
                 Developed a framework using learnable visual queries to improve out-of-distribution performance. By training these queries with a group relative optimization objective, I guided the model to learn domain-invariant features. My implementation <strong>achieved a 3% accuracy gain</strong> on the PACS dataset over the ERM baseline. I am now extending this work by using Mechanistic Interpretability as a tool to design a methodology to physically remove domain-specific circuits from the network.
             </p>
         </div>
+        <!-- ==== NEW PROJECT ADDED HERE ==== -->
         <div class="item" id="project-fedmi">
             <span class="item-title">Mechanistic Analysis of Circuit Preservation in Federated Learning</span>
-            <div class="item-meta">Role: Project Lead | CITY, LUMS | <a href="https://github.com/ha405/FedMI" target="_blank" rel="noopener noreferrer">GitHub</a> | <em>Preprint coming soon</em></div>
+            <div class="item-meta">Advisors:Dr. Muhammad Tahir, CITY at LUMS</div>
             <p class="item-description">
                 I led a project investigating the internal failure modes of Federated Learning (FL) on Non-IID data through the lens of Mechanistic Interpretability. We hypothesized that performance degradation is caused by 'circuit collapse'—the destructive interference of functional sub-networks from conflicting client updates. By training and analyzing sparse, interpretable models in an FL simulation, we provided the first mechanistic evidence that Non-IID data causes local circuits to diverge and collapse in the global model, reframing the statistical problem of 'weight divergence' as an observable structural failure.
             </p>
         </div>
-         <!-- ==== ID ADDED HERE ==== -->
-        <div class="item" id="project-diffusion">
+         <div class="item" id="project-diffusion">
             <span class="item-title">Quantization of Diffusion Models</span>
-            <div class="item-meta">Role: Project Lead | CITY & 10x Engineers, LUMS</div>
+            <div class="item-meta">Advisors:Dr. Zubair Khalid,, CITY at LUMS & 10x Engineers</div>
             <p class="item-description">
                 To address the varying numerical precision required at different timesteps of the diffusion process, I am developing a method for timestep-aware quantization. This involves training an MLP on the signal-to-noise ratio at a timestep to predict optimal quantization parameters based on the noise schedule. My methodology beats the vanilla timestep based MLP by 55 percent.
             </p>
         </div>
-        <div class="item" id="project-klawq">
+        <div class="item">
             <span class="item-title">KL-Aware Quantization (KLAWQ)</span>
-            <div class="item-meta">Role: Project Lead | CV & Graphics Lab, LUMS</div>
+            <div class="item-meta">Advisors:Dr. Murtaza Taj, CVGL</div>
             <p class="item-description">
                 Developed an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical innovation was combining the standard GPTQ Hessian with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's outputs, and my implementation <strong>achieved a 30% reduction in perplexity</strong> over the baseline GPTQ at equivalent bit-widths.
             </p>
         </div>
         <div class="item">
             <span class="item-title">Single-Image Camera Calibration (SOFI-UGCL)</span>
-            <div class="item-meta">Role: Contributor | CV & Graphics Lab, LUMS</div>
+            <div class="item-meta">Advisors:Dr. Murtaza Taj, CVGL</div>
             <p class="item-description">
                 Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I took a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong> recovered camera's intrinsic (K) and extrinsic (R, t) parameters</strong> by enforcing mathematical constrains over the loss function, enabling recovery of the full projection matrix from a single image.
             </p>
@@ -88,7 +88,7 @@
         </div>
         <div class="item">
             <span class="item-title">Teaching Assistant, CS436: Computer Vision</span>
-            <div class="item-meta">Lahore University of Management Sciences</div>
+            <div class="item-meta">Lahore University of Management Sciences, Dr. Murtaza Taj</div>
             <p class="item-description">
                 As a TA for the core Computer Vision course, I designed assignments on PyTorch transfer learning and building real-time, multithreaded object detection pipelines in C++/OpenCV. I also supervised and mentored 40 student groups (80+ students) for their final course project, which involved creating a virtual tour application using Structure from Motion (SfM) techniques.
             </p>
@@ -99,14 +99,14 @@
         <h2>Open Source Contributions</h2>
         <div class="item">
             <span class="item-title">Contributor, pytorch-image-models (timm)</span>
-            <div class="item-meta">Role: Core Evaluation Metrics</div>
+            <div class="item-meta">Core Evaluation Metrics</div>
             <p class="item-description">
                 Implemented F1, precision, and recall metrics into the core evaluation loop of the popular `timm` library. My contribution specifically handles distributed training environments by correctly aggregating metrics across multiple GPUs using `torch.distributed` primitives, ensuring accuracy even with uneven batch sizes.
             </p>
         </div>
         <div class="item">
             <span class="item-title">Contributor, adapters (PEFT Library)</span>
-            <div class="item-meta">Role: GQA Support for Modern LLMs</div>
+            <div class="item-meta">GQA Support for Modern LLMs</div>
             <p class="item-description">
                 Extended the `adapters` library to support Parameter-Efficient Fine-Tuning (PEFT) for models using Group Query Attention (GQA), such as Llama-2 and Mistral. As part of this, I identified and fixed a critical tensor shape mismatch bug, unblocking PEFT for these newer, memory-efficient architectures.
             </p>
