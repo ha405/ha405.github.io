@@ -4,267 +4,102 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Haseeb | ML Researcher</title>
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <aside class="sidebar">
-      <img src="gdp.png" alt="Muhammad Haseeb" class="profile-photo">
-      <h1 class="sidebar-name">Muhammad Haseeb</h1>
-      <div class="sidebar-title">Machine Learning Engineer | CS Undergrad</div>
-      <div class="sidebar-affiliation">Lahore University of Management Sciences</div>
 
-      <ul class="sidebar-links">
-        <li><a href="mailto:haseeb099m@gmail.com"><i class="icon fas fa-envelope"></i> Email</a></li>
-        <li><a href="https://github.com/ha405" target="_blank"><i class="icon fab fa-github"></i> GitHub</a></li>
-        <li><a href="https://linkedin.com/in/muhammad-haseeb" target="_blank"><i class="icon fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a href="cv.pdf" class="cv-button"><i class="icon fas fa-file-pdf"></i> Download CV</a></li>
+  <header class="main-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research & Projects</a></li>
       </ul>
-    </aside>
+    </nav>
+  </header>
 
-    <main class="content">
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          I am a final-year Computer Science undergraduate at LUMS (exp. 2026). My research is focused on developing practical and efficient large-scale neural networks. I research on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my research is using <strong>mechanistic interpretability</strong> to analyze how these techniques fundamentally alter a model's internal circuits which helps my understanding of the problem posed.
-        </p>
-      </section>
+  <div class="container">
+    <section class="intro">
+      <img src="dp.png" alt="Muhammad Haseeb" class="intro-photo">
+      <div class="intro-text">
+          <h1 class="intro-name">Muhammad Haseeb</h1>
+          <p class="intro-subtitle">Research Assistant | Machine Learning Engineer</p>
+          <p class="intro-keywords">Model Compression | Domain Generalization | Mechanistic Interpretability</p>
+      </div>
+    </section>
 
-      <section id="timeline">
-        <h2>Timeline</h2>
-        <ul class="timeline">
-          <li>
-            <span class="timeline-date">Jan 2025 - Present</span>
-            <span class="timeline-event">Leading projects in Interpretability, Domain Generalization, and Compression at CITY, LUMS.</span>
-          </li>
-          <li>
-            <span class="timeline-date">Sep 2025 - Dec 2025</span>
-            <span class="timeline-event">Served as Teaching Assistant for CS436: Computer Vision, mentoring 80 students in Programming Assignment and Course Project.</span>
-          </li>
-          <li>
-            <span class="timeline-date">May 2025 - Aug 2025</span>
-            <span class="timeline-event">Completed a research internship at the University of Illinois Urbana-Champaign (UIUC).</span>
-          </li>
-          <li>
-            <span class="timeline-date">Jan 2025 - Aug 2025</span>
-            <span class="timeline-event">Developed a GPTQ inspired quantization and ViT based camera calibration method at the Computer Vision & Graphics Lab, LUMS.</span>
-          </li>
-        </ul>
-      </section>
+    <div class="main-layout">
+      <main class="main-column">
+        <section id="about">
+          <p>
+            Hi, I’m Haseeb, a final-year CS undergraduate at LUMS (exp. 2026) working in domains of efficient, generalizable and interpretable ML. My research focuses on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my work is using mechanistic interpretability to analyze how these techniques fundamentally alter a model's internal circuits, which helps deepen my understanding of the problem posed.
+          </p>
+          <p>
+            I currently work as a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer"><strong>Centre for Urban Informatics, Technology and Policy (CITY)</strong></a> at LUMS under the supervision of <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Muhammad Tahir</a></strong> and <strong>Dr. Zubair Khalid</strong>. My projects here include the Backbone Contrastive Pruning <strong>(BaCP)</strong> framework to prevent representational collapse in extremely sparse networks. My senior project is on domain generalization where I am working to identify and remove domain specific circuits in models through the lens of Mechanistic Interpretability. I have also been associated with an external company <a href="https://10xengineers.ai/" target="_blank" rel="noopener noreferrer"><strong>10x Engineers</strong></a> for Quantization of Diffusion Models where I developed a method to train MLPs on per layer timestep stats to accurately predict quantization scale and zero-point.
+          </p>
+          <p>
+            Previously, I contributed to research at the <a href="https://www.researchgate.net/lab/CVGL-LUMS-Murtaza-Taj" target="_blank" rel="noopener noreferrer"><strong>Computer Vision & Graphics Lab</strong></a>, where I developed <strong>KLAWQ</strong>, a GPTQ-inspired quantization method beating, and engineered a Transformer-based system for single-image camera calibration. My experience extends to a research internship at the <strong>University of Illinois Urbana-Champaign (UIUC)</strong>, where I applied LLMs to automated software engineering challenges like debloating and code translation.
+          </p>
+          <p>
+            Beyond academia, my contract role as a Machine Learning Engineer at <strong>Innova Tech</strong> gave me hands-on experience in quantizing and deploying vision models on edge devices using ONNX and TensorRT. I am also an active open-source contributor to major ML libraries like timm and adapters. 
+          </p>
+        </section>
 
-      <section id="interests">
+        <section id="highlights">
+            <h2>Selected Research Highlights</h2>
+            <ul class="highlights-list">
+                <li>Contributed to the <a href="research.html#pub-bacp">BaCP framework</a>, engineering a multi-objective loss function to prevent representational collapse in networks at 99% sparsity.</li>
+                <!-- ==== UPDATED HIGHLIGHT HERE ==== -->
+                <li>Developed a novel <a href="research.html#project-diffusion">quantization method for Diffusion Models</a> that improves performance by 55% over baselines by predicting parameters from the signal-to-noise ratio.</li>
+                <li>Designed a <a href="research.html#project-dg">Domain Generalization framework</a> using learnable visual queries that yielded a 3% accuracy gain on the PACS benchmark.</li>
+                <li>Investigated the mechanistic causes of performance degradation in Federated Learning, proposing a new "circuit collapse" hypothesis in <a href="research.html#project-fedmi">FedMI</a>.</li>
+            </ul>
+        </section>
+      </main>
+
+      <aside class="sidebar-column">
+        <div class="news-box">
+            <h3>Recent News</h3>
+            <ul>
+                <li>
+                    <span class="news-date">Oct 2025</span>
+                    Concluded contract Machine Learning Engineer role at Innova Tech, focused on edge deployment and model optimization.
+                </li>
+                <li>
+                    <span class="news-date">Sep 2025</span>
+                    Appointed as Teaching Assistant for CS436: Computer Vision, mentoring 80 students.
+                </li>
+                <li>
+                    <span class="news-date">Aug 2025</span>
+                    Completed a successful research internship at the University of Illinois Urbana-Champaign.
+                </li>
+                <li>
+                    <span class="news-date">Jan 2025</span>
+                    Started research CITY, LUMS on interpretability, compression, and domain generalization. Took lead of projects in July 2025.
+                </li>
+                <li>
+                    <span class="news-date">Jan 2025</span>
+                    Initiated research at the CV & Graphics Lab on quantization and camera calibration.
+                </li>
+            </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section id="interests" class="highlight-section">
         <h2>Research Interests</h2>
         <ul class="interests-list">
-            <li><strong>Model Compression:</strong> Researching pruning and quantization methods to reduce the computational and memory footprint of neural networks while preserving performance.</li>
-            <li><strong>Domain Generalization:</strong> Developing methods that adapt models to distribution shifts by identifying and preserving sparse, domain-invariant subnetworks.</li>
-            <li><strong>Mechanistic Interpretability:</strong> Analyzing internal circuit evolution to understand phenomena like representational collapse in federated learning.</li>
+            <li>Model Compression (Pruning & Quantization)</li>
+            <li>Domain Generalization & OOD Robustness</li>
+            <li>Mechanistic Interpretability</li>
+            <li>AI on Edge</li>
+            <li>Computer Vision</li>
         </ul>
-      </section>
+    </section>
 
-      <section id="publications">
-        <h2>Publications</h2>
-        <div class="item">
-          <details>
-            <summary>
-              <span class="item-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</span>
-              <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir. <em>(Submitted to AAAI 2025)</em></div>
-            </summary>
-            <div class="item-details-content">
-              <p>As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented the multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity.</p>
-            </div>
-          </details>
-        </div>
-      </section>
+    <footer class="page-footer">
+        <p>&copy; 2026 Muhammad Haseeb. Last Updated: January 2026.</p>
+    </footer>
 
-      <section id="projects">
-        <h2>Research Projects</h2>
-        <div class="item">
-          <details>
-            <summary>
-                <span class="item-title">Domain Generalization via Visual Queries</span>
-                <div class="item-meta">Role: Project Lead | CITY, LUMS</div>
-            </summary>
-            <div class="item-details-content">
-                <p>Developed a framework using learnable visual queries to improve out-of-distribution performance. By training these queries with a group relative optimization objective, I guided the model to learn domain-invariant features. My implementation <strong>achieved a 3% accuracy gain</strong> on the PACS dataset over the ERM baseline. I am now extending this work by designing a pruning methodology to physically remove domain-specific circuits from the network.</p>
-            </div>
-          </details>
-        </div>
-        <div class="item">
-          <details>
-            <summary>
-                <span class="item-title">KL-Aware Quantization (KLAWQ)</span>
-                <div class="item-meta">Role: Project Lead | CV & Graphics Lab, LUMS</div>
-            </summary>
-            <div class="item-details-content">
-                <p>Developed an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical innovation was combining the standard GPTQ Hessian with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's outputs, and my implementation <strong>achieved a 30% reduction in perplexity</strong> over the baseline GPTQ at equivalent bit-widths.</p>
-            </div>
-          </details>
-        </div>
-        <div class="item">
-          <details>
-            <summary>
-                <span class="item-title">Single-Image Camera Calibration (SOFI-UGCL)</span>
-                <div class="item-meta">Role: Contributor | CV & Graphics Lab, LUMS</div>
-            </summary>
-            <div class="item-details-content">
-                <p>Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I took a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong>developed the algorithm to derive the camera's intrinsic (K) and extrinsic (R, t) parameters</strong> while enforcing rotation matrix orthonormality, enabling recovery of the full projection matrix from a single image.</p>
-            </div>
-          </details>
-        </div>
-      </section>
-      
-      <section id="opensource">
-        <h2>Open Source Contributions</h2>
-        <div class="item">
-          <details>
-            <summary>
-                <span class="item-title">Contributor, pytorch-image-models (timm)</span>
-                <div class="item-meta">Role: Core Evaluation Metrics</div>
-            </summary>
-            <div class="item-details-content">
-                <p>Implemented F1, precision, and recall metrics into the core evaluation loop of the popular `timm` library. My contribution specifically handles distributed training environments by correctly aggregating metrics across multiple GPUs using `torch.distributed` primitives, ensuring accuracy even with uneven batch sizes.</p>
-            </div>
-          </details>
-        </div>
-        <div class="item">
-          <details>
-            <summary>
-                <span class="item-title">Contributor, adapters (PEFT Library)</span>
-                <div class="item-meta">Role: GQA Support for Modern LLMs</div>
-            </summary>
-            <div class="item-details-content">
-                <p>Extended the `adapters` library to support Parameter-Efficient Fine-Tuning (PEFT) for models using Group Query Attention (GQA), such as Llama-2 and Mistral. As part of this, I identified and fixed a critical tensor shape mismatch bug, unblocking PEFT for these newer, memory-efficient architectures.</p>
-            </div>
-          </details>
-        </div>
-      </section>
-
-      <footer class="page-footer">
-        <p class="copyright">&copy; 2024 Muhammad Haseeb</p>
-        <div id="quiz-container">
-            <h3 id="question-text">Prime Messi or Prime Ronaldo?</h3>
-            <div id="options-container">
-                <button id="option-a-btn" class="quiz-btn"></button>
-                <button id="option-b-btn" class="quiz-btn"></button>
-            </div>
-            <p id="quiz-feedback"></p>
-            <p id="quiz-score"></p>
-            <button id="play-again-btn" class="quiz-btn" style="display: none;">Play Again</button>
-        </div>
-      </footer>
-    </main>
   </div>
-
-  <script>
-    const allQuestions = [
-        { question: "Prime Messi or Prime Ronaldo?", options: ["Prime Messi", "Prime Ronaldo"], answer: "Prime Messi" },
-        { question: "PyTorch or TensorFlow?", options: ["PyTorch", "TensorFlow"], answer: "PyTorch" },
-        { question: "Levi or Mikasa?", options: ["Levi", "Mikasa"], answer: "Levi" },
-        { question: "Test cricket or T20?", options: ["Test cricket", "T20"], answer: "Test cricket" },
-        { question: "Anime openings or endings?", options: ["Anime openings", "Anime endings"], answer: "Anime openings" },
-        { question: "Manual rev-matching or paddle shifters?", options: ["Manual rev-matching", "Paddle shifters"], answer: "Manual rev-matching" },
-        { question: "Tiki-taka or counter-attack?", options: ["Tiki-taka", "Counter-attack"], answer: "Counter-attack" },
-        { question: "Derby days or cup finals?", options: ["Derby days", "Cup finals"], answer: "Derby days" },
-        { question: "Naturally aspirated or turbocharged?", options: ["Naturally aspirated", "Turbocharged"], answer: "Naturally aspirated" },
-        { question: "Long anime arcs or short seasons?", options: ["Long anime arcs", "Short seasons"], answer: "Long anime arcs" },
-        { question: "Through balls or long shots?", options: ["Through balls", "Long shots"], answer: "Through balls" },
-        { question: "Leg spin or left-arm fast?", options: ["Leg spin", "Left-arm fast"], answer: "Left-arm fast" }
-    ];
-
-    let currentQuestions = [];
-    let currentQuestionIndex = 0;
-    let friendshipPoints = 0;
-
-    const questionText = document.getElementById('question-text');
-    const optionABtn = document.getElementById('option-a-btn');
-    const optionBBtn = document.getElementById('option-b-btn');
-    const optionsContainer = document.getElementById('options-container');
-    const quizFeedback = document.getElementById('quiz-feedback');
-    const quizScore = document.getElementById('quiz-score');
-    const playAgainBtn = document.getElementById('play-again-btn');
-
-    function shuffleArray(array) {
-        for (let i = array.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [array[i], array[j]] = [array[j], array[i]];
-        }
-        return array;
-    }
-
-    function startQuiz() {
-        currentQuestions = shuffleArray([...allQuestions]).slice(0, 5);
-        currentQuestionIndex = 0;
-        friendshipPoints = 0;
-        
-        questionText.style.display = 'block';
-        optionsContainer.style.display = 'flex';
-        playAgainBtn.style.display = 'none';
-        quizFeedback.textContent = '';
-        updateScore();
-        displayQuestion();
-    }
-
-    function displayQuestion() {
-        if (currentQuestionIndex >= 5) {
-            endQuiz();
-            return;
-        }
-
-        const question = currentQuestions[currentQuestionIndex];
-        questionText.textContent = question.question;
-        optionABtn.textContent = question.options[0];
-        optionBBtn.textContent = question.options[1];
-        
-        optionABtn.disabled = false;
-        optionBBtn.disabled = false;
-        quizFeedback.textContent = '';
-        quizFeedback.className = '';
-    }
-
-    function handleAnswer(userChoice) {
-        optionABtn.disabled = true;
-        optionBBtn.disabled = true;
-
-        const correctChoice = currentQuestions[currentQuestionIndex].answer;
-        if (userChoice === correctChoice) {
-            friendshipPoints++;
-            quizFeedback.textContent = "Great minds think alike! +1 Friendship Point.";
-            quizFeedback.className = 'feedback-correct';
-        } else {
-            quizFeedback.textContent = `Good choice, but I prefer ${correctChoice}.`;
-            quizFeedback.className = 'feedback-incorrect';
-        }
-        updateScore();
-        
-        setTimeout(() => {
-            currentQuestionIndex++;
-            displayQuestion();
-        }, 2000);
-    }
-
-    function endQuiz() {
-        questionText.style.display = 'none';
-        optionsContainer.style.display = 'none';
-        quizFeedback.textContent = `Thanks for playing with me`;
-        quizFeedback.className = '';
-        playAgainBtn.style.display = 'block';
-    }
-
-    function updateScore() {
-        quizScore.textContent = `Friendship Points: ${friendshipPoints} / 5`;
-    }
-
-    optionABtn.addEventListener('click', () => handleAnswer(optionABtn.textContent));
-    optionBBtn.addEventListener('click', () => handleAnswer(optionBBtn.textContent));
-    playAgainBtn.addEventListener('click', startQuiz);
-
-    document.addEventListener('DOMContentLoaded', startQuiz);
-  </script>
-
 </body>
 </html>
