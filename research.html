@@ -15,8 +15,6 @@
         <li><a href="research.html" class="active">Research & Projects</a></li>
         <li><a href="#publications">Publications</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#opensource">Open Source</a></li>
       </ul>
     </nav>
   </header>
@@ -56,7 +54,7 @@
         </div>
          <div class="item" id="project-diffusion">
             <span class="item-title">Quantization of Diffusion Models</span>
-            <div class="item-meta">Advisors:Dr. Zubair Khalid,, CITY at LUMS & 10x Engineers</div>
+            <div class="item-meta">Advisors:Dr. Zubair Khalid, CITY at LUMS & 10x Engineers</div>
             <p class="item-description">
                 To address the varying numerical precision required at different timesteps of the diffusion process, I am developing a method for timestep-aware quantization. This involves training an MLP on the signal-to-noise ratio at a timestep to predict optimal quantization parameters based on the noise schedule. My methodology beats the vanilla timestep based MLP by 55 percent.
             </p>
@@ -73,42 +71,6 @@
             <div class="item-meta">Advisors:Dr. Murtaza Taj, CVGL</div>
             <p class="item-description">
                 Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I took a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong> recovered camera's intrinsic (K) and extrinsic (R, t) parameters</strong> by enforcing mathematical constrains over the loss function, enabling recovery of the full projection matrix from a single image.
-            </p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <h2>Experience & Teaching</h2>
-        <div class="item">
-            <span class="item-title">Machine Learning Engineer (Contract)</span>
-            <div class="item-meta">Innova Tech</div>
-            <p class="item-description">
-                As an MLE, I owned the optimization pipeline for an on-device object detection system. I led ONNX and TensorRT-based quantization experiments, reducing model memory footprints by approximately 40% while maintaining real-time inference. Additionally, I automated a large-scale data annotation pipeline, which improved dataset quality and resulted in a 4% accuracy uplift in validation.
-            </p>
-        </div>
-        <div class="item">
-            <span class="item-title">Teaching Assistant, CS436: Computer Vision</span>
-            <div class="item-meta">Lahore University of Management Sciences, Dr. Murtaza Taj</div>
-            <p class="item-description">
-                As a TA for the core Computer Vision course, I designed assignments on PyTorch transfer learning and building real-time, multithreaded object detection pipelines in C++/OpenCV. I also supervised and mentored 40 student groups (80+ students) for their final course project, which involved creating a virtual tour application using Structure from Motion (SfM) techniques.
-            </p>
-        </div>
-    </section>
-    
-    <section id="opensource">
-        <h2>Open Source Contributions</h2>
-        <div class="item">
-            <span class="item-title">Contributor, pytorch-image-models (timm)</span>
-            <div class="item-meta">Core Evaluation Metrics</div>
-            <p class="item-description">
-                Implemented F1, precision, and recall metrics into the core evaluation loop of the popular `timm` library. My contribution specifically handles distributed training environments by correctly aggregating metrics across multiple GPUs using `torch.distributed` primitives, ensuring accuracy even with uneven batch sizes.
-            </p>
-        </div>
-        <div class="item">
-            <span class="item-title">Contributor, adapters (PEFT Library)</span>
-            <div class="item-meta">GQA Support for Modern LLMs</div>
-            <p class="item-description">
-                Extended the `adapters` library to support Parameter-Efficient Fine-Tuning (PEFT) for models using Group Query Attention (GQA), such as Llama-2 and Mistral. As part of this, I identified and fixed a critical tensor shape mismatch bug, unblocking PEFT for these newer, memory-efficient architectures.
             </p>
         </div>
     </section>
