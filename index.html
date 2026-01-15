@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Haseeb | ML Researcher</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -17,79 +21,125 @@
     </nav>
   </header>
 
-  <div class="container">
-    <section class="intro">
-      <img src="dp.png" alt="Muhammad Haseeb" class="intro-photo">
-      <div class="intro-text">
-          <h1 class="intro-name">Muhammad Haseeb</h1>
-          <p class="intro-subtitle">Research Assistant | Machine Learning Engineer</p>
-          <p class="intro-keywords">Model Compression | Domain Generalization | Mechanistic Interpretability</p>
-      </div>
+  <div class="container grid-layout">
+    
+    <!-- LEFT COLUMN: Profile (Sticky) -->
+    <aside class="left-sidebar">
       
-      <!-- Decorative elements - no content, pure aesthetics -->
-      <div class="intro-decoration intro-decoration-1"></div>
-      <div class="intro-decoration intro-decoration-2"></div>
-    </section>
+      <!-- Decorative Elements -->
+      <div class="decoration-blob"></div>
+      <div class="decoration-shape"></div>
 
-    <div class="main-layout">
-      <main class="main-column">
-        <section id="about">
-          <p>
-            Hi, I'm Haseeb, a final-year CS undergraduate at LUMS (exp. 2026) working in domains of efficient, generalizable and interpretable ML. My research focuses on developing novel methods for <strong>model compression</strong> and <strong>domain generalization</strong>. A core theme of my work is using mechanistic interpretability to analyze how these techniques fundamentally alter a model's internal circuits, which helps deepen my understanding of the problem posed.
-          </p>
-          <p>
-            I currently work as a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer"><strong>Centre for Urban Informatics, Technology and Policy (CITY)</strong></a> at LUMS under the supervision of <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Muhammad Tahir</a></strong> and <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Zubair Khalid</strong></a>. My projects here include the Backbone Contrastive Pruning <strong>(BaCP)</strong> framework to prevent representational collapse in extremely sparse networks. I am also leading a project on domain generalization where I am working to identify and remove domain specific circuits in models through the lens of Mechanistic Interpretability. I have also been associated with an external company <a href="https://10xengineers.ai/" target="_blank" rel="noopener noreferrer"><strong>10x Engineers</strong></a> for Quantization of Diffusion Models where I developed a method to train MLPs on per layer timestep stats to accurately predict quantization scale and zero-point.
-          </p>
-          <p>
-            Previously, I contributed to research at the <a href="https://www.researchgate.net/lab/CVGL-LUMS-Murtaza-Taj" target="_blank" rel="noopener noreferrer"><strong>Computer Vision & Graphics Lab</strong></a>, where I developed <strong>KLAWQ</strong>, a GPTQ-inspired quantization method beating vanilla GPTQ by upto 30 percent in terms of perplexity. I also engineered a framework to Transformer-based model with mathematical constraints  for single-image camera calibration. I was also selected for the extremely competitive <strong>UIUC+ Summer Research Internship 2025</strong>. I worked with <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Darko Marinov</strong></a> on applying LLMs to automated software engineering challenges like debloating. I was also involved for a short period with <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer"><strong>Dr. Reyhaneh Jabbarvand</strong></a> on C-to-Rust code translation with LLMs.
-          </p>
-          <p>
-            Beyond academia, my contract role as a Machine Learning Engineer at <strong>Innova Tech</strong> gave me hands-on experience in quantizing and deploying vision models on edge devices using ONNX and TensorRT. I am also an active open-source contributor to major ML libraries like timm and adapters. 
-          </p>
-        </section>
-
-        <section id="highlights">
-            <h2>Selected Research Highlights</h2>
-            <ul class="highlights-list">
-                <li>Contributed to the <a href="research.html#pub-bacp">BaCP framework</a>, engineering a multi-objective loss function to prevent representational collapse in networks at 99% sparsity.</li>
-                <li>Developed a novel <a href="research.html#project-diffusion">quantization method for Diffusion Models</a> that improves performance by 55% over baselines by predicting parameters from the signal-to-noise ratio.</li>
-                <li>Designed a <a href="research.html#project-dg">Domain Generalization framework</a> using learnable visual queries that yielded a 3% accuracy gain on the PACS benchmark.</li>
-                <li>Investigated the mechanistic causes of performance degradation in Federated Learning, proposing a new "circuit collapse" hypothesis in <a href="research.html#project-fedmi">FedMI</a>.</li>
-            </ul>
-        </section>
-      </main>
-
-      <aside class="sidebar-column">
-        <div class="news-box">
-            <h3>Experience & Teaching</h3>
-            <ul>
-                <li>
-                    <strong>Machine Learning Engineer (Contract)</strong> at Innova Tech<br>
-                    Owned optimization pipeline for on-device object detection. Led ONNX/TensorRT quantization, reducing memory by 40% with real-time inference. Automated data annotation pipeline, improving accuracy by 4%.
-                </li>
-                <li>
-                    <strong>Teaching Assistant, CS436: Computer Vision</strong> at LUMS<br>
-                    Designed assignments on PyTorch transfer learning and C++/OpenCV pipelines. Mentored 40 groups (80+ students) on SfM-based virtual tour projects.
-                </li>
-            </ul>
+      <div class="profile-sticky">
+        <img src="dp.png" alt="Muhammad Haseeb" class="profile-photo">
+        
+        <h1 class="profile-name">Muhammad Haseeb</h1>
+        <div class="profile-titles">
+          <p>Research Assistant</p>
+          <p>Machine Learning Engineer</p>
         </div>
-        <div class="news-box">
-            <h3>Open Source Contributions</h3>
-            <ul>
-                <li>
-                    <strong>Contributor, pytorch-image-models (timm)</strong><br>
-                    Implemented F1, precision, recall metrics for distributed training using torch.distributed.
-                </li>
-                <li>
-                    <strong>Contributor, adapters (PEFT Library)</strong><br>
-                    Added GQA support for Llama-2/Mistral PEFT. Fixed tensor shape mismatch bug, enabling PEFT for modern LLMs.
-                </li>
-            </ul>
+        <div class="profile-keywords">
+          <span>Model Compression</span>
+          <span>Domain Generalization</span>
+          <span>Mechanistic Interpretability</span>
         </div>
-      </aside>
-    </div>
+        
+        <!-- NEW: Resume Download Button -->
+        <a href="res_jan.pdf" class="resume-button" target="_blank">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+          CV
+        </a>
 
-    <section id="interests" class="highlight-section">
+        <!-- Contact Info with Icons -->
+        <div class="profile-contact">
+          
+          <!-- Email 1 -->
+          <div class="contact-row">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:26100253@lums.edu.pk">26100253@lums.edu.pk</a>
+          </div>
+          
+          <!-- Email 2 -->
+          <div class="contact-row">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            <a href="mailto:haseeb099m@gmail.com">haseeb099m@gmail.com</a>
+          </div>
+
+          <!-- LinkedIn -->
+          <div class="contact-row">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank">LinkedIn</a>
+          </div>
+
+          <!-- GitHub -->
+          <div class="contact-row">
+            <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            <a href="https://github.com/ha405" target="_blank">GitHub</a>
+          </div>
+
+        </div>
+
+      </div>
+    </aside>
+
+    <!-- RIGHT COLUMN: Main Content -->
+    <main class="main-content">
+      
+      <!-- Bio Section -->
+      <section id="about">
+        <p>
+          Hi, I'm Haseeb, a final-year CS undergraduate at LUMS (exp. 2026) working in efficient, generalizable, and interpretable machine learning. My research focuses on model compression and domain generalization, with an emphasis on understanding failure modes in modern neural networks and designing more robust learning systems.
+        </p>
+
+        <p>
+          I currently work as a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer">Centre for Urban Informatics, Technology and Policy (CITY)</a> at LUMS under <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Muhammad Tahir</a> and <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Zubair Khalid</a>. My work includes the Backbone Contrastive Pruning <strong>(BaCP)</strong> framework to mitigate representational collapse in highly sparse networks. My core focus is using mechanistic interpretability to analyze failure modes in distributed and domain-shift settings. This involves my work on reframing weight divergence phenomena in Federated Learning as "circuit collapse". I am also researching on decomposing models into domain-invariant and domain-specific circuits to better understand and address performance degradation under distribution shift.
+        </p>
+        <p>
+          I have also been associated with the external company <a href="https://10xengineers.ai/" target="_blank" rel="noopener noreferrer">10x Engineers</a> on quantization of diffusion models, where I developed a method for training lightweight MLPs on per-layer timestep statistics to predict quantization scale and zero-point.
+        </p>
+
+        <p>
+          Previously, I contributed to research at the <a href="https://www.researchgate.net/lab/CVGL-LUMS-Murtaza-Taj" target="_blank" rel="noopener noreferrer">Computer Vision & Graphics Lab</a>, where I developed <strong>KLAWQ</strong>, a GPTQ-inspired quantization method improving perplexity by up to 30% over vanilla GPTQ. I also engineered a transformer-based framework with mathematical constraints for single-image camera calibration. I was selected for the <strong>UIUC Summer Research Internship 2025</strong>, working with <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Darko Marinov</a> on LLMs for automated software engineering tasks, and briefly worked with <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Reyhaneh Jabbarvand</a> on C-to-Rust translation using LLMs.
+        </p>
+
+        <p>
+          Beyond academia, my contract role as a Machine Learning Engineer at <strong>Innova Tech</strong> involved quantizing and deploying vision models on edge devices using ONNX and TensorRT. I am also an active open-source contributor to libraries such as timm and adapters.
+        </p>
+      </section>
+
+
+      <!-- Experience & Teaching -->
+      <section id="experience">
+        <h2>Experience & Teaching</h2>
+        <div class="item-list">
+            <div class="list-entry">
+                <strong>Machine Learning Engineer (Contract)</strong> at Innova Tech<br>
+                Owned optimization pipeline for on-device object detection. Led ONNX/TensorRT quantization, reducing memory by 40% with real-time inference. Automated data annotation pipeline, improving accuracy by 4%.
+            </div>
+            <div class="list-entry">
+                <strong>Teaching Assistant, CS436: Computer Vision</strong> at LUMS<br>
+                Designed assignments on PyTorch transfer learning and C++/OpenCV pipelines. Mentored 40 groups (80+ students) on SfM-based virtual tour projects.
+            </div>
+        </div>
+      </section>
+
+      <!-- Open Source -->
+      <section id="opensource">
+        <h2>Open Source Contributions</h2>
+        <div class="item-list">
+            <div class="list-entry">
+                <strong>Contributor, pytorch-image-models (timm)</strong><br>
+                Implemented F1, precision, recall metrics for distributed training using torch.distributed.
+            </div>
+            <div class="list-entry">
+                <strong>Contributor, adapters (PEFT Library)</strong><br>
+                Added GQA support for Llama-2/Mistral PEFT. Fixed tensor shape mismatch bug, enabling PEFT for modern LLMs.
+            </div>
+        </div>
+      </section>
+
+      <!-- Interests -->
+      <section id="interests" class="highlight-section">
         <h2>Research Interests</h2>
         <ul class="interests-list">
             <li>Model Compression (Pruning & Quantization)</li>
@@ -98,12 +148,13 @@
             <li>AI on Edge Devices</li>
             <li>Camera Calibration & 3d Reconstruction</li>
         </ul>
-    </section>
-
-    <footer class="page-footer">
-        <p>&copy; 2026 Muhammad Haseeb. Last Updated: January 2026.</p>
-    </footer>
-
+      </section>
+    </main>
   </div>
+
+  <footer class="page-footer">
+      <p>&copy; 2026 Muhammad Haseeb. Last Updated: January 2026.</p>
+  </footer>
+
 </body>
 </html>

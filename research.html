@@ -38,10 +38,10 @@
     <section id="projects">
         <h2>Research Projects</h2>
         <div class="item" id="project-dg">
-            <span class="item-title">Domain Generalization</span>
+            <span class="item-title">Interpretability & Domain Generalization</span>
             <div class="item-meta">Advisors:Dr. Muhammad Tahir, CITY at LUMS</div>
             <p class="item-description">
-                Developed a framework using learnable visual queries to improve out-of-distribution performance. By training these queries with a group relative optimization objective, I guided the model to learn domain-invariant features. My implementation <strong>achieved a 3% accuracy gain</strong> on the PACS dataset over the ERM baseline. I am now extending this work by using Mechanistic Interpretability as a tool to design a methodology to physically remove domain-specific circuits from the network.
+            I'm researching to solve domain generalization by moving beyond traditional training methods to instead reverse-engineer a model's internal logic. I use mechanistic interpretability to map a model's functional circuits, distinguishing the generalizable "core" pathways from the unreliable "shortcut" pathways that cause failures on new data. My key technique involves using cross-domain data as a "contrastive probe" to isolate the core circuits that are stable across different domains. In previous line of this work, I trained learnable visual queries for ViTs via Group Relative Query Optimization, achieving a 3% generalization boost on the PACS dataset.
             </p>
         </div>
         <!-- ==== NEW PROJECT ADDED HERE ==== -->
@@ -56,7 +56,7 @@
             <span class="item-title">Quantization of Diffusion Models</span>
             <div class="item-meta">Advisors:Dr. Zubair Khalid, CITY at LUMS & 10x Engineers</div>
             <p class="item-description">
-                To address the varying numerical precision required at different timesteps of the diffusion process, I am developing a method for timestep-aware quantization. This involves training an MLP on the signal-to-noise ratio at a timestep to predict optimal quantization parameters based on the noise schedule. My methodology beats the vanilla timestep based MLP by 55 percent.
+                Researched on quantization techniques to reduce the compute and memory cost of Diffusion Transformers. For timestep dependent dynamic activations, I developed a novel method that conditions a predictor network on the physical Log-Signal-to-Noise Ratio (Log-SNR) at a specific timestep to predict quantization parameters. This approach accounts for non-stationary signal dynamics and achieved a <strong>55% reduction in perceptual error (LPIPS)</strong>. For static weights, I implemented Hessian-based optimization methods GPTQ and Qronos, leveraging second-order curvature information to accurately compress the model to 4-bit format while accounting for quantization error.
             </p>
         </div>
         <div class="item">
