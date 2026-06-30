@@ -43,16 +43,16 @@
         
         <h1 class="profile-name">Muhammad Haseeb</h1>
         <div class="profile-titles">
-          <p>Research Assistant</p>
-          <p>Machine Learning Engineer</p>
+          <p>ML Researcher</p>
+          <p>Founding Product Engineer @ NEXA</p>
         </div>
         <div class="profile-keywords">
+          <span>Mechanistic Interpretability</span>
           <span>Model Compression</span>
           <span>Domain Generalization</span>
-          <span>Mechanistic Interpretability</span>
         </div>
         
-        <!-- NEW: Resume Download Button -->
+        <!-- Resume Download Button -->
         <a href="Academic_CV.pdf" class="resume-button" target="_blank">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
           CV
@@ -96,30 +96,51 @@
       <!-- Bio Section -->
       <section id="about">
         <p>
-          Hi, I'm Haseeb, a final-year CS undergraduate at LUMS (exp. 2026) working in efficient, generalizable, and interpretable machine learning. My research focuses on model compression and domain generalization, with an emphasis on understanding failure modes in modern neural networks and designing more robust learning systems.
+          Hi, I'm Haseeb, a recent Computer Science graduate from LUMS (May 2026) working in efficient, generalizable, and interpretable machine learning. My research focuses on model compression, domain generalization, and mechanistic interpretability, with an emphasis on understanding failure modes in modern neural networks and designing more robust learning systems.
         </p>
 
         <p>
-          I currently work as a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer">Centre for Urban Informatics, Technology and Policy (CITY)</a> at LUMS under <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Muhammad Tahir</a> and <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Zubair Khalid</a>. My work includes the Backbone Contrastive Pruning <strong>(BaCP)</strong> framework to mitigate representational collapse in highly sparse networks. My core focus is using mechanistic interpretability to analyze failure modes in distributed and domain-shift settings. This involves my work on reframing weight divergence phenomena in Federated Learning as "circuit collapse". I am also researching on decomposing models into domain-invariant and domain-specific circuits to better understand and address performance degradation under distribution shift.
-        </p>
-        <p>
-          I have also been associated with the external company <a href="https://10xengineers.ai/" target="_blank" rel="noopener noreferrer">10x Engineers</a> on quantization of diffusion models, where I developed a method for training lightweight MLPs on per-layer timestep statistics to predict quantization scale and zero-point.
+          I work as a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer">Centre for Urban Informatics, Technology and Policy (CITY)</a> at LUMS under <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Muhammad Tahir</a> and <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Zubair Khalid</a>. My core focus is using mechanistic interpretability tools to analyze failure modes in distributed and domain-shift settings. Recently, our work demonstrating that Federated Learning (FedAvg) performance drops under data skew stem from representational misalignment was accepted at the <strong>ICML 2026 Mechanistic Interpretability Workshop</strong>. I am also researching the Backbone Contrastive Pruning <strong>(BaCP)</strong> framework to mitigate representational collapse in highly sparse networks.
         </p>
 
         <p>
-          Previously, I contributed to research at the <a href="https://www.researchgate.net/lab/CVGL-LUMS-Murtaza-Taj" target="_blank" rel="noopener noreferrer">Computer Vision & Graphics Lab</a>, where I developed <strong>KLAWQ</strong>, a GPTQ-inspired quantization method improving perplexity by up to 30% over vanilla GPTQ. I also engineered a transformer-based framework with mathematical constraints for single-image camera calibration. I was selected for the <strong>UIUC Summer Research Internship 2025</strong>, working with <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Darko Marinov</a> on LLMs for automated software engineering tasks, and briefly worked with <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Reyhaneh Jabbarvand</a> on C-to-Rust translation using LLMs.
+          Previously, I contributed to research at the <a href="https://www.researchgate.net/lab/CVGL-LUMS-Murtaza-Taj" target="_blank" rel="noopener noreferrer">Computer Vision & Graphics Lab</a>, where I developed <strong>KLAWQ</strong>, a GPTQ-inspired quantization method improving perplexity by up to 30% over vanilla GPTQ, and engineered a transformer-based framework for single-image camera calibration. I was also selected for the <strong>UIUC Summer Research Internship 2025</strong>, working with <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Darko Marinov</a> and <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Dr. Reyhaneh Jabbarvand</a> on LLMs for automated software engineering and code translation.
         </p>
 
         <p>
-          Beyond academia, my contract role as a Machine Learning Engineer at <strong>Innova Tech</strong> involved quantizing and deploying vision models on edge devices using ONNX and TensorRT. I am also an active open-source contributor to libraries such as timm and adapters.
+          Outside of purely academic research, I work with NEXA as a Founding Product Engineer building scalable distributed ML systems. In the past, I have worked with DatacurveAI, 10x Engineers, and Innova Tech on open-source libraries, diffusion quantization, and edge device deployment.
         </p>
       </section>
 
+      <!-- Publications Section -->
+      <section id="publications">
+        <h2>Selected Publications</h2>
+        <div class="item-list">
+            <div class="list-entry">
+                <strong>Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</strong><br>
+                <u>Muhammad Haseeb</u>, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir.<br>
+                <em>ICML 2026 Mechanistic Interpretability Workshop</em>
+            </div>
+            <div class="list-entry">
+                <strong>BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</strong><br>
+                Mohammad Haroon Khawaja, <u>Muhammad Haseeb</u>, Mohammad Fatim Shoaib, Muhammad Tahir.<br>
+                <em>Preprint</em>
+            </div>
+        </div>
+      </section>
 
       <!-- Experience & Teaching -->
       <section id="experience">
-        <h2>Experience & Teaching</h2>
+        <h2>Industry Experience & Teaching</h2>
         <div class="item-list">
+            <div class="list-entry">
+                <strong>Founding Product Engineer</strong> at NEXA (Remote)<br>
+                Architecting and building highly scalable, distributed backend systems from the ground up. Integrating machine learning models and optimizing distributed serving pipelines for fast, efficient inference.
+            </div>
+            <div class="list-entry">
+                <strong>OSS Engineer</strong> at DatacurveAI (YC S24)<br>
+                Solved bugs and added new features across various open-source machine learning repositories to test and train LLMs on working with large codebases.
+            </div>
             <div class="list-entry">
                 <strong>Machine Learning Engineer (Contract)</strong> at Innova Tech<br>
                 Owned optimization pipeline for on-device object detection. Led ONNX/TensorRT quantization, reducing memory by 40% with real-time inference. Automated data annotation pipeline, improving accuracy by 4%.
@@ -150,18 +171,17 @@
       <section id="interests" class="highlight-section">
         <h2>Research Interests</h2>
         <ul class="interests-list">
+            <li>Mechanistic Interpretability</li>
             <li>Model Compression (Pruning & Quantization)</li>
             <li>Domain Generalization & OOD Robustness</li>
-            <li>Mechanistic Interpretability</li>
-            <li>AI on Edge Devices</li>
-            <li>Camera Calibration & 3d Reconstruction</li>
+            <li>Distributed Systems & ML Infrastructure</li>
         </ul>
       </section>
     </main>
   </div>
 
   <footer class="page-footer">
-      <p>&copy; 2026 Muhammad Haseeb. Last Updated: January 2026.</p>
+      <p>&copy; 2026 Muhammad Haseeb. Last Updated: June 2026.</p>
   </footer>
 
 </body>
