@@ -26,57 +26,65 @@
 
     <section id="publications">
         <h2>Publications</h2>
+        
+        <!-- ICML 2026 Workshop Paper -->
+        <div class="item" id="pub-fedmi">
+          <span class="item-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</span>
+          <div class="item-meta"><strong>M. Haseeb</strong>, S. Masood, M. A. Sohail, M. F. Shoaib, M. Tahir. <em>(ICML 2026 Mechanistic Interpretability Workshop)</em></div>
+          <p class="item-description">
+            I led this research analyzing the internal failure modes of Federated Learning under Non-IID data using mechanistic interpretability. We investigated how class-specific circuits learned by different clients diverge during training and interact during aggregation. By analyzing sparse models with circuit extraction, Universal Sparse Autoencoders (USAEs), and linear probes, we showed that informative latent features remain present even when global model accuracy degrades. This demonstrates that non-IID aggregation disrupts internal circuit alignment with the classification head rather than erasing learned representations.
+          </p>
+        </div>
+
+        <!-- BaCP Preprint -->
         <div class="item" id="pub-bacp">
           <span class="item-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</span>
-          <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir. <em>(Submitted to AAAI 2025)</em></div>
+          <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir. <em>(Preprint)</em></div>
           <p class="item-description">
-            As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented the multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity.
+            As a contributor to this work, I tackled the problem of representational collapse in highly sparse networks. We designed and implemented a multi-objective loss function that aligns sparse embeddings against three critical references (pretrained, fine-tuned, and historical). We tested our framework across CNNs, Vision Transformers, and Language Models to verify that our method preserves accuracy at extreme sparsity (up to 99%).
           </p>
         </div>
     </section>
 
     <section id="projects">
         <h2>Research Projects</h2>
+        
         <div class="item" id="project-dg">
             <span class="item-title">Interpretability & Domain Generalization</span>
-            <div class="item-meta">Advisors:Dr. Muhammad Tahir, CITY at LUMS</div>
+            <div class="item-meta">Advisors: Dr. Muhammad Tahir, CITY at LUMS</div>
             <p class="item-description">
-            I'm researching to solve domain generalization by moving beyond traditional training methods to instead reverse-engineer a model's internal logic. I use mechanistic interpretability to map a model's functional circuits, distinguishing the generalizable "core" pathways from the unreliable "shortcut" pathways that cause failures on new data. My key technique involves using cross-domain data as a "contrastive probe" to isolate the core circuits that are stable across different domains. In previous line of this work, I trained learnable visual queries for ViTs via Group Relative Query Optimization, achieving a 3% generalization boost on the PACS dataset.
+            I am researching ways to solve domain generalization by moving beyond traditional training methods to instead reverse-engineer a model's internal logic. I apply circuit extraction techniques to isolate task-specific subnetworks, analyzing whether out-of-distribution failures are caused by shortcut learning or noise in non-essential pathways. My key technique involves using cross-domain data as a "contrastive probe" to isolate core circuits that are stable across domains. Previously, I optimized visual queries in ViTs using reinforcement learning (Group Relative Query Optimization), achieving a 3% generalization boost on the PACS dataset.
             </p>
         </div>
-        <!-- ==== NEW PROJECT ADDED HERE ==== -->
-        <div class="item" id="project-fedmi">
-            <span class="item-title">Mechanistic Analysis of Circuit Preservation in Federated Learning</span>
-            <div class="item-meta">Advisors:Dr. Muhammad Tahir, CITY at LUMS</div>
-            <p class="item-description">
-            I led a research project analyzing the internal failure modes of Federated Learning under Non-IID data using mechanistic interpretability. We investigated how class-specific circuits learned by different clients diverge during training and interact during aggregation. By analyzing sparse models with circuit extraction, sparse autoencoders, and linear probes, we showed that informative latent features remain present even when global model accuracy degrades, suggesting that aggregation disrupts internal circuit organization rather than eliminating learned representations.
-            </p>
-        </div>
-         <div class="item" id="project-diffusion">
+        
+        <div class="item" id="project-diffusion">
             <span class="item-title">Quantization of Diffusion Models</span>
-            <div class="item-meta">Advisors:Dr. Zubair Khalid, CITY at LUMS & 10x Engineers</div>
+            <div class="item-meta">Advisors: Dr. Zubair Khalid, CITY at LUMS & 10x Engineers</div>
             <p class="item-description">
-                Researched on quantization techniques to reduce the compute and memory cost of Diffusion Transformers. For timestep dependent dynamic activations, I developed a novel method that conditions a predictor network on the physical Log-Signal-to-Noise Ratio (Log-SNR) at a specific timestep to predict quantization parameters. This approach accounts for non-stationary signal dynamics and achieved a <strong>55% reduction in perceptual error (LPIPS)</strong>. For static weights, I implemented Hessian-based optimization methods GPTQ and Qronos, leveraging second-order curvature information to accurately compress the model to 4-bit format while accounting for quantization error.
+                Researched quantization techniques to reduce the compute and memory cost of Diffusion Transformers. For timestep-dependent dynamic activations, I developed a novel method that conditions a predictor network on the physical Log-Signal-to-Noise Ratio (Log-SNR) at a specific timestep to predict quantization parameters. This approach accounts for non-stationary signal dynamics and achieved a <strong>55% reduction in perceptual error (LPIPS)</strong>. For static weights, I implemented Hessian-based optimization methods GPTQ and Qronos, leveraging second-order curvature information to accurately compress the model to 4-bit format while accounting for quantization error.
             </p>
         </div>
-        <div class="item">
+        
+        <div class="item" id="project-klawq">
             <span class="item-title">KL-Aware Quantization (KLAWQ)</span>
-            <div class="item-meta">Advisors:Dr. Murtaza Taj, CVGL</div>
+            <div class="item-meta">Advisors: Dr. Murtaza Taj, CVGL</div>
             <p class="item-description">
-                Developed an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical innovation was combining the standard GPTQ Hessian with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's outputs, and my implementation <strong>achieved a 30% reduction in perplexity</strong> over the baseline GPTQ at equivalent bit-widths.
+                Developed an augmented GPTQ framework that integrates knowledge distillation and supervised fine-tuning directly into the post-training quantization pipeline. My key technical innovation was combining the standard GPTQ Hessian with second-order curvature information from KL-divergence and cross-entropy objectives. This better preserves the teacher model's outputs, and my implementation <strong>achieved a 30% reduction in perplexity</strong> over baseline GPTQ at equivalent bit-widths.
             </p>
         </div>
-        <div class="item">
+        
+        <div class="item" id="project-camera-calib">
             <span class="item-title">Single-Image Camera Calibration (SOFI-UGCL)</span>
-            <div class="item-meta">Advisors:Dr. Murtaza Taj, CVGL</div>
+            <div class="item-meta">Advisors: Dr. Murtaza Taj, CVGL</div>
             <p class="item-description">
-                Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I took a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong> recovered camera's intrinsic (K) and extrinsic (R, t) parameters</strong> by enforcing mathematical constrains over the loss function, enabling recovery of the full projection matrix from a single image.
+                Engineered a hybrid method for camera calibration combining a Transformer front-end with geometric post-processing. I utilized a pretrained Multi-Scale Deformable Transformer (SOFI) to predict geometric primitives like the zenith point and horizon line. From these predictions, I <strong>recovered the camera's intrinsic (K) and extrinsic (R, t) parameters</strong> by enforcing mathematical constraints over the loss function, enabling recovery of the full projection matrix from a single image.
             </p>
         </div>
+        
     </section>
 
     <footer class="page-footer">
-        <p>&copy; 2026 Muhammad Haseeb. Last Updated: January 2026.</p>
+        <p>&copy; 2026 Muhammad Haseeb. Last Updated: June 2026.</p>
     </footer>
 
   </div>
