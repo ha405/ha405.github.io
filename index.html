@@ -31,60 +31,42 @@
       </nav>
     </header>
 
-    <!-- Intro -->
+    <!-- Intro: text left, photo right -->
     <section class="intro">
-      <img src="haseeb.png" alt="Muhammad Haseeb" class="intro-photo">
       <div class="intro-text">
         <h1>Muhammad Haseeb</h1>
         <p class="intro-role">
-          Graduate Research Assistant, <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">CITY</a>, LUMS<br>
+          Graduate Research Assistant, <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">CITY</a>, LUMS &nbsp;&middot;&nbsp;
           Graduate Teaching Fellow, MS in Artificial Intelligence, LUMS
         </p>
         <p class="intro-links">
-          <a href="mailto:26100253@lums.edu.pk">Email</a>
+          <a href="mailto:26100253@lums.edu.pk">26100253@lums.edu.pk</a>
           <a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a>
           <a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank" rel="noopener">LinkedIn</a>
         </p>
+
+        <p>
+          I am a Graduate Research Assistant at the Centre for Urban Informatics, Technology and Policy (CITY) at LUMS, working with
+          <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener">Muhammad Tahir</a> and
+          <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Zubair Khalid</a>,
+          and a Graduate Teaching Fellow for the MS in Artificial Intelligence program, where I teach <strong>AI 630: Responsible AI Engineering</strong>.
+          I completed my B.S. in Computer Science at LUMS in 2026.
+        </p>
+        <p>
+          I work on <strong>AI safety</strong> through <strong>mechanistic interpretability</strong>. My current focus is <strong>emergent misalignment</strong>:
+          how narrow fine-tuning produces broadly misaligned behaviour, and which circuits and features inside the model carry it. I want these behaviours to be
+          measurable and controllable at the level of model internals, not only at the level of outputs.
+        </p>
+        <p>
+          Before this I studied federated learning with the same tools, showing that FedAvg under non-IID data preserves client representations but misaligns them
+          with the global classifier (<a href="research.html#pub-fedmi">ICML 2026 MI Workshop</a>). I have also worked on model compression
+          (<a href="research.html#pub-bacp">BaCP</a>, <a href="research.html#project-klawq">KLAWQ</a>) and domain generalization, and spent summer 2025 at UIUC with
+          <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener">Darko Marinov</a> and
+          <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a> on LLMs for software engineering.
+        </p>
       </div>
-    </section>
-
-    <!-- Bio -->
-    <section class="bio">
-      <p>
-        I am a Graduate Research Assistant at the Centre for Urban Informatics, Technology and Policy (CITY) at LUMS, where I work with
-        <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Muhammad Tahir</a> and
-        <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Dr. Zubair Khalid</a>.
-        I am also a Graduate Teaching Fellow for the MS in Artificial Intelligence program, where I teach <strong>AI 630: Responsible AI Engineering</strong>.
-        I received my B.S. in Computer Science from LUMS in 2026.
-      </p>
-      <p>
-        My research is in <strong>AI safety</strong> and <strong>mechanistic interpretability</strong>. I currently study <strong>emergent misalignment</strong>:
-        how narrow fine-tuning produces broadly misaligned behaviour, and which internal circuits and features are responsible for it.
-        My goal is to make these behaviours measurable and controllable at the level of model internals rather than only at the level of outputs.
-      </p>
-      <p>
-        Previously, I used circuit-level analysis to show that FedAvg under non-IID data preserves client representations but misaligns them with the
-        global classifier (<a href="research.html#pub-fedmi">ICML 2026 Mechanistic Interpretability Workshop</a>), and worked on model compression
-        (<a href="research.html#pub-bacp">BaCP</a>, <a href="research.html#project-klawq">KLAWQ</a>) and domain generalization.
-        In summer 2025 I was a research intern at UIUC with
-        <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener">Darko Marinov</a> and
-        <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a>, working on LLMs for software engineering.
-      </p>
-      <p class="bio-note">
-        I am happy to talk about research or collaborations — <a href="mailto:26100253@lums.edu.pk">26100253@lums.edu.pk</a>.
-      </p>
-    </section>
-
-    <!-- News -->
-    <section id="news">
-      <h2>News</h2>
-      <ul class="news-list">
-        <li><span class="date">Aug 2026</span><span>Started as Graduate Teaching Fellow for AI 630: Responsible AI Engineering (MS AI), LUMS.</span></li>
-        <li><span class="date">Summer 2026</span><span>Paper on preserved-but-misaligned representations in non-IID FedAvg accepted at the <strong>ICML 2026 Mechanistic Interpretability Workshop</strong>.</span></li>
-        <li><span class="date">May 2026</span><span>Graduated with a B.S. in Computer Science from LUMS.</span></li>
-        <li><span class="date">Summer 2025</span><span>Research intern at UIUC with Darko Marinov and Reyhaneh Jabbarvand.</span></li>
-      </ul>
+      <img src="haseeb.png" alt="Muhammad Haseeb" class="intro-photo">
     </section>
 
     <!-- Publications -->
@@ -92,12 +74,11 @@
       <h2>Publications</h2>
 
       <div class="pub">
-        <div class="pub-venue">ICML 2026<br><span>MI Workshop</span></div>
+        <div class="pub-venue">ICML 2026<span>MI Workshop</span></div>
         <div class="pub-body">
           <div class="pub-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
           <div class="pub-authors"><strong>Muhammad Haseeb</strong>, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir</div>
-          <div class="pub-summary">Circuit extraction, sparse autoencoders, and linear probes show that non-IID aggregation keeps client features intact but misaligns them with the classification head.</div>
-          <div class="pub-links"><a href="research.html#pub-fedmi">Summary</a></div>
+          <div class="pub-summary">Circuit extraction, sparse autoencoders, and probes show non-IID aggregation keeps client features intact but misaligns them with the classification head. <a href="research.html#pub-fedmi">Summary</a></div>
         </div>
       </div>
 
@@ -106,35 +87,47 @@
         <div class="pub-body">
           <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
           <div class="pub-authors">Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, Mohammad Fatim Shoaib, Muhammad Tahir</div>
-          <div class="pub-summary">A contrastive pruning objective that prevents representational collapse at up to 99% sparsity across CNNs, ViTs, and language models.</div>
-          <div class="pub-links"><a href="research.html#pub-bacp">Summary</a></div>
+          <div class="pub-summary">Contrastive pruning objective that prevents representational collapse at up to 99% sparsity across CNNs, ViTs, and language models. <a href="research.html#pub-bacp">Summary</a></div>
         </div>
       </div>
     </section>
 
-    <!-- Timeline -->
-    <section id="timeline">
-      <h2>Timeline</h2>
-      <table class="timeline">
-        <tr><td class="date">Aug 2026 –</td><td><strong>Graduate Teaching Fellow</strong>, MS AI (AI 630: Responsible AI Engineering), LUMS</td></tr>
-        <tr><td class="date">2026 –</td><td><strong>Founding Product Engineer</strong>, NEXA — distributed model-serving systems</td></tr>
-        <tr><td class="date">2025 –</td><td><strong>Graduate Research Assistant</strong>, CITY, LUMS — AI safety &amp; mechanistic interpretability</td></tr>
-        <tr><td class="date">2025</td><td><strong>OSS Engineer</strong>, DatacurveAI (YC S24) — open-source ML fixes for LLM training data</td></tr>
-        <tr><td class="date">Summer 2025</td><td><strong>Research Intern</strong>, UIUC — LLMs for software engineering and C-to-Rust translation</td></tr>
-        <tr><td class="date">2024 – 25</td><td><strong>Teaching Assistant</strong>, CS436: Computer Vision, LUMS</td></tr>
-        <tr><td class="date">2024</td><td><strong>ML Engineer (Contract)</strong>, Innova Tech — ONNX/TensorRT quantization for edge detection</td></tr>
-        <tr><td class="date">2022 – 26</td><td><strong>B.S. Computer Science</strong>, LUMS</td></tr>
-      </table>
-    </section>
+    <!-- Timeline + News side by side -->
+    <div class="two-col">
+      <section id="timeline">
+        <h2>Timeline</h2>
+        <table class="timeline">
+          <tr><td class="date">2026 –</td><td><strong>Graduate Teaching Fellow</strong>, MS AI, LUMS<br><span class="sub">AI 630: Responsible AI Engineering</span></td></tr>
+          <tr><td class="date">2026 –</td><td><strong>Founding Product Engineer</strong>, NEXA<br><span class="sub">Distributed model-serving systems</span></td></tr>
+          <tr><td class="date">2025 –</td><td><strong>Graduate Research Assistant</strong>, CITY, LUMS<br><span class="sub">AI safety &amp; mechanistic interpretability</span></td></tr>
+          <tr><td class="date">2025</td><td><strong>OSS Engineer</strong>, DatacurveAI (YC S24)</td></tr>
+          <tr><td class="date">2025</td><td><strong>Research Intern</strong>, UIUC<br><span class="sub">LLMs for software engineering</span></td></tr>
+          <tr><td class="date">2024 – 25</td><td><strong>Teaching Assistant</strong>, CS436 Computer Vision, LUMS</td></tr>
+          <tr><td class="date">2024</td><td><strong>ML Engineer</strong>, Innova Tech<br><span class="sub">ONNX/TensorRT quantization on edge</span></td></tr>
+          <tr><td class="date">2022 – 26</td><td><strong>B.S. Computer Science</strong>, LUMS</td></tr>
+        </table>
+      </section>
 
-    <!-- Open source -->
-    <section id="opensource">
-      <h2>Open Source</h2>
-      <ul class="plain-list">
-        <li><strong>pytorch-image-models (timm)</strong> — distributed F1, precision, and recall metrics via <code>torch.distributed</code>.</li>
-        <li><strong>adapters (PEFT)</strong> — GQA support for Llama-2/Mistral and a tensor-shape fix enabling PEFT on modern LLMs.</li>
-      </ul>
-    </section>
+      <div>
+        <section id="news">
+          <h2>News</h2>
+          <ul class="news-list">
+            <li><span class="date">Aug 2026</span><span>Started as Graduate Teaching Fellow for AI 630 (MS AI), LUMS.</span></li>
+            <li><span class="date">2026</span><span>FedAvg interpretability paper accepted at the ICML 2026 MI Workshop.</span></li>
+            <li><span class="date">May 2026</span><span>Graduated B.S. Computer Science, LUMS.</span></li>
+            <li><span class="date">Jun 2025</span><span>Began research internship at UIUC.</span></li>
+          </ul>
+        </section>
+
+        <section id="opensource">
+          <h2>Open Source</h2>
+          <ul class="plain-list">
+            <li><strong>timm</strong> — distributed F1 / precision / recall metrics.</li>
+            <li><strong>adapters (PEFT)</strong> — GQA support for Llama-2 / Mistral.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
 
     <footer class="site-footer">
       &copy; 2026 Muhammad Haseeb &middot; Updated September 2026
