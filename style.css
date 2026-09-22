@@ -18,31 +18,9 @@ body {
   font-family: var(--font-body);
   background-color: var(--bg);
   color: var(--text-main); /* Global Dark Text */
-  line-height: 1.7;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
-
-/* --- ANIMATIONS (Restored) --- */
-@keyframes floatShape {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-20px, -20px) scale(1.05); }
-}
-
-@keyframes morphShape {
-  0%, 100% { 
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    transform: rotate(0deg);
-  }
-  50% { 
-    border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
-    transform: rotate(180deg);
-  }
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 /* --- Typography & Links --- */
@@ -78,18 +56,18 @@ a:hover {
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid var(--border);
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .main-nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding: 16px 0;
+  padding: 14px 0;
 }
 
 .main-nav a {
-  padding: 8px 16px;
+  padding: 6px 14px;
   color: var(--text-meta);
   font-weight: 500;
   position: relative;
@@ -116,23 +94,22 @@ a:hover {
     width: 100%;
 }
 
-/* --- LAYOUT: 2-Column Grid --- */
+/* --- Centered academic layout --- */
 .container {
-  max-width: 1150px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 32px;
 }
 
 .grid-layout {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 60px;
-  align-items: start;
+  display: block;
 }
 
-/* --- Left Sidebar (Profile) --- */
+/* --- Profile header --- */
 .left-sidebar {
-  padding-top: 10px;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 54px 0 32px;
   position: relative;
 }
 
@@ -161,30 +138,30 @@ a:hover {
 }
 
 .profile-sticky {
-  position: sticky;
-  top: 100px;
+  position: static;
+  text-align: center;
 }
 
 .profile-photo {
-  width: 160px;
-  height: 160px;
+  width: 124px;
+  height: 124px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   border: 3px solid #fff;
-  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease;
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
+    transform: none;
 }
 
 .profile-name {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.35rem;
   line-height: 1.1;
   color: #111;
   margin-bottom: 12px;
@@ -194,7 +171,7 @@ a:hover {
   margin-bottom: 2px;
   color: var(--text-meta);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 /* Contact Info & Icons */
@@ -233,31 +210,36 @@ a:hover {
 }
 
 .profile-keywords {
-  margin-top: 24px;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  margin: 20px 0 0;
+  padding: 0;
+  border: 0;
 }
 
 .profile-keywords span {
-  display: block;
+  display: inline;
   font-size: 0.85rem;
   color: var(--text-meta);
-  margin-bottom: 6px;
   font-weight: 500;
+}
+
+.profile-keywords span:not(:last-child)::after {
+  content: ' · ';
+  color: #b8b8b8;
+  margin: 0 3px;
 }
 
 .profile-nav {
   display: flex;
-  flex-direction: column;
-  gap: 7px;
-  margin-top: 24px;
-  padding-top: 20px;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+  padding-top: 18px;
   border-top: 1px solid var(--border);
 }
 
 .profile-nav a {
   color: var(--text-meta);
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   font-weight: 500;
 }
 
@@ -266,22 +248,26 @@ a:hover {
 }
 
 /* --- Right Content Area --- */
-.main-content { min-width: 0; }
+.main-content {
+  min-width: 0;
+  max-width: 760px;
+  margin: 0 auto;
+}
 
 section { margin-bottom: 50px; }
 
 .research-statement {
-  font-size: 1.18rem;
-  line-height: 1.65;
+  font-size: 1.15rem;
+  line-height: 1.6;
   color: #111;
   max-width: 760px;
 }
 
 h2 {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
-  margin-bottom: 24px;
-  padding-bottom: 12px;
+  font-size: 1.55rem;
+  margin-bottom: 18px;
+  padding-bottom: 8px;
   position: relative;
   color: #111;
 }
@@ -294,6 +280,16 @@ h2::after {
   width: 38px;
   height: 1px;
   background: #b5b5b5;
+}
+
+h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-meta);
+  margin: 34px 0 0;
+  padding-bottom: 4px;
+  letter-spacing: 0.01em;
 }
 
 strong {
@@ -309,21 +305,27 @@ strong {
 }
 
 .list-entry {
-  padding-left: 15px;
-  border-left: 3px solid var(--accent);
-  background-color: #fff; /* Ensure bg is white */
+  padding: 0 0 18px;
+  border-bottom: 1px solid var(--border);
+  background-color: transparent;
+}
+
+.list-entry:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .timeline-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0;
 }
 
 .experience-entry {
   position: relative;
-  padding-left: 145px;
-  padding-bottom: 22px;
+  padding-left: 130px;
+  padding-bottom: 20px;
+  padding-top: 20px;
   border-bottom: 1px solid var(--border);
 }
 
@@ -380,10 +382,9 @@ strong {
 
 /* Interests Section */
 .highlight-section {
-  background-color: var(--bg-alt);
-  border-radius: 12px;
-  padding: 30px;
-  border: 1px solid var(--border);
+  background-color: transparent;
+  padding: 0;
+  border: 0;
 }
 .interests-list {
   list-style: none;
@@ -407,8 +408,8 @@ strong {
 /* Page Title (Research.html) */
 .page-title-container h1 {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
-    padding: 40px 0;
+    font-size: 2.5rem;
+    padding: 48px 0 30px;
     color: #111;
 }
 
@@ -448,17 +449,13 @@ strong {
 
 /* The .item styling you liked */
 .item { 
-    padding: 24px 0 24px 20px;
+    padding: 24px 0;
     margin-bottom: 24px;
-    border-left: 3px solid transparent; /* The invisible border */
-    transition: all 0.3s ease;
     border-bottom: 1px solid var(--border);
 }
 
 .item:hover {
-    border-left-color: var(--accent); /* Color appears on hover */
-    padding-left: 24px;
-    background-color: rgba(250, 251, 252, 0.5); /* Subtle bg hint */
+    background-color: transparent;
 }
 
 .item:last-child {
@@ -506,11 +503,11 @@ strong {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
-  .grid-layout { grid-template-columns: 1fr; gap: 40px; }
+  .container { padding: 0 20px; }
   .left-sidebar { text-align: center; padding-bottom: 30px; border-bottom: 1px solid var(--border); }
   .profile-photo { margin: 0 auto 20px auto; display: block; }
-  .profile-keywords { border-top: none; margin-top: 15px; padding-top: 0; }
-  .profile-keywords span { display: inline-block; margin: 0 10px 5px 0; background: var(--bg-alt); padding: 4px 8px; border-radius: 4px; }
+  .profile-keywords { margin-top: 15px; }
+  .profile-nav { flex-wrap: wrap; gap: 8px 14px; }
   .contact-row { justify-content: center; }
   .interests-list { columns: 1; }
   .experience-entry { padding-left: 0; }
@@ -522,28 +519,30 @@ strong {
 
 /* --- Resume Button --- */
 .resume-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
   background-color: var(--accent);
   color: #fff !important; /* Force white text */
   padding: 10px 0;
-  border-radius: 20px;
+  border-radius: 4px;
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
-  margin: 16px 0 20px 0; /* Spacing around the button */
+  margin: 18px 0 0;
   transition: all 0.2s ease;
-  height: 35px;
-  width: 30%;
-  box-shadow: 0 4px 12px rgba(137, 181, 225, 0.2);
+  height: 34px;
+  width: auto;
+  padding-left: 18px;
+  padding-right: 18px;
+  box-shadow: none;
 }
 
 .resume-button:hover {
   background-color: var(--accent-light);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(79, 139, 200, 0.3);
+  transform: none;
+  box-shadow: none;
   text-decoration: none;
 }
 
