@@ -246,10 +246,74 @@ a:hover {
   font-weight: 500;
 }
 
+.profile-keywords .keyword-label {
+  color: var(--accent);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.profile-keywords .secondary-label {
+  margin-top: 16px;
+}
+
 /* --- Right Content Area --- */
 .main-content { min-width: 0; }
 
 section { margin-bottom: 50px; }
+
+.research-statement {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  color: #111;
+  max-width: 760px;
+}
+
+.research-snapshot {
+  margin-top: -8px;
+}
+
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.focus-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-alt);
+}
+
+.focus-card.primary-focus {
+  border-top: 3px solid var(--accent);
+}
+
+.focus-tier {
+  display: block;
+  color: var(--accent);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.focus-card strong {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.focus-card p {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
 
 h2 {
   font-family: var(--font-heading);
@@ -483,6 +547,7 @@ strong {
   .profile-keywords span { display: inline-block; margin: 0 10px 5px 0; background: var(--bg-alt); padding: 4px 8px; border-radius: 4px; }
   .contact-row { justify-content: center; }
   .interests-list { columns: 1; }
+  .focus-grid { grid-template-columns: 1fr; }
   .decoration-blob { left: 50%; transform: translateX(-50%); width: 220px; height: 220px; }
   .decoration-shape { top: 20px; right: 20px; }
   .timeline-item {
