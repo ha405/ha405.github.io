@@ -1,11 +1,11 @@
 :root {
   --bg: #ffffff;
   --bg-alt: #fafbfc; 
-  --text-main: #1f2937;    /* Deep Charcoal (Dark) */
-  --text-meta: #6b7280;    /* Gray (Only for dates/labels) */
-  --accent: #0066cc;
-  --accent-light: #3388dd;
-  --accent-soft: #e6f2ff;
+  --text-main: #222222;
+  --text-meta: #666666;
+  --accent: #245a8d;
+  --accent-light: #245a8d;
+  --accent-soft: #eef3f7;
   --border: #e5e7eb;
   --font-heading: 'Source Serif Pro', serif;
   --font-body: 'Inter', sans-serif;
@@ -146,7 +146,7 @@ a:hover {
   background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(0, 102, 204, 0.1) 100%);
   border-radius: 50%;
   z-index: -1;
-  animation: floatShape 8s ease-in-out infinite;
+  display: none;
 }
 
 .decoration-shape {
@@ -157,7 +157,7 @@ a:hover {
   height: 100px;
   background: rgba(0, 102, 204, 0.04);
   z-index: -1;
-  animation: morphShape 10s linear infinite;
+  display: none;
 }
 
 .profile-sticky {
@@ -291,9 +291,9 @@ h2::after {
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 60px;
-  height: 2px;
-  background: var(--accent);
+  width: 38px;
+  height: 1px;
+  background: #b5b5b5;
 }
 
 strong {
@@ -314,13 +314,15 @@ strong {
   background-color: #fff; /* Ensure bg is white */
 }
 
-.experience-list {
+.timeline-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
 .experience-entry {
+  position: relative;
+  padding-left: 145px;
   padding-bottom: 22px;
   border-bottom: 1px solid var(--border);
 }
@@ -338,10 +340,19 @@ strong {
 }
 
 .experience-meta {
-  display: block;
+  position: absolute;
+  left: 0;
+  top: 1px;
   font-size: 0.84rem;
-  color: var(--accent);
+  color: var(--text-meta);
   font-weight: 500;
+  line-height: 1.4;
+}
+
+.experience-org {
+  display: block;
+  color: var(--text-meta);
+  font-size: 0.9rem;
   margin-bottom: 6px;
 }
 
@@ -396,7 +407,7 @@ strong {
 /* Page Title (Research.html) */
 .page-title-container h1 {
     font-family: var(--font-heading);
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     padding: 40px 0;
     color: #111;
 }
@@ -502,6 +513,8 @@ strong {
   .profile-keywords span { display: inline-block; margin: 0 10px 5px 0; background: var(--bg-alt); padding: 4px 8px; border-radius: 4px; }
   .contact-row { justify-content: center; }
   .interests-list { columns: 1; }
+  .experience-entry { padding-left: 0; }
+  .experience-meta { position: static; margin-bottom: 4px; }
   .decoration-blob { left: 50%; transform: translateX(-50%); width: 220px; height: 220px; }
   .decoration-shape { top: 20px; right: 20px; }
   .research-area-list { grid-template-columns: 1fr; }
