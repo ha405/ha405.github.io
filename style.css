@@ -615,6 +615,7 @@ h2::after {
   border-radius: 50%;
   background: #fff;
   box-shadow: 0 10px 30px rgba(37, 42, 49, 0.14);
+  overflow: hidden;
 }
 
 .profile-photo {
@@ -622,6 +623,7 @@ h2::after {
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center 20%;
   border-radius: 50%;
 }
 
