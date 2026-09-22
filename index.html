@@ -11,156 +11,166 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Haseeb</title>
-  <meta name="description" content="Muhammad Haseeb — AI safety and mechanistic interpretability researcher at LUMS.">
+  <meta name="description" content="Muhammad Haseeb studies emergent misalignment and circuit-level interventions. Teaching Fellow, MSAI; former Research Assistant at CITY, LUMS.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="home-page" id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div class="home-shell">
+    <header class="profile-hero">
+      <div class="profile-photo-wrap">
+        <img src="haseeb.png" alt="Muhammad Haseeb" class="profile-photo">
+      </div>
+      <div class="profile-intro">
+        <h1>Muhammad Haseeb</h1>
+        <p class="profile-role">Teaching Fellow, MSAI, LUMS · Graduate Research Assistant</p>
+        <div class="profile-links" aria-label="Profile links">
+          <a href="Academic_CV.pdf" target="_blank" rel="noopener">View CV</a>
+          <a href="research.html">Research &amp; Projects</a>
+          <a href="mailto:26100253@lums.edu.pk">Email</a>
+          <a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </header>
 
-  <header class="main-header">
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#publications">Publications</a></li>
-        <li><a href="#news">News</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="research.html">Research</a></li>
-      </ul>
+    <nav class="section-nav" aria-label="Main navigation">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#news">News</a>
     </nav>
-  </header>
 
-  <div class="layout">
+    <div class="home-grid">
+      <main class="home-main" id="main-content">
+        <section id="about" class="home-section">
+          <h2>About</h2>
+          <p>
+            My research focuses on AI safety and mechanistic interpretability. I am currently studying emergent misalignment after
+            narrow fine-tuning: the circuits associated with this behaviour, whether targeted interventions can detect or reduce it,
+            and how well those interventions transfer across models and tasks.
+          </p>
+          <p>
+            From January 2025 to May 2026, I was a Research Assistant at the
+            <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">Centre for Urban Informatics, Technology and Policy (CITY)</a>
+            at LUMS, working with
+            <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener">Muhammad Tahir</a> and
+            <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Zubair Khalid</a>.
+            I studied representation and classifier alignment in FedAvg under non-IID data
+            (<a href="research.html#pub-fedmi">ICML 2026 MI Workshop</a>). Other projects include model compression
+            (<a href="research.html#pub-bacp">BaCP</a> and <a href="research.html#project-klawq">KLAWQ</a>) and domain generalization.
+          </p>
+          <p>
+            During a 2025 research internship at UIUC, I worked with
+            <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener">Darko Marinov</a> and
+            <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a>
+            on applications of LLMs to software engineering.
+          </p>
+        </section>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <img src="haseeb.png" alt="Muhammad Haseeb" class="sidebar-photo">
-      <h1 class="sidebar-name">Muhammad Haseeb</h1>
-      <p class="sidebar-affil">Graduate Research Assistant<br>CITY, LUMS</p>
-      <p class="sidebar-affil">Teaching Fellow, MSAI</p>
-
-      <div class="sidebar-block">
-        <h3>Interests</h3>
-        <ul>
-          <li>AI Safety</li>
-          <li>Mechanistic Interpretability</li>
-          <li>Emergent Misalignment</li>
-          <li>Federated Learning</li>
-          <li>Model Compression</li>
-        </ul>
-      </div>
-
-      <div class="sidebar-block">
-        <h3>Education</h3>
-        <ul class="edu-list">
-          <li><strong>B.S. Computer Science</strong>, 2026<br>LUMS</li>
-        </ul>
-      </div>
-
-      <div class="sidebar-block">
-        <h3>Links</h3>
-        <ul class="link-list">
-          <li><a href="mailto:26100253@lums.edu.pk">Email</a></li>
-          <li><a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a></li>
-          <li><a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="research.html">Research</a></li>
-        </ul>
-      </div>
-    </aside>
-
-    <!-- Main -->
-    <main class="main">
-
-      <section id="about">
-        <h2>About</h2>
-        <p>
-          I am a Graduate Research Assistant at the
-          <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">Centre for Urban Informatics, Technology and Policy (CITY)</a>
-          at LUMS, advised by
-          <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener">Muhammad Tahir</a> and
-          <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Zubair Khalid</a>.
-          I am also a Teaching Fellow, MSAI.
-        </p>
-        <p>
-          My research is in <strong>AI safety</strong> and <strong>mechanistic interpretability</strong>. I currently study
-          <strong>emergent misalignment</strong>: how narrow fine-tuning produces broadly misaligned behaviour, and which circuits and
-          features inside the model are responsible. I want these behaviours to be measurable and controllable at the level of model
-          internals, not only at the level of outputs.
-        </p>
-        <p>
-          Previously, I used circuit-level analysis to show that FedAvg under non-IID data preserves client representations but misaligns
-          them with the global classifier (<a href="research.html#pub-fedmi">ICML 2026 MI Workshop</a>). I have also worked on model
-          compression (<a href="research.html#pub-bacp">BaCP</a>, <a href="research.html#project-klawq">KLAWQ</a>) and domain
-          generalization. In summer 2025 I was a research intern at UIUC with
-          <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener">Darko Marinov</a> and
-          <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a>
-          on LLMs for software engineering.
-        </p>
-      </section>
-
-      <section id="publications">
-        <h2>Publications</h2>
-        <ol class="pub-list">
+        <section id="publications" class="home-section">
+          <h2>Publications</h2>
+          <ol class="pub-list">
 
           <li class="pub-item" id="pub-fedmi">
             <div class="pub-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
             <div class="pub-authors"><strong>Muhammad Haseeb</strong>, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir</div>
+            <div class="pub-keywords" aria-label="Keywords">
+              <span>Federated Learning</span>
+              <span>Mechanistic Interpretability</span>
+              <span>Circuit Analysis</span>
+            </div>
             <div class="pub-venue-line">
               <span class="pub-venue">ICML 2026 Mechanistic Interpretability Workshop</span>
-              <span class="pub-actions"><a href="research.html#pub-fedmi">summary</a></span>
+              <span class="pub-actions"><a href="research.html#pub-fedmi">Read research summary <span aria-hidden="true">→</span></a></span>
             </div>
           </li>
 
           <li class="pub-item" id="pub-bacp">
             <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
             <div class="pub-authors">Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, Mohammad Fatim Shoaib, Muhammad Tahir</div>
+            <div class="pub-keywords" aria-label="Keywords">
+              <span>Model Compression</span>
+              <span>Network Pruning</span>
+              <span>Representation Learning</span>
+            </div>
             <div class="pub-venue-line">
               <span class="pub-venue">Preprint</span>
-              <span class="pub-actions"><a href="research.html#pub-bacp">summary</a></span>
+              <span class="pub-actions"><a href="research.html#pub-bacp">Read research summary <span aria-hidden="true">→</span></a></span>
             </div>
           </li>
 
-        </ol>
-      </section>
+          </ol>
+          <a class="section-link" href="research.html">View all research projects <span aria-hidden="true">→</span></a>
+        </section>
 
-      <section id="news">
-        <h2>News</h2>
-        <ul class="news-list">
-          <li><span class="news-date">Aug 2026</span> Started as Teaching Fellow, MSAI.</li>
-          <li><span class="news-date">2026</span> FedAvg interpretability paper accepted at the ICML 2026 Mechanistic Interpretability Workshop.</li>
-          <li><span class="news-date">May 2026</span> Graduated with a B.S. in Computer Science from LUMS.</li>
-          <li><span class="news-date">Jun 2025</span> Research intern at UIUC with Darko Marinov and Reyhaneh Jabbarvand.</li>
-        </ul>
-      </section>
+        <section id="experience" class="home-section">
+          <h2>Experience</h2>
+          <ul class="exp-list">
+          <li><span class="exp-date">Aug 2026</span> Teaching Fellow, MSAI — AI 630: Responsible AI Engineering</li>
+          <li><span class="exp-date">Aug – Dec 2026</span> Teaching Assistant, CS436 Computer Vision, LUMS</li>
+          <li><span class="exp-date">Jun 2026</span> Founding Software Engineer (Team Lead), NEXA</li>
+          <li><span class="exp-date">Jan 2025 – May 2026</span> Research Assistant, CITY, LUMS</li>
+          <li><span class="exp-date">Dec 2025 – Feb 2026</span> OSS Engineer, Datacurve / Shipd</li>
+          <li><span class="exp-date">Jul – Oct 2025</span> ML Engineer, Innova Tech</li>
+          <li><span class="exp-date">May 2025 – Aug 2025</span> Research Intern, UIUC</li>
+          </ul>
+        </section>
 
-      <section id="experience">
-        <h2>Experience</h2>
-        <ul class="exp-list">
-          <li><span class="exp-date">2026 –</span> Teaching Fellow, MSAI</li>
-          <li><span class="exp-date">2026 –</span> Founding Product Engineer, NEXA</li>
-          <li><span class="exp-date">2025 –</span> Graduate Research Assistant, CITY, LUMS</li>
-          <li><span class="exp-date">2025</span> OSS Engineer, DatacurveAI (YC S24)</li>
-          <li><span class="exp-date">2025</span> Research Intern, UIUC</li>
-          <li><span class="exp-date">2024 – 25</span> Teaching Assistant, CS436 Computer Vision, LUMS</li>
-          <li><span class="exp-date">2024</span> ML Engineer (Contract), Innova Tech</li>
-        </ul>
-      </section>
-
-      <section id="opensource">
-        <h2>Open Source</h2>
-        <ul class="plain-list">
+        <section id="opensource" class="home-section">
+          <h2>Open Source</h2>
+          <ul class="plain-list">
           <li><strong>pytorch-image-models (timm)</strong> — distributed F1, precision, and recall metrics.</li>
           <li><strong>adapters (PEFT)</strong> — GQA support for Llama-2 / Mistral.</li>
-        </ul>
-      </section>
+          </ul>
+        </section>
+      </main>
 
-      <footer class="site-footer">&copy; 2026 Muhammad Haseeb</footer>
+      <aside class="home-aside">
+        <section class="info-panel featured-paper">
+          <p class="featured-label">Selected research</p>
+          <h2>ICML 2026 MI Workshop</h2>
+          <p>Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</p>
+          <p class="featured-venue">Federated Learning · Circuit Analysis</p>
+          <a href="research.html#pub-fedmi">Read the research summary <span aria-hidden="true">→</span></a>
+        </section>
+        <section id="news" class="info-panel news-panel">
+          <h2>Recent News</h2>
+          <ul class="news-list">
+            <li><span class="news-date">Aug 2026</span> Joined LUMS's MSAI program as a Teaching Fellow for AI 630: Responsible AI Engineering.</li>
+            <li><span class="news-date">May 2026</span> Our FedAvg interpretability paper was accepted to the ICML 2026 Mechanistic Interpretability Workshop.</li>
+            <li><span class="news-date">May 2026</span> Graduated from LUMS with a B.S. in Computer Science.</li>
+            <li><span class="news-date">May 2025</span> Began a research internship at UIUC with Darko Marinov and Reyhaneh Jabbarvand.</li>
+          </ul>
+        </section>
 
-    </main>
+        <section class="info-panel">
+          <h2>Research Interests</h2>
+          <ul class="interest-list">
+            <li>AI Safety</li>
+            <li>Mechanistic Interpretability</li>
+            <li>Emergent Misalignment</li>
+            <li>Federated Learning</li>
+            <li>Model Compression</li>
+          </ul>
+        </section>
+
+        <section class="info-panel education-panel">
+          <h2>Education</h2>
+          <p><strong>B.S. Computer Science</strong><br>LUMS, 2026</p>
+        </section>
+      </aside>
+    </div>
+
+    <footer class="home-footer">
+      <span>&copy; 2026 Muhammad Haseeb</span>
+      <a href="#top">Back to top <span aria-hidden="true">↑</span></a>
+    </footer>
   </div>
-
 </body>
 </html>
