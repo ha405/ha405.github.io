@@ -25,6 +25,7 @@
       <ul>
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="research.html">Research & Projects</a></li>
+        <li><a href="Academic_CV.pdf" target="_blank">CV</a></li>
       </ul>
     </nav>
   </header>
@@ -48,11 +49,9 @@
           <p>Founding Product Engineer @ NEXA</p>
         </div>
         <div class="profile-keywords">
-          <span class="keyword-label">Primary</span>
           <span>Mechanistic Interpretability</span>
           <span>AI Safety</span>
           <span>Federated Learning</span>
-          <span class="keyword-label secondary-label">Secondary</span>
           <span>Model Compression</span>
           <span>Domain Generalization</span>
         </div>
@@ -92,6 +91,12 @@
 
         </div>
 
+        <nav class="profile-nav" aria-label="Page sections">
+          <a href="#publications">Selected publications</a>
+          <a href="#experience">Experience &amp; teaching</a>
+          <a href="research.html">Research &amp; projects</a>
+        </nav>
+
       </div>
     </aside>
 
@@ -101,43 +106,11 @@
       <!-- Bio Section -->
       <section id="about">
         <p class="research-statement">
-          I study how modern neural networks fail under distribution shift, federated training, and safety-critical settings. My work uses mechanistic interpretability to understand these failures and build more robust, efficient, and trustworthy learning systems.
+          I use mechanistic interpretability to study why neural networks fail under non-IID federated training and distribution shift. My work examines representational misalignment in FedAvg and identifies circuits that remain reliable across domains.
         </p>
         <p>
-          I am a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer">Centre for Urban Informatics, Technology and Policy (CITY)</a> at LUMS, and a Graduate Teaching Fellow for <strong>AI 630: Responsible AI Engineering</strong>. I also work as a Founding Product Engineer at NEXA, building scalable distributed ML systems.
+          I am a Research Assistant at the <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener noreferrer">Centre for Urban Informatics, Technology and Policy (CITY)</a> at LUMS, a Graduate Teaching Fellow for <strong>AI 630: Responsible AI Engineering</strong>, and a Founding Product Engineer at NEXA. My secondary work includes pruning and quantization methods for efficient models.
         </p>
-      </section>
-
-      <!-- Research Snapshot -->
-      <section id="research-snapshot" class="research-snapshot">
-        <h2>Research Focus</h2>
-        <div class="focus-grid">
-          <div class="focus-card primary-focus">
-            <span class="focus-tier">Primary</span>
-            <strong>Mechanistic Interpretability</strong>
-            <p>Reverse-engineering internal circuits and failure modes in neural networks.</p>
-          </div>
-          <div class="focus-card primary-focus">
-            <span class="focus-tier">Primary</span>
-            <strong>AI Safety</strong>
-            <p>Building reliable and interpretable systems that behave robustly under shift.</p>
-          </div>
-          <div class="focus-card primary-focus">
-            <span class="focus-tier">Primary</span>
-            <strong>Federated Learning</strong>
-            <p>Analyzing representational misalignment and circuit collapse under Non-IID data.</p>
-          </div>
-          <div class="focus-card">
-            <span class="focus-tier">Secondary</span>
-            <strong>Model Compression</strong>
-            <p>Pruning and quantization methods that preserve useful representations.</p>
-          </div>
-          <div class="focus-card">
-            <span class="focus-tier">Secondary</span>
-            <strong>Domain Generalization</strong>
-            <p>Separating robust, domain-invariant circuits from shortcut features.</p>
-          </div>
-        </div>
       </section>
 
       <!-- Publications Section -->
@@ -157,74 +130,40 @@
         </div>
       </section>
 
-      <!-- Timeline -->
+      <!-- Experience & Teaching -->
       <section id="experience">
-        <h2>Timeline</h2>
-        <div class="timeline">
-
-            <div class="timeline-item">
-              <div class="timeline-date">Aug 2026</div>
-              <div class="timeline-content">
-                <strong>Graduate Teaching Fellow — AI 630: Responsible AI Engineering</strong>
-                <span class="timeline-org">LUMS</span>
-                <p>Graduate Teaching Fellow for the graduate course on Responsible AI Engineering.</p>
-              </div>
+        <h2>Experience &amp; Teaching</h2>
+        <div class="experience-list">
+            <div class="experience-entry">
+              <div class="experience-meta">Aug 2026–Present · LUMS</div>
+              <strong>Graduate Teaching Fellow — AI 630: Responsible AI Engineering</strong>
+              <p>Support instruction on responsible development, evaluation, and deployment of machine learning systems.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">2026</div>
-              <div class="timeline-content">
-                <strong>Founding Product Engineer</strong>
-                <span class="timeline-org">NEXA (Remote)</span>
-                <p>Architecting scalable distributed backend systems from the ground up. Integrating ML models and optimizing distributed serving pipelines for fast inference.</p>
-              </div>
+            <div class="experience-entry">
+              <div class="experience-meta">2026–Present · NEXA</div>
+              <strong>Founding Product Engineer</strong>
+              <p>Build distributed backend and model-serving systems for production ML workloads.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">2025–26</div>
-              <div class="timeline-content">
-                <strong>Research Assistant</strong>
-                <span class="timeline-org">CITY Lab, LUMS</span>
-                <p>Mechanistic interpretability for Federated Learning and domain generalization; BaCP for sparse networks. Advisors: Dr. Muhammad Tahir &amp; Dr. Zubair Khalid.</p>
-              </div>
+            <div class="experience-entry">
+              <div class="experience-meta">2025–Present · CITY, LUMS</div>
+              <strong>Research Assistant</strong>
+              <p>Study circuit-level failure modes in Federated Learning and domain generalization with Dr. Muhammad Tahir and Dr. Zubair Khalid.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">2025</div>
-              <div class="timeline-content">
-                <strong>OSS Engineer</strong>
-                <span class="timeline-org">DatacurveAI (YC S24)</span>
-                <p>Fixed bugs and added features across open-source ML repositories to train and evaluate LLMs on large codebases.</p>
-              </div>
+            <div class="experience-entry">
+              <div class="experience-meta">2025 · DatacurveAI (YC S24)</div>
+              <strong>OSS Engineer</strong>
+              <p>Fixed bugs and added features across open-source ML repositories used to train and evaluate LLMs on large codebases.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">Summer 2025</div>
-              <div class="timeline-content">
-                <strong>Summer Research Intern</strong>
-                <span class="timeline-org">UIUC</span>
-                <p>LLMs for automated software engineering and C-to-Rust translation with Dr. Darko Marinov and Dr. Reyhaneh Jabbarvand.</p>
-              </div>
+            <div class="experience-entry">
+              <div class="experience-meta">Summer 2025 · UIUC</div>
+              <strong>Summer Research Intern</strong>
+              <p>Worked on LLMs for automated software engineering and C-to-Rust translation with Dr. Darko Marinov and Dr. Reyhaneh Jabbarvand.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">2024–25</div>
-              <div class="timeline-content">
-                <strong>Teaching Assistant — CS436: Computer Vision</strong>
-                <span class="timeline-org">LUMS</span>
-                <p>Designed assignments on PyTorch transfer learning and C++/OpenCV pipelines. Mentored 40 groups (80+ students) on SfM-based virtual tour projects.</p>
-              </div>
+            <div class="experience-entry">
+              <div class="experience-meta">2024–25 · LUMS</div>
+              <strong>Teaching Assistant — CS436: Computer Vision</strong>
+              <p>Designed PyTorch and C++/OpenCV assignments and mentored 80+ students on structure-from-motion projects.</p>
             </div>
-
-            <div class="timeline-item">
-              <div class="timeline-date">2024</div>
-              <div class="timeline-content">
-                <strong>Machine Learning Engineer (Contract)</strong>
-                <span class="timeline-org">Innova Tech</span>
-                <p>Owned on-device object detection optimization. Led ONNX/TensorRT quantization (40% memory reduction) and automated annotation (+4% accuracy).</p>
-              </div>
-            </div>
-
         </div>
       </section>
 

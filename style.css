@@ -246,17 +246,23 @@ a:hover {
   font-weight: 500;
 }
 
-.profile-keywords .keyword-label {
-  color: var(--accent);
-  font-size: 0.7rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 8px;
-  font-weight: 700;
+.profile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
 }
 
-.profile-keywords .secondary-label {
-  margin-top: 16px;
+.profile-nav a {
+  color: var(--text-meta);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.profile-nav a:hover {
+  color: var(--accent);
 }
 
 /* --- Right Content Area --- */
@@ -265,54 +271,10 @@ a:hover {
 section { margin-bottom: 50px; }
 
 .research-statement {
-  font-size: 1.2rem;
+  font-size: 1.18rem;
   line-height: 1.65;
   color: #111;
   max-width: 760px;
-}
-
-.research-snapshot {
-  margin-top: -8px;
-}
-
-.focus-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.focus-card {
-  padding: 18px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--bg-alt);
-}
-
-.focus-card.primary-focus {
-  border-top: 3px solid var(--accent);
-}
-
-.focus-tier {
-  display: block;
-  color: var(--accent);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  margin-bottom: 8px;
-  text-transform: uppercase;
-}
-
-.focus-card strong {
-  display: block;
-  font-size: 1rem;
-  line-height: 1.35;
-  margin-bottom: 6px;
-}
-
-.focus-card p {
-  font-size: 0.86rem;
-  line-height: 1.5;
-  margin-bottom: 0;
 }
 
 h2 {
@@ -352,79 +314,38 @@ strong {
   background-color: #fff; /* Ensure bg is white */
 }
 
-/* --- Timeline --- */
-.timeline {
-  position: relative;
-  padding-left: 0;
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.timeline-item {
-  display: grid;
-  grid-template-columns: 110px 1fr;
-  gap: 20px;
-  position: relative;
-  padding-bottom: 28px;
+.experience-entry {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
 }
 
-.timeline-item:last-child {
+.experience-entry:last-child {
   padding-bottom: 0;
+  border-bottom: none;
 }
 
-.timeline-item:not(:last-child)::before {
-  content: '';
-  position: absolute;
-  left: 110px;
-  top: 10px;
-  bottom: -10px;
-  width: 2px;
-  background: var(--border);
-  transform: translateX(-50%);
-}
-
-.timeline-date {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--accent);
-  text-align: right;
-  padding-top: 2px;
-  line-height: 1.4;
-}
-
-.timeline-content {
-  position: relative;
-  padding-left: 24px;
-}
-
-.timeline-content::before {
-  content: '';
-  position: absolute;
-  left: -5px;
-  top: 8px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
-  border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--accent-soft);
-  z-index: 1;
-}
-
-.timeline-content strong {
+.experience-entry strong {
   display: block;
   font-size: 1.05rem;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
   line-height: 1.35;
 }
 
-.timeline-org {
+.experience-meta {
   display: block;
-  font-size: 0.9rem;
-  color: var(--text-meta);
+  font-size: 0.84rem;
+  color: var(--accent);
   font-weight: 500;
   margin-bottom: 6px;
 }
 
-.timeline-content p {
+.experience-entry p {
   margin-bottom: 0;
   font-size: 0.95rem;
   color: var(--text-main);
@@ -478,6 +399,40 @@ strong {
     font-size: 3.5rem;
     padding: 40px 0;
     color: #111;
+}
+
+.section-intro {
+    max-width: 720px;
+    font-size: 1.05rem;
+    margin-bottom: 24px;
+}
+
+.research-area-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0 32px;
+    border-top: 1px solid var(--border);
+}
+
+.research-area {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.research-area strong {
+    display: block;
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+}
+
+.research-area p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 0;
+}
+
+.research-area.secondary-area strong {
+    color: var(--text-main);
 }
 
 /* The .item styling you liked */
@@ -547,30 +502,9 @@ strong {
   .profile-keywords span { display: inline-block; margin: 0 10px 5px 0; background: var(--bg-alt); padding: 4px 8px; border-radius: 4px; }
   .contact-row { justify-content: center; }
   .interests-list { columns: 1; }
-  .focus-grid { grid-template-columns: 1fr; }
   .decoration-blob { left: 50%; transform: translateX(-50%); width: 220px; height: 220px; }
   .decoration-shape { top: 20px; right: 20px; }
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 6px;
-    padding-left: 24px;
-  }
-  .timeline-item:not(:last-child)::before {
-    left: 4px;
-    top: 14px;
-    transform: none;
-  }
-  .timeline-date {
-    text-align: left;
-    font-size: 0.8rem;
-  }
-  .timeline-content {
-    padding-left: 0;
-  }
-  .timeline-content::before {
-    left: -24px;
-    top: -22px;
-  }
+  .research-area-list { grid-template-columns: 1fr; }
 }
 
 /* --- Resume Button --- */
