@@ -11,128 +11,143 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Muhammad Haseeb</title>
-  <meta name="description" content="Muhammad Haseeb — AI safety and mechanistic interpretability researcher at LUMS. Graduate Research Assistant at CITY and Teaching Fellow, MS AI.">
+  <meta name="description" content="Muhammad Haseeb — AI safety and mechanistic interpretability researcher at LUMS.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="page">
+  <div class="layout">
 
-    <header class="site-header">
-      <a href="index.html" class="site-name">Muhammad Haseeb</a>
-      <nav class="site-nav">
-        <a href="index.html" class="active">Home</a>
-        <a href="research.html">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
-    </header>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="haseeb.png" alt="Muhammad Haseeb" class="sidebar-photo">
+      <h1 class="sidebar-name">Muhammad Haseeb</h1>
+      <p class="sidebar-affil">Graduate Research Assistant<br>CITY, LUMS</p>
+      <p class="sidebar-affil">Graduate Teaching Fellow<br>MS in Artificial Intelligence, LUMS</p>
 
-    <!-- Intro: text left, photo right -->
-    <section class="intro">
-      <div class="intro-text">
-        <h1>Muhammad Haseeb</h1>
-        <p class="intro-role">
-          Graduate Research Assistant, <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">CITY</a>, LUMS &nbsp;&middot;&nbsp;
-          Graduate Teaching Fellow, MS in Artificial Intelligence, LUMS
-        </p>
-        <p class="intro-links">
-          <a href="mailto:26100253@lums.edu.pk">26100253@lums.edu.pk</a>
-          <a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a>
-          <a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank" rel="noopener">LinkedIn</a>
-        </p>
+      <div class="sidebar-block">
+        <h3>Interests</h3>
+        <ul>
+          <li>AI Safety</li>
+          <li>Mechanistic Interpretability</li>
+          <li>Emergent Misalignment</li>
+          <li>Federated Learning</li>
+          <li>Model Compression</li>
+        </ul>
+      </div>
 
+      <div class="sidebar-block">
+        <h3>Education</h3>
+        <ul class="edu-list">
+          <li><strong>B.S. Computer Science</strong>, 2026<br>LUMS</li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <h3>Links</h3>
+        <ul class="link-list">
+          <li><a href="mailto:26100253@lums.edu.pk">Email</a></li>
+          <li><a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li><a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/muhammad-haseeb-4500b3246/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main">
+
+      <section id="bio">
+        <h2>Biography</h2>
         <p>
-          I am a Graduate Research Assistant at the Centre for Urban Informatics, Technology and Policy (CITY) at LUMS, working with
+          I am a Graduate Research Assistant at the
+          <a href="https://city.lums.edu.pk/" target="_blank" rel="noopener">Centre for Urban Informatics, Technology and Policy (CITY)</a>
+          at LUMS, advised by
           <a href="https://scholar.google.com/citations?user=pd9S_mcAAAAJ&hl=en" target="_blank" rel="noopener">Muhammad Tahir</a> and
-          <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Zubair Khalid</a>,
-          and a Graduate Teaching Fellow for the MS in Artificial Intelligence program, where I teach <strong>AI 630: Responsible AI Engineering</strong>.
-          I completed my B.S. in Computer Science at LUMS in 2026.
+          <a href="https://scholar.google.com/citations?user=by5tc-oAAAAJ&hl=en" target="_blank" rel="noopener">Zubair Khalid</a>.
+          I am also a Graduate Teaching Fellow for the MS in Artificial Intelligence program, where I teach
+          <strong>AI 630: Responsible AI Engineering</strong>.
         </p>
         <p>
-          I work on <strong>AI safety</strong> through <strong>mechanistic interpretability</strong>. My current focus is <strong>emergent misalignment</strong>:
-          how narrow fine-tuning produces broadly misaligned behaviour, and which circuits and features inside the model carry it. I want these behaviours to be
-          measurable and controllable at the level of model internals, not only at the level of outputs.
+          My research is in <strong>AI safety</strong> and <strong>mechanistic interpretability</strong>. I currently study
+          <strong>emergent misalignment</strong>: how narrow fine-tuning produces broadly misaligned behaviour, and which circuits and
+          features inside the model are responsible. I want these behaviours to be measurable and controllable at the level of model
+          internals, not only at the level of outputs.
         </p>
         <p>
-          Before this I studied federated learning with the same tools, showing that FedAvg under non-IID data preserves client representations but misaligns them
-          with the global classifier (<a href="research.html#pub-fedmi">ICML 2026 MI Workshop</a>). I have also worked on model compression
-          (<a href="research.html#pub-bacp">BaCP</a>, <a href="research.html#project-klawq">KLAWQ</a>) and domain generalization, and spent summer 2025 at UIUC with
+          Previously, I used circuit-level analysis to show that FedAvg under non-IID data preserves client representations but misaligns
+          them with the global classifier (<a href="research.html#pub-fedmi">ICML 2026 MI Workshop</a>). I have also worked on model
+          compression (<a href="research.html#pub-bacp">BaCP</a>, <a href="research.html#project-klawq">KLAWQ</a>) and domain
+          generalization. In summer 2025 I was a research intern at UIUC with
           <a href="https://scholar.google.com/citations?user=x6OIBq4AAAAJ&hl=en" target="_blank" rel="noopener">Darko Marinov</a> and
-          <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a> on LLMs for software engineering.
+          <a href="https://scholar.google.com/citations?user=9gmW8MYAAAAJ&hl=en" target="_blank" rel="noopener">Reyhaneh Jabbarvand</a>
+          on LLMs for software engineering.
         </p>
-      </div>
-      <img src="haseeb.png" alt="Muhammad Haseeb" class="intro-photo">
-    </section>
-
-    <!-- Publications -->
-    <section id="publications">
-      <h2>Publications</h2>
-
-      <div class="pub">
-        <div class="pub-venue">ICML 2026<span>MI Workshop</span></div>
-        <div class="pub-body">
-          <div class="pub-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
-          <div class="pub-authors"><strong>Muhammad Haseeb</strong>, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir</div>
-          <div class="pub-summary">Circuit extraction, sparse autoencoders, and probes show non-IID aggregation keeps client features intact but misaligns them with the classification head. <a href="research.html#pub-fedmi">Summary</a></div>
-        </div>
-      </div>
-
-      <div class="pub">
-        <div class="pub-venue">Preprint</div>
-        <div class="pub-body">
-          <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
-          <div class="pub-authors">Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, Mohammad Fatim Shoaib, Muhammad Tahir</div>
-          <div class="pub-summary">Contrastive pruning objective that prevents representational collapse at up to 99% sparsity across CNNs, ViTs, and language models. <a href="research.html#pub-bacp">Summary</a></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Timeline + News side by side -->
-    <div class="two-col">
-      <section id="timeline">
-        <h2>Timeline</h2>
-        <table class="timeline">
-          <tr><td class="date">2026 –</td><td><strong>Graduate Teaching Fellow</strong>, MS AI, LUMS<br><span class="sub">AI 630: Responsible AI Engineering</span></td></tr>
-          <tr><td class="date">2026 –</td><td><strong>Founding Product Engineer</strong>, NEXA<br><span class="sub">Distributed model-serving systems</span></td></tr>
-          <tr><td class="date">2025 –</td><td><strong>Graduate Research Assistant</strong>, CITY, LUMS<br><span class="sub">AI safety &amp; mechanistic interpretability</span></td></tr>
-          <tr><td class="date">2025</td><td><strong>OSS Engineer</strong>, DatacurveAI (YC S24)</td></tr>
-          <tr><td class="date">2025</td><td><strong>Research Intern</strong>, UIUC<br><span class="sub">LLMs for software engineering</span></td></tr>
-          <tr><td class="date">2024 – 25</td><td><strong>Teaching Assistant</strong>, CS436 Computer Vision, LUMS</td></tr>
-          <tr><td class="date">2024</td><td><strong>ML Engineer</strong>, Innova Tech<br><span class="sub">ONNX/TensorRT quantization on edge</span></td></tr>
-          <tr><td class="date">2022 – 26</td><td><strong>B.S. Computer Science</strong>, LUMS</td></tr>
-        </table>
       </section>
 
-      <div>
-        <section id="news">
-          <h2>News</h2>
-          <ul class="news-list">
-            <li><span class="date">Aug 2026</span><span>Started as Graduate Teaching Fellow for AI 630 (MS AI), LUMS.</span></li>
-            <li><span class="date">2026</span><span>FedAvg interpretability paper accepted at the ICML 2026 MI Workshop.</span></li>
-            <li><span class="date">May 2026</span><span>Graduated B.S. Computer Science, LUMS.</span></li>
-            <li><span class="date">Jun 2025</span><span>Began research internship at UIUC.</span></li>
-          </ul>
-        </section>
+      <section id="news">
+        <h2>News</h2>
+        <ul class="news-list">
+          <li><span class="news-date">Aug 2026</span> Started as Graduate Teaching Fellow for AI 630 (MS AI), LUMS.</li>
+          <li><span class="news-date">2026</span> FedAvg interpretability paper accepted at the ICML 2026 Mechanistic Interpretability Workshop.</li>
+          <li><span class="news-date">May 2026</span> Graduated with a B.S. in Computer Science from LUMS.</li>
+          <li><span class="news-date">Jun 2025</span> Research intern at UIUC with Darko Marinov and Reyhaneh Jabbarvand.</li>
+        </ul>
+      </section>
 
-        <section id="opensource">
-          <h2>Open Source</h2>
-          <ul class="plain-list">
-            <li><strong>timm</strong> — distributed F1 / precision / recall metrics.</li>
-            <li><strong>adapters (PEFT)</strong> — GQA support for Llama-2 / Mistral.</li>
-          </ul>
-        </section>
-      </div>
-    </div>
+      <section id="publications">
+        <h2>Publications</h2>
+        <ol class="pub-list">
 
-    <footer class="site-footer">
-      &copy; 2026 Muhammad Haseeb &middot; Updated September 2026
-    </footer>
+          <li class="pub-item" id="pub-fedmi">
+            <div class="pub-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
+            <div class="pub-authors"><strong>Muhammad Haseeb</strong>, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir</div>
+            <div class="pub-venue-line">
+              <span class="pub-venue">ICML 2026 Mechanistic Interpretability Workshop</span>
+              <span class="pub-actions"><a href="research.html#pub-fedmi">summary</a></span>
+            </div>
+          </li>
 
+          <li class="pub-item" id="pub-bacp">
+            <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
+            <div class="pub-authors">Mohammad Haroon Khawaja, <strong>Muhammad Haseeb</strong>, Mohammad Fatim Shoaib, Muhammad Tahir</div>
+            <div class="pub-venue-line">
+              <span class="pub-venue">Preprint</span>
+              <span class="pub-actions"><a href="research.html#pub-bacp">summary</a></span>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+        <ul class="exp-list">
+          <li><span class="exp-date">2026 –</span> Graduate Teaching Fellow, MS AI (AI 630), LUMS</li>
+          <li><span class="exp-date">2026 –</span> Founding Product Engineer, NEXA</li>
+          <li><span class="exp-date">2025 –</span> Graduate Research Assistant, CITY, LUMS</li>
+          <li><span class="exp-date">2025</span> OSS Engineer, DatacurveAI (YC S24)</li>
+          <li><span class="exp-date">2025</span> Research Intern, UIUC</li>
+          <li><span class="exp-date">2024 – 25</span> Teaching Assistant, CS436 Computer Vision, LUMS</li>
+          <li><span class="exp-date">2024</span> ML Engineer (Contract), Innova Tech</li>
+        </ul>
+      </section>
+
+      <section id="opensource">
+        <h2>Open Source</h2>
+        <ul class="plain-list">
+          <li><strong>pytorch-image-models (timm)</strong> — distributed F1, precision, and recall metrics.</li>
+          <li><strong>adapters (PEFT)</strong> — GQA support for Llama-2 / Mistral.</li>
+        </ul>
+      </section>
+
+      <footer class="site-footer">&copy; 2026 Muhammad Haseeb</footer>
+
+    </main>
   </div>
 
 </body>

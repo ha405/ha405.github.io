@@ -7,130 +7,133 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+Pro:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <div class="page">
+  <div class="layout">
 
-    <header class="site-header">
-      <a href="index.html" class="site-name">Muhammad Haseeb</a>
-      <nav class="site-nav">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="#publications">Publications</a>
-        <a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
-    </header>
+    <aside class="sidebar">
+      <img src="haseeb.png" alt="Muhammad Haseeb" class="sidebar-photo">
+      <h1 class="sidebar-name">Muhammad Haseeb</h1>
+      <p class="sidebar-affil">Graduate Research Assistant<br>CITY, LUMS</p>
 
-    <h1 class="page-title">Research</h1>
-    <p class="page-lede">
-      I study what neural networks learn internally and why they behave in unsafe or unreliable ways, using mechanistic interpretability
-      as the primary tool. Current work is on AI safety; earlier work covered federated learning, model compression, and domain generalization.
-    </p>
-
-    <section id="areas">
-      <h2>Research Areas</h2>
-      <ul class="area-list">
-        <li><strong>AI Safety <span class="area-status">current</span></strong> Emergent misalignment: how narrow fine-tuning yields broadly misaligned behaviour, and which circuits and features drive it.</li>
-        <li><strong>Mechanistic Interpretability <span class="area-status">current</span></strong> Circuit extraction, sparse autoencoders, and probing to explain behaviour and failure at the level of model internals.</li>
-        <li><strong>Federated Learning <span class="area-status">completed</span></strong> Representational misalignment in FedAvg under non-IID data.</li>
-        <li><strong>Model Compression <span class="area-status">completed</span></strong> Pruning and quantization that preserve representations at extreme sparsity and low bit-widths.</li>
-        <li><strong>Domain Generalization <span class="area-status">completed</span></strong> Separating domain-invariant circuits from shortcut features.</li>
-      </ul>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-
-      <div class="item" id="pub-fedmi">
-        <div class="item-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
-        <div class="item-meta"><strong>M. Haseeb</strong>, S. Masood, M. A. Sohail, M. F. Shoaib, M. Tahir &middot; ICML 2026 Mechanistic Interpretability Workshop</div>
-        <p class="item-description">
-          We ask why FedAvg degrades under non-IID data. Analysing sparse models with circuit extraction, Universal Sparse Autoencoders, and linear probes,
-          we find that informative client features remain present in the global model even as accuracy falls. The failure is a misalignment between preserved
-          representations and the classification head, not a loss of the representations themselves. This reframes "weight divergence" as an observable structural failure.
-        </p>
+      <div class="sidebar-block">
+        <h3>Links</h3>
+        <ul class="link-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Academic_CV.pdf" target="_blank" rel="noopener">CV</a></li>
+          <li><a href="https://github.com/ha405" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
       </div>
+    </aside>
 
-      <div class="item" id="pub-bacp">
-        <div class="item-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
-        <div class="item-meta">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir &middot; Preprint</div>
-        <p class="item-description">
-          Highly sparse networks suffer representational collapse. BaCP adds a multi-objective contrastive loss that aligns sparse embeddings against pretrained,
-          fine-tuned, and historical references. It preserves accuracy at up to 99% sparsity across CNNs, Vision Transformers, and language models.
+    <main class="main">
+
+      <section id="areas">
+        <h2>Research</h2>
+        <p class="page-lede">
+          I study what neural networks learn internally and why they behave in unsafe or unreliable ways.
+          Current work is on AI safety and emergent misalignment; earlier work covered federated learning,
+          model compression, and domain generalization.
         </p>
-      </div>
-    </section>
+        <ul class="area-list">
+          <li><strong>AI Safety</strong> <span class="area-status">current</span> — Emergent misalignment from narrow fine-tuning; locating and controlling the circuits that carry it.</li>
+          <li><strong>Mechanistic Interpretability</strong> <span class="area-status">current</span> — Circuit extraction, sparse autoencoders, and probing.</li>
+          <li><strong>Federated Learning</strong> <span class="area-status">completed</span> — Representational misalignment in FedAvg under non-IID data.</li>
+          <li><strong>Model Compression</strong> <span class="area-status">completed</span> — Pruning and quantization preserving representations at extreme sparsity.</li>
+          <li><strong>Domain Generalization</strong> <span class="area-status">completed</span> — Domain-invariant vs. shortcut circuits.</li>
+        </ul>
+      </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
+      <section id="publications">
+        <h2>Publications</h2>
+        <ol class="pub-list">
 
-      <h3>Current — AI Safety</h3>
-      <div class="item" id="project-em">
-        <div class="item-title">Emergent Misalignment Through Circuits</div>
-        <div class="item-meta">CITY, LUMS &middot; with Dr. Muhammad Tahir &middot; 2026 –</div>
-        <p class="item-description">
-          Narrow fine-tuning can produce broadly misaligned behaviour far outside the training distribution. I am using circuit-level analysis to locate the
-          features and pathways that carry this behaviour, test whether they are shared across misalignment triggers, and evaluate interventions on
-          model internals as a route to controlling it.
-        </p>
-      </div>
+          <li class="pub-item" id="pub-fedmi">
+            <div class="pub-title">Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg</div>
+            <div class="pub-authors"><strong>M. Haseeb</strong>, S. Masood, M. A. Sohail, M. F. Shoaib, M. Tahir</div>
+            <div class="pub-venue-line"><span class="pub-venue">ICML 2026 Mechanistic Interpretability Workshop</span></div>
+            <p class="item-description" style="width:100%;margin-top:6px;">
+              Circuit extraction, USAEs, and linear probes show non-IID aggregation keeps client features intact but misaligns them with the classification head.
+            </p>
+          </li>
 
-      <h3>Completed — Federated Learning &amp; Interpretability</h3>
-      <div class="item" id="project-fedmi">
-        <div class="item-title">Circuit Preservation in Federated Learning</div>
-        <div class="item-meta">CITY, LUMS &middot; with Dr. Muhammad Tahir &middot; 2025 – 2026</div>
-        <p class="item-description">
-          Led the project behind the ICML 2026 MI Workshop paper above: built an FL simulation over sparse, interpretable models and showed that non-IID
-          aggregation misaligns rather than erases client circuits.
-        </p>
-      </div>
+          <li class="pub-item" id="pub-bacp">
+            <div class="pub-title">BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks</div>
+            <div class="pub-authors">M. H. Khawaja, <strong>M. Haseeb</strong>, M. F. Shoaib, M. Tahir</div>
+            <div class="pub-venue-line"><span class="pub-venue">Preprint</span></div>
+            <p class="item-description" style="width:100%;margin-top:6px;">
+              Multi-objective contrastive loss aligning sparse embeddings against pretrained, fine-tuned, and historical references; preserves accuracy at up to 99% sparsity.
+            </p>
+          </li>
 
-      <h3>Completed — Domain Generalization</h3>
-      <div class="item" id="project-dg">
-        <div class="item-title">Interpretability for Domain Generalization</div>
-        <div class="item-meta">CITY, LUMS &middot; with Dr. Muhammad Tahir</div>
-        <p class="item-description">
-          Used cross-domain data as a contrastive probe to isolate circuits stable across domains and separate them from shortcut pathways that fail out of distribution.
-          Earlier, optimised learnable visual queries in ViTs with Group Relative Query Optimization, improving PACS generalization by 3%.
-        </p>
-      </div>
+        </ol>
+      </section>
 
-      <h3>Completed — Model Compression</h3>
-      <div class="item" id="project-diffusion">
-        <div class="item-title">Quantization of Diffusion Transformers</div>
-        <div class="item-meta">CITY, LUMS &amp; 10x Engineers &middot; with Dr. Zubair Khalid</div>
-        <p class="item-description">
-          Developed a predictor conditioned on per-timestep log-SNR to set activation quantization parameters, cutting perceptual error (LPIPS) by 55%.
-          Implemented Hessian-based GPTQ and Qronos for 4-bit weight quantization.
-        </p>
-      </div>
+      <section id="projects">
+        <h2>Projects</h2>
 
-      <div class="item" id="project-klawq">
-        <div class="item-title">KL-Aware Quantization (KLAWQ)</div>
-        <div class="item-meta">CVGL, LUMS &middot; with Dr. Murtaza Taj</div>
-        <p class="item-description">
-          Extended GPTQ with second-order curvature from KL-divergence and cross-entropy objectives, integrating distillation into post-training quantization.
-          Reduced perplexity by 30% over GPTQ at equal bit-width.
-        </p>
-      </div>
+        <h3>Current — AI Safety</h3>
+        <div class="item" id="project-em">
+          <div class="item-title">Emergent Misalignment Through Circuits</div>
+          <div class="item-meta">CITY, LUMS · Dr. Muhammad Tahir · 2026 –</div>
+          <p class="item-description">
+            Using circuit-level analysis to locate features and pathways that carry misaligned behaviour after narrow fine-tuning,
+            and evaluating interventions on model internals to control it.
+          </p>
+        </div>
 
-      <h3>Completed — Computer Vision</h3>
-      <div class="item" id="project-camera-calib">
-        <div class="item-title">Single-Image Camera Calibration (SOFI-UGCL)</div>
-        <div class="item-meta">CVGL, LUMS &middot; with Dr. Murtaza Taj</div>
-        <p class="item-description">
-          Combined a multi-scale deformable transformer (SOFI) predicting zenith and horizon with geometric constraints in the loss to recover intrinsic
-          and extrinsic camera parameters from one image.
-        </p>
-      </div>
-    </section>
+        <h3>Completed — Federated Learning</h3>
+        <div class="item" id="project-fedmi">
+          <div class="item-title">Circuit Preservation in Federated Learning</div>
+          <div class="item-meta">CITY, LUMS · Dr. Muhammad Tahir · 2025 – 2026</div>
+          <p class="item-description">
+            Built an FL simulation over sparse, interpretable models; showed non-IID aggregation misaligns rather than erases client circuits.
+          </p>
+        </div>
 
-    <footer class="site-footer">
-      &copy; 2026 Muhammad Haseeb &middot; Updated September 2026
-    </footer>
+        <h3>Completed — Domain Generalization</h3>
+        <div class="item" id="project-dg">
+          <div class="item-title">Interpretability for Domain Generalization</div>
+          <div class="item-meta">CITY, LUMS · Dr. Muhammad Tahir</div>
+          <p class="item-description">
+            Cross-domain contrastive probes to isolate stable circuits; Group Relative Query Optimization on ViTs (+3% on PACS).
+          </p>
+        </div>
 
+        <h3>Completed — Model Compression</h3>
+        <div class="item" id="project-diffusion">
+          <div class="item-title">Quantization of Diffusion Transformers</div>
+          <div class="item-meta">CITY &amp; 10x Engineers · Dr. Zubair Khalid</div>
+          <p class="item-description">
+            Log-SNR-conditioned activation quantizer (−55% LPIPS); Hessian-based GPTQ/Qronos for 4-bit weights.
+          </p>
+        </div>
+
+        <div class="item" id="project-klawq">
+          <div class="item-title">KL-Aware Quantization (KLAWQ)</div>
+          <div class="item-meta">CVGL, LUMS · Dr. Murtaza Taj</div>
+          <p class="item-description">
+            GPTQ extended with KL/CE curvature; −30% perplexity vs. baseline GPTQ at equal bit-width.
+          </p>
+        </div>
+
+        <h3>Completed — Computer Vision</h3>
+        <div class="item" id="project-camera-calib">
+          <div class="item-title">Single-Image Camera Calibration (SOFI-UGCL)</div>
+          <div class="item-meta">CVGL, LUMS · Dr. Murtaza Taj</div>
+          <p class="item-description">
+            SOFI transformer + geometric constraints to recover camera intrinsics and extrinsics from one image.
+          </p>
+        </div>
+      </section>
+
+      <footer class="site-footer">&copy; 2026 Muhammad Haseeb</footer>
+
+    </main>
   </div>
 
 </body>
