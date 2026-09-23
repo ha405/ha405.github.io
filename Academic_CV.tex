@@ -1,0 +1,144 @@
+% === ACADEMIC CV (LaTeX) ===
+% Final Polished Version
+\documentclass[11pt]{article}
+\usepackage[margin=0.5in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{parskip} % For clean spacing between entries
+
+% --- FORMATTING SETUP ---
+\titleformat{\section}
+  {\large\bfseries\uppercase} % Uppercase and Bold
+  {}
+  {0em}
+  {}[\titlerule] % Horizontal line after header
+
+\titlespacing*{\section}{0pt}{8pt}{2pt} % Adjust spacing around titles
+
+% Consistent list formatting
+\setlist[itemize,1]{label=\textbf{--}, leftmargin=*, topsep=2pt, itemsep=3pt, parsep=0pt}
+\setlist[itemize,2]{label=$\circ$, leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt}
+
+\pagenumbering{gobble}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\LARGE\textbf{Muhammad Haseeb}} \\ [0.4em]
+    \href{mailto:haseeb099m@gmail.com}{haseeb099m@gmail.com} $\mid$
+    \href{https://github.com/ha405}{github.com/ha405} $\mid$
+    \href{https://www.linkedin.com/in/muhammad-haseeb-4500b3246/}{linkedin.com/in/muhammad-haseeb}
+\end{center}
+
+% --- RESEARCH INTERESTS ---
+\section{Research Interests}
+AI Safety; Mechanistic Interpretability; Emergent Misalignment; Domain Generalization; Efficient ML.
+
+% --- EDUCATION ---
+\section{Education}
+\textbf{Lahore University of Management Sciences (LUMS)} \hfill Sep 2022 -- May 2026 \\
+B.S. Computer Science \\
+\textit{Relevant Coursework:} Machine Learning, Deep Learning, Computer Vision, AI on Edge Devices, Advanced Topics in ML, LLM Systems, Linear Algebra, Probability.
+
+% --- PUBLICATIONS ---
+\section{Publications}
+\begin{itemize}
+    \item \textbf{Mechanistic Evidence for Preserved-but-Misaligned Representations in Non-IID FedAvg (\textit{ICML 2026 Mechanistic Interpretability Workshop})}.\\
+    \textbf{Muhammad Haseeb}, Salaar Masood, Muhammad Abdullah Sohail, Mohammad Fatim Shoaib, Muhammad Tahir.
+    \item \textbf{BaCP: Backbone Contrastive Pruning for Preserving Representations in Extremely Sparse Neural Networks (\textit{Preprint})}.\\
+    Mohammad Haroon Khawaja, \textbf{Muhammad Haseeb}, Mohammad Fatim Shoaib, Muhammad Tahir.
+\end{itemize}
+
+% --- RESEARCH EXPERIENCE ---
+\section{Research Experience}
+
+\textbf{ML Research Assistant} \hfill Jan 2025 -- May 2026\\
+\textit{\href{https://lums.edu.pk/academic-report/ar2024/centre-city.php}{Centre for Urban Informatics, Technology and Policy (CITY)}, LUMS} \\
+\textit{Advisors: Dr. Muhammad Tahir, Dr. Zubair Khalid}
+\begin{itemize}
+    \item \textbf{Emergent Misalignment:} Investigating which circuits are associated with misaligned behavior after narrow fine-tuning, whether targeted interventions can reduce it, and whether those interventions transfer across tasks and models.
+    \item \textbf{Mechanistic Analysis of Federated Learning:} (\textit{Accepted at ICML 2026 Mechanistic Interpretability Workshop})
+    \begin{itemize}[label=$\circ$]
+        \item Studied FedAvg through the lens of Mechanistic Interpretability to analyze performance loss under Non-IID conditions using class-specific circuit discovery, Universal Sparse Autoencoders (USAEs), and linear probes.
+        \item Compared class-specific circuits and observed drift and interference patterns during non-IID aggregation, while IID circuits behaved in a perfect constructive manner.
+        \item Demonstrated via USAE concept analysis that useful latent features, similar to the IID feature basis, remain present and recoverable even when global accuracy degrades under label skew.
+    \end{itemize}
+    \item \textbf{Backbone Contrastive Pruning (BaCP):}
+        \begin{itemize}[label=$\circ$]
+            \item Contributed to a generalized pruning framework to merge standard pruning criteria with contrastive learning
+            to prevent representational collapse.
+            \item Designed a multi-objective loss function that aligns sparse embeddings with pretrained, fine-tuned, and
+            historical snapshot references to maintain feature consistency with pretrained references to prevent representational collapse.
+            \item Maintained accuracy comparable to dense baselines at up to \textbf{99\% sparsity}, outperforming standard unstructured pruning approaches across ViTs/CNNs/Language Models.
+        \end{itemize}
+    \item \textbf{Domain Generalization \& Interpretability:}
+            \begin{itemize}[label=$\circ$]
+                \item Applied circuit extraction techniques to isolate task-specific subnetworks, analyzing whether out-of-distribution failures are caused by shortcut learning or weight interference.
+                \item Optimized visual queries in Vision Transformers using reinforcement learning (Group Relative Query Optimization), achieving a \textbf{3\% accuracy gain} on the PACS dataset compared to empirical risk minimization.
+            \end{itemize}
+    \item \textbf{Quantization of Diffusion Models:} Proposed Log-SNR conditioned temporal dynamic quantization (\textbf{55\% lower LPIPS} on PixArt-$\alpha$) and implemented Hessian-based GPTQ/QroNos for \textbf{4-bit weight compression}.
+\end{itemize}
+
+\textbf{AI/SWE Research Intern} \hfill May 2025 -- Aug 2025\\
+\textit{University of Illinois Urbana-Champaign (UIUC)}
+\begin{itemize}
+    \item Investigated LLM-based heuristics for automated \texttt{\#ifdef} guard insertion in C codebases and explored large language models for software debloating and code dependency analysis.
+    \item Contributed to the development of a VS Code extension supporting a C-to-Rust translation pipeline.
+\end{itemize}
+
+\textbf{ML Research Assistant} \hfill Jan 2025 -- Aug 2025\\
+\textit{Computer Vision \& Graphics Lab, LUMS}
+\begin{itemize}
+    \item \textbf{KL Aware Quantization (KLAWQ):} Proposed an augmented GPTQ framework integrating KL divergence and second-order curvature to optimize a combined MSE+KL objective, reducing LLM perplexity by \textbf{30\%} compared to GPTQ baselines.
+    \item \textbf{Single-Image Camera Calibration:} Developed a pipeline to train a Multi-Scale Deformable Transformer by combining loss with geometric constraints to recover full camera projection matrices from a single image.
+\end{itemize}
+
+% --- INDUSTRY EXPERIENCE ---
+\section{Industry Experience}
+\textbf{Founding Product Engineer} \hfill June 2026 -- Present\\
+\textit{NEXA (Remote)}
+\begin{itemize}
+    \item Architecting and building highly scalable, distributed backend systems from the ground up.
+    \item Integrating machine learning models and optimizing distributed serving pipelines for fast, efficient inference.
+\end{itemize}
+
+\textbf{OSS Engineer} \hfill Dec 2025 -- Feb 2026\\
+\textit{DatacurveAI (YC S24)}
+\begin{itemize}
+    \item Solved bugs and added new features across various open-source machine learning repositories to test and train LLMs on working with large codebases.
+\end{itemize}
+
+\textbf{Machine Learning Engineer} \hfill Jul 2025 -- Oct 2025\\
+\textit{Innova Tech}
+\begin{itemize}
+  \item Automated data annotation pipeline, refined training configurations, and fixed model architectures getting a \textbf{4\% accuracy gain}. Also, implemented inference optimization with TensorRT for speedup and various quantization techniques to reduce memory footprint by \textbf{40\%} on edge devices.
+\end{itemize}
+
+% --- TEACHING EXPERIENCE ---
+\section{Teaching Experience}
+\textbf{Teaching Fellow, MSAI} \hfill Aug 2026 -- Present\\
+\textit{AI 630: Responsible AI Engineering, LUMS}
+\begin{itemize}
+    \item Developed and graded quizzes for AI 630: Responsible AI Engineering.
+    \item Managed class logistics and coordinated course projects.
+\end{itemize}
+
+\textbf{Teaching Assistant} \hfill Aug 2025 -- Dec 2025\\
+\textit{CS436: Computer Vision, LUMS}
+\begin{itemize}
+    \item Designed and supervised an assignment on transfer learning and multithreaded C++ object detection. Mentored 40 student groups in building a virtual tour application using Structure from Motion.
+\end{itemize}
+
+% --- SKILLS & CONTRIBUTIONS ---
+\section{Skills \& Open-Source}
+\textbf{Technical Skills:} Python, C, C++, Rust, SQL; PyTorch, Transformers, ONNX, TensorRT, diffusers, adapters.
+
+\textbf{Open-Source Contributions:}
+\begin{itemize}[label=$\circ$, leftmargin=1.5em]
+    \item \textbf{pytorch-image-models:} Added F1, precision, and recall metrics to evaluation and training pipelines.
+    \item \textbf{adapters:} Implemented PEFT support for Group Query Attention models, fixing tensor mismatch issues.
+\end{itemize}
+
+\end{document}
