@@ -6,7 +6,6 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{parskip} % For clean spacing between entries
-\setlength{\parskip}{2pt}
 
 % --- FORMATTING SETUP ---
 \titleformat{\section}
@@ -15,11 +14,11 @@
   {0em}
   {}[\titlerule] % Horizontal line after header
 
-\titlespacing*{\section}{0pt}{5pt}{2pt} % Adjust spacing around titles
+\titlespacing*{\section}{0pt}{8pt}{2pt} % Adjust spacing around titles
 
 % Consistent list formatting
-\setlist[itemize,1]{label=\textbf{--}, leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
-\setlist[itemize,2]{label=$\circ$, leftmargin=*, topsep=1pt, itemsep=1pt, parsep=0pt}
+\setlist[itemize,1]{label=\textbf{--}, leftmargin=*, topsep=2pt, itemsep=3pt, parsep=0pt}
+\setlist[itemize,2]{label=$\circ$, leftmargin=*, topsep=2pt, itemsep=2pt, parsep=0pt}
 
 \pagenumbering{gobble}
 
@@ -61,23 +60,25 @@ B.S. Computer Science \\
 \textit{\href{https://lums.edu.pk/academic-report/ar2024/centre-city.php}{Centre for Urban Informatics, Technology and Policy (CITY)}, LUMS} \\
 \textit{Advisors: Dr. Muhammad Tahir, Dr. Zubair Khalid}
 \begin{itemize}
-    \item \textbf{Emergent Misalignment:} Across three Qwen2.5-3B-Instruct fine-tunes, found three shared head locations among each model's top five. Base-model head replacement reduced generated misalignment versus matched random interventions; cross-model activation transfer showed partial functional correspondence.
+    \item \textbf{Emergent Misalignment:} Traced attention-head contributions across three independently fine-tuned Qwen2.5-3B-Instruct models and identified three head locations shared among their five highest-ranked heads. Replacing selected head contributions with base-model activations reduced generated misalignment relative to layer-matched random interventions; cross-model transfers showed partial functional correspondence.
     \item \textbf{Mechanistic Analysis of Federated Learning:} (\textit{Accepted at ICML 2026 Mechanistic Interpretability Workshop})
     \begin{itemize}[label=$\circ$]
-        \item Used class-specific circuit discovery, Universal Sparse Autoencoders (USAEs), and linear probes to study FedAvg degradation under non-IID data.
-        \item Observed class-circuit drift and interference during non-IID aggregation, unlike constructive IID circuit behavior.
-        \item Showed that useful latent features remain recoverable under label skew despite degraded global accuracy.
+        \item Studied FedAvg through the lens of Mechanistic Interpretability to analyze performance loss under Non-IID conditions using class-specific circuit discovery, Universal Sparse Autoencoders (USAEs), and linear probes.
+        \item Compared class-specific circuits and observed drift and interference patterns during non-IID aggregation, while IID circuits behaved in a perfect constructive manner.
+        \item Demonstrated via USAE concept analysis that useful latent features, similar to the IID feature basis, remain present and recoverable even when global accuracy degrades under label skew.
     \end{itemize}
     \item \textbf{Backbone Contrastive Pruning (BaCP):}
         \begin{itemize}[label=$\circ$]
-            \item Built a pruning framework combining standard criteria with contrastive learning to prevent representational collapse.
-            \item Designed a multi-objective loss aligning sparse embeddings with pretrained, fine-tuned, and earlier snapshots.
-            \item Preserved dense-baseline accuracy at up to \textbf{99\% sparsity} across ViTs, CNNs, and language models.
+            \item Contributed to a generalized pruning framework to merge standard pruning criteria with contrastive learning
+            to prevent representational collapse.
+            \item Designed a multi-objective loss function that aligns sparse embeddings with pretrained, fine-tuned, and
+            historical snapshot references to maintain feature consistency with pretrained references to prevent representational collapse.
+            \item Maintained accuracy comparable to dense baselines at up to \textbf{99\% sparsity}, outperforming standard unstructured pruning approaches across ViTs/CNNs/Language Models.
         \end{itemize}
     \item \textbf{Domain Generalization \& Interpretability:}
             \begin{itemize}[label=$\circ$]
-                \item Extracted task-specific circuits to test whether out-of-distribution failures arise from shortcuts or weight interference.
-                \item Optimized ViT visual queries with Group Relative Query Optimization, improving PACS accuracy by \textbf{3\%} over empirical risk minimization.
+                \item Applied circuit extraction techniques to isolate task-specific subnetworks, analyzing whether out-of-distribution failures are caused by shortcut learning or weight interference.
+                \item Optimized visual queries in Vision Transformers using reinforcement learning (Group Relative Query Optimization), achieving a \textbf{3\% accuracy gain} on the PACS dataset compared to empirical risk minimization.
             \end{itemize}
     \item \textbf{Quantization of Diffusion Models:} Proposed Log-SNR conditioned temporal dynamic quantization (\textbf{55\% lower LPIPS} on PixArt-$\alpha$) and implemented Hessian-based GPTQ/QroNos for \textbf{4-bit weight compression}.
 \end{itemize}
