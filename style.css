@@ -889,6 +889,32 @@ h2::after {
   font-weight: 700;
 }
 
+.featured-update {
+  margin-top: 18px;
+  padding-top: 15px;
+  border-top: 1px solid #d7e7f0;
+}
+
+.featured-update-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border: 1px solid #bcdbe9;
+  border-radius: 999px;
+  color: #176e91;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.featured-update a {
+  display: block;
+  margin-top: 9px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.45;
+}
+
 .home-page .info-panel {
   max-width: none;
   margin-bottom: 22px;
